@@ -49,7 +49,11 @@ class Series():
         return [ep.id for ep in episodes].count(id) > 0
 
     def downloadNewEpisodes(self):
-        for episode in self.getNewEpisodes():
+        # Ignore results where the series name doesn't match
+        episodes = [episode for episode in self.getNewEpisodes()
+                    if episode.series.lower() == self.name.lower()]
+
+        for episode in episodes:
             cmd = "iplayer-dl -d %s %s" % (self.DOWNLOAD_PATH, episode.id)
 
             # iplayer-dl outputs everything to stderr!
