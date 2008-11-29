@@ -17,27 +17,33 @@ To get help:
 iplayer-get -h
 }}}
 
-= Running =
+= Usage =
 
-Add a new series as follows:
+== Example ==
+{{{
+     > iplayer-get -p ~/movies
+     > iplayer-get -a "Doctor Who"
+     > iplayer-get -a "Spooks"
+     > iplayer-get
+}}}
+
+=== Configure the download path ===
+{{{
+iplayer-get -p DOWNLOAD_PATH
+}}}
+where DOWNLOAD_PATH is where to download new episodes
+
+=== Add a new series ===
 {{{
 iplayer-get -a ADD_SERIES
 }}}
 where ADD_SERIES is the name of the series (in quotes if more than one word)
 
-The download new episodes by running iplayer-get with no arguments
+=== Download ===
+Download new episodes by running iplayer-get with no arguments
 {{{
 iplayer-get
 }}}
-Example:
-{{{
-     > iplayer-get -a "Doctor Who"
-     > iplayer-get
 
-     Checking series Doctor Who...                                      
-     Resuming download at 0 bytes.                                                   
-     Doctor Who - Series 3 - Human Nature.mov (Default)                   
-     100.0%  
-}}}
 = How It Works =
 For each series registered, iplayer-get goes to the BBC's iplayer search page and searches for the series name. Any matching results are downloaded, provided the series names match. 
