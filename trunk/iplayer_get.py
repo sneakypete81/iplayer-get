@@ -25,7 +25,6 @@ class Episode():
 
 class Series():
     SEARCH_URL = "http://www.bbc.co.uk/iplayer/search/tv/"
-    DOWNLOAD_PATH = os.path.expanduser("~/Movies")
     LOG_FILE = ".iplayer_dl_log"
     
     def __init__(self, name):
@@ -48,13 +47,13 @@ class Series():
         episodes = self.getEpisodes()
         return [ep.id for ep in episodes].count(id) > 0
 
-    def downloadNewEpisodes(self):
+    def downloadNewEpisodes(self, downloadPath):
         # Ignore results where the series name doesn't match
         episodes = [episode for episode in self.getNewEpisodes()
                     if episode.series.lower() == self.name.lower()]
 
         for episode in episodes:
-            cmd = "iplayer-dl -d %s %s" % (self.DOWNLOAD_PATH, episode.id)
+            cmd = "iplayer-dl -d %s %s" % (downloadPath, episode.id)
 
             # iplayer-dl outputs everything to stderr!
             # Redirect to stdout, then tee it off to the logfile
@@ -86,15 +85,19 @@ class Series():
 class IPlayer():
     OPTIONS_FILE = os.path.expanduser("~/.iplayer-get")
     def __init__(self):
+        self.seriess = []
+        self.downloadPath = os.path.expanduser("~")
         try:
             file = open(self.OPTIONS_FILE, "r")
             self.seriess = pickle.load(file)
+            self.downloadPath = pickle.load(file)
         except:
-            self.seriess = []
+            pass
         
     def __del__(self):
         file = open(self.OPTIONS_FILE, "w")
         pickle.dump(self.seriess, file)
+        pickle.dump(self.downloadPath, file)
         
     def addSeries(self, name):
         series = Series(name)
@@ -138,7 +141,7 @@ class IPlayer():
     def downloadNewEpisodes(self):
         for series in self.seriess:
             print "Checking series %s..." % series.name
-            series.downloadNewEpisodes()
+            series.downloadNewEpisodes(self.downloadPath)
 
 class SeriesParser(HTMLParser.HTMLParser):
     def __init__(self):
@@ -219,6 +222,9 @@ def parseOptions():
     parser.add_option("-m", "--mark-as-downloaded",
                       dest="mark_downloaded_id",
                       help="Prevent MARK_DOWNLOADED_ID from being downloaded in the future")
+    parser.add_option("-p", "--download-path",
+                      dest="download_path",
+                      help="Download episodes to DOWNLOAD_PATH")
     (options, args) = parser.parse_args()
     
     if args:
@@ -232,17 +238,27 @@ def parseOptions():
 done_something = False
 iplayer = IPlayer()
 
+if options.download_path:
+    iplayer.downloadPath = options.download_path
+    print "Episode download path set to '%s'." % options.download_path
+    done_something = True
+
 if options.add_series:
     iplayer.addSeries(options.add_series)
+    print "Series '%s' added." % options.add_series
     done_something = True
 
 if options.del_series:
-    if not iplayer.delSeries(options.del_series):
+    if iplayer.delSeries(options.del_series):
+        print "Series '%s' will no longer be downloaded." % options.del_series
+    else:
         parser.error("Series '%s' not found" % options.del_series)
     done_something = True
 
 if options.mark_downloaded_id:
-    if not iplayer.markDownloaded(options.mark_downloaded_id):
+    if iplayer.markDownloaded(options.mark_downloaded_id):
+        print "Episode ID %s will not be downloaded." % options.mark_downloaded_id
+    else:
         parser.error("ID %s not found" % options.mark_downloaded_id)
     done_something = True
 
