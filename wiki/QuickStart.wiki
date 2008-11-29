@@ -1,3 +1,4 @@
+#labels Featured
 = Installing =
 
   * Make sure you have ruby and python installed
