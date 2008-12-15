@@ -46,4 +46,4 @@ iplayer-get
 }}}
 
 = How It Works =
-For each series registered, iplayer-get goes to the BBC's iplayer search page and searches for the series name. Any matching results are downloaded, provided the series names match. 
+For each series registered, iplayer-get goes to the BBC's iplayer search page and searches for the series name. Any matching results are downloaded, provided the series name matches. 
