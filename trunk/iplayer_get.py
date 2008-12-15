@@ -53,6 +53,7 @@ class Series():
                     if episode.series.lower() == self.name.lower()]
 
         for episode in episodes:
+            print "%s: (%s)" % (episode.title, episode.id)
             cmd = "iplayer-dl -d %s %s" % (downloadPath, episode.id)
 
             # iplayer-dl outputs everything to stderr!
@@ -68,6 +69,7 @@ class Series():
                 print "*** ERROR: iplayer-dl didn't say '100.0%'"
             else:
                 print "*** ERROR: iplayer-dl returned status %d" % status
+            print
             
     def getNewEpisodes(self):
         currentEpisodes = self.getEpisodes()
