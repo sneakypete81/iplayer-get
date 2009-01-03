@@ -13,6 +13,7 @@ import textwrap
 import optparse
 
 class Episode():
+    LOG_FILE = ".iplayer_dl_log"
     def allAttributesExist(self):
         try:
             self.id
@@ -23,9 +24,28 @@ class Episode():
         except:
             return False
 
+    def download(self, downloadPath):
+        cmd = "iplayer-dl -d %s %s" % (downloadPath, self.id)
+
+        # iplayer-dl outputs everything to stderr!
+        # Redirect to stdout, then tee it off to the logfile
+        status = os.system("(%s 2>&1) | tee %s" % (cmd, self.LOG_FILE))
+        f=open(self.LOG_FILE)
+        output = f.read()
+        
+        if status == 0 and output.strip().endswith("100.0%"):
+            print "Download complete.\n"
+            return True
+        
+        if status == 0:
+            print "*** ERROR: iplayer-dl failed\n"
+        else:
+            print "*** ERROR: iplayer-dl returned status %d\n" % status
+        return False
+        
+
 class Series():
     SEARCH_URL = "http://www.bbc.co.uk/iplayer/search/tv/"
-    LOG_FILE = ".iplayer_dl_log"
     
     def __init__(self, name):
         self.name = name
@@ -54,23 +74,9 @@ class Series():
 
         for episode in episodes:
             print "%s: (%s)" % (episode.title, episode.id)
-            cmd = "iplayer-dl -d %s %s" % (downloadPath, episode.id)
-
-            # iplayer-dl outputs everything to stderr!
-            # Redirect to stdout, then tee it off to the logfile
-            status = os.system("(%s 2>&1) | tee %s" % (cmd, self.LOG_FILE))
-            f=open(self.LOG_FILE)
-            output = f.read()
-            
-            if status == 0 and output.strip().endswith("100.0%"):
-                print "Download complete."
+            if episode.download(downloadPath):
                 self.downloadedEpisodes.append(episode.id)
-            elif status == 0:
-                print "*** ERROR: iplayer-dl didn't say '100.0%'"
-            else:
-                print "*** ERROR: iplayer-dl returned status %d" % status
-            print
-            
+
     def getNewEpisodes(self):
         currentEpisodes = self.getEpisodes()
         return [ep for ep in currentEpisodes
@@ -227,6 +233,9 @@ def parseOptions():
     parser.add_option("-p", "--download-path",
                       dest="download_path",
                       help="Download episodes to DOWNLOAD_PATH")
+    parser.add_option("-g", "--get-episode",
+                      dest="episode_id",
+                      help="Download EPISODE_ID (eg. b00g34gw)")
     (options, args) = parser.parse_args()
     
     if args:
@@ -266,6 +275,12 @@ if options.mark_downloaded_id:
 
 if options.list:
     iplayer.listSeries()
+    done_something = True
+
+if options.episode_id:
+    episode = Episode()
+    episode.id = options.episode_id
+    episode.download(iplayer.downloadPath)
     done_something = True
 
 # If nothing else is specified, check for new episodes
