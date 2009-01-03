@@ -193,13 +193,16 @@ class ProgrammeList(wx.Panel):
 
             programme_pids = set([episode.Pid for episode in programme])
             if programme_pids.issubset(self.iplayer.downloaded_episodes):
-                self.list.SetItemTextColour(item, self.DOWNLOADED_ITEM_COLOUR)
+                self.list.SetItemTextColour(item, 
+                                            self.DOWNLOADED_ITEM_COLOUR)
 
     def refresh(self):
         item = self.list.GetNextItem(-1, state=wx.LIST_STATE_SELECTED)
         self.populate()
         if item != -1:
-            self.list.SetItemState(item, wx.LIST_STATE_SELECTED, wx.LIST_STATE_SELECTED)
+            self.list.SetItemState(item, 
+                                   wx.LIST_STATE_SELECTED, 
+                                   wx.LIST_STATE_SELECTED)
 
     def delete_selected(self, event=None):
         item = self.list.GetNextItem(-1, state=wx.LIST_STATE_SELECTED)
@@ -209,6 +212,13 @@ class ProgrammeList(wx.Panel):
         self.iplayer.ignored_programmes.add(self.list.GetItemText(item))
         self.list.DeleteItem(item)
 
+        # Select the next item automatically
+        if item >= self.list.GetItemCount():
+            item -= 1
+        if item >= 0:
+            self.list.SetItemState(item, 
+                                   wx.LIST_STATE_SELECTED, 
+                                   wx.LIST_STATE_SELECTED)
 
 
 class EpisodeList(wx.ListCtrl):
