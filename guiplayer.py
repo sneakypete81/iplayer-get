@@ -260,7 +260,9 @@ class ProgrammeList(wx.Panel):
         self.list.SetColumnWidth(0, self.GetSize().width)
 
         for (name, programme) in sorted(self.iplayer.programmes.items()):
-            if ignore and name in self.iplayer.ignored_programmes:
+            # Don't compare episode-specific title text
+            name_root = name.split(": Series")[0]
+            if ignore and name_root in self.iplayer.ignored_programmes:
                 continue
 
             item = self.list.InsertStringItem(sys.maxint, name)
@@ -305,7 +307,6 @@ class EpisodeList(wx.HtmlListBox):
         wx.HtmlListBox.__init__(self, parent, style=wx.BORDER_SUNKEN)
 
     def populate(self, programme): 
-        print "populate"
         self.programme = programme
         self.SetItemCount(len(programme))
         self.Refresh()
@@ -378,7 +379,7 @@ class EpisodePanel(wx.Panel):
     def populate(self, episode):
         self.episode = episode
         
-        self.description.ChangeValue(episode.Desc)
+#        self.description.ChangeValue(episode.Desc)
 
 # Works, but is synchonous -> slow!        
 #        data = urllib.urlopen(episode.Thumbnail).read()
