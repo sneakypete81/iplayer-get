@@ -162,14 +162,15 @@ class ProgrammeTab(wx.Panel):
         wx.Panel.__init__(self, parent) 
         self.iplayer = iplayer
         self.log = log
-        
-        hbox = wx.BoxSizer(wx.HORIZONTAL)
+        self.download_callback = download_callback
+
+        topbox = wx.BoxSizer(wx.HORIZONTAL)
 
         self.programme_list = ProgrammeList(self, self.iplayer, log=self.log)
         self.programme_list.list.Bind(wx.EVT_LIST_ITEM_SELECTED, 
                                       self._programme_change,
                                       self.programme_list.list)
-        hbox.Add(self.programme_list, proportion=1, flag=wx.EXPAND | wx.ALL, border=5)
+        topbox.Add(self.programme_list, proportion=1, flag=wx.EXPAND | wx.ALL, border=5)
 
         vbox = wx.BoxSizer(wx.VERTICAL)
 
@@ -179,18 +180,22 @@ class ProgrammeTab(wx.Panel):
         self.episode_title.SetFont(title_font)
         vbox.Add(self.episode_title)
 
-        self.episode_list = EpisodeList(self, self.iplayer, self._refresh_programme_list)
-        self.episode_list.Bind(wx.EVT_LISTBOX, 
-                               self._episode_change)
+        self.episode_list = EpisodeList(self, self.iplayer)
         vbox.Add(self.episode_list, proportion=1, flag=wx.EXPAND)
 
-        self.episode_panel = EpisodePanel(self, self.iplayer, 
-                             refresh_callback=self._refresh_episode_list,
-                             download_callback=download_callback)
-        vbox.Add(self.episode_panel, flag=wx.EXPAND)
+        hbox = wx.BoxSizer(wx.HORIZONTAL)
+        but = wx.Button(self, label="Download")
+        but.Bind(wx.EVT_BUTTON, self.download)
+        hbox.Add(but)
 
-        hbox.Add(vbox, proportion=1, flag=wx.EXPAND | wx.ALL, border=5)
-        self.SetSizerAndFit(hbox)
+        but = wx.Button(self, label="Mark as Downloaded")
+        but.Bind(wx.EVT_BUTTON, self.mark_as_downloaded)
+        hbox.Add(but, flag=wx.LEFT, border=5)
+
+        vbox.Add(hbox, flag=wx.TOP, border=5)
+
+        topbox.Add(vbox, proportion=1, flag=wx.EXPAND | wx.ALL, border=5)
+        self.SetSizerAndFit(topbox)
 
         self.programme_list.populate()
 
@@ -205,15 +210,20 @@ class ProgrammeTab(wx.Panel):
             if index >= 0:
                 self.episode_panel.populate(programme[index])
                 
-    def _episode_change(self, event):
-        index = event.GetSelection()
-        if index != wx.NOT_FOUND:
-            episode = self.episode_list.programme[index]
-            self.episode_panel.populate(episode)
-
     def refresh(self):
         self._refresh_episode_list()
         self._refresh_programme_list()
+
+    def download(self, event):
+        episode = self.episode_list.get_selected_episode()
+        if episode is not None:
+            self.download_callback(episode)
+
+    def mark_as_downloaded(self, event):
+        episode = self.episode_list.get_selected_episode()
+        if episode is not None:
+            self.iplayer.mark_as_downloaded(episode)
+            self.refresh()
 
     def _refresh_programme_list(self):
         self.programme_list.refresh()
@@ -300,9 +310,8 @@ class ProgrammeList(wx.Panel):
 
 
 class EpisodeList(wx.HtmlListBox):
-    def __init__(self, parent, iplayer, refresh_callback):
+    def __init__(self, parent, iplayer):
         self.iplayer = iplayer
-        self.refresh_callback = refresh_callback
         self.programme = []
         wx.HtmlListBox.__init__(self, parent, style=wx.BORDER_SUNKEN)
 
@@ -335,66 +344,12 @@ class EpisodeList(wx.HtmlListBox):
         
         return html
 
-    def refresh(self):
-#        next_item = self.GetNextItem(-1, state=wx.LIST_STATE_SELECTED) + 1
-        self.refresh_callback()
-#        self.populate(self.programme)
-#        if next_item != -1 and next_item < self.GetItemCount():
-#            self.SetItemState(next_item, wx.LIST_STATE_SELECTED, wx.LIST_STATE_SELECTED)
-
-class EpisodePanel(wx.Panel):
-    def __init__(self, parent, iplayer, refresh_callback, download_callback):
-        self.iplayer = iplayer
-        self.refresh_callback = refresh_callback
-        self.download_callback = download_callback
-        self.episode = None
-        wx.Panel.__init__(self, parent)
-        
-        vbox = wx.BoxSizer(wx.VERTICAL)
-#        hbox = wx.BoxSizer(wx.HORIZONTAL)
-
-#        self.thumbnail = wx.StaticBitmap(self)
-#        hbox.Add(self.thumbnail)
-        
-#        self.description = wx.TextCtrl(self, style=wx.TE_READONLY | 
-#                                                   wx.TE_MULTILINE)
-#        hbox.Add(self.description, proportion=2, flag=wx.EXPAND)
-
-#        vbox.Add(hbox, proportion=2, flag=wx.EXPAND | wx.TOP, border=20)
-        
-        hbox = wx.BoxSizer(wx.HORIZONTAL)
-        but = wx.Button(self, label="Download")
-        but.Bind(wx.EVT_BUTTON, self.download)
-        hbox.Add(but, flag=wx.ALL, border=5)
-
-        but = wx.Button(self, label="Mark as Downloaded")
-        but.Bind(wx.EVT_BUTTON, self.mark_as_downloaded)
-        hbox.Add(but, flag=wx.ALL, border=5)
-
-        vbox.Add(hbox)
-#        vbox.AddStretchSpacer(1)
-
-        self.SetSizerAndFit(vbox)
-
-    def populate(self, episode):
-        self.episode = episode
-        
-#        self.description.ChangeValue(episode.Desc)
-
-# Works, but is synchonous -> slow!        
-#        data = urllib.urlopen(episode.Thumbnail).read()
-#        stream = cStringIO.StringIO(data)
-#        bmp = wx.BitmapFromImage(wx.ImageFromStream(stream))
-#        self.thumbnail.SetBitmap(bmp)
-
-    def download(self, event):
-        if self.episode is not None:
-            self.download_callback(self.episode)
-#        self.iplayer.download(self.episode)
-
-    def mark_as_downloaded(self, event):
-        self.iplayer.mark_as_downloaded(self.episode)
-        self.refresh_callback()
+    def get_selected_episode(self):
+        index = self.GetSelection() 
+        if index == wx.NOT_FOUND:
+            return None
+        else:
+            return self.programme[index]
 
 
 class DownloadTab(wx.Panel):
