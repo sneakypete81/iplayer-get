@@ -174,8 +174,11 @@ class ProgrammeTab(wx.Panel):
 
         vbox = wx.BoxSizer(wx.VERTICAL)
 
-#        label = wx.StaticText(self, label="Episodes:")
-#        vbox.Add(label)
+        self.episode_title = wx.StaticText(self, label="")
+        title_font = self.episode_title.GetFont()
+        title_font.SetWeight(wx.FONTWEIGHT_BOLD)
+        self.episode_title.SetFont(title_font)
+        vbox.Add(self.episode_title)
 
         self.episode_list = EpisodeList(self, self.iplayer, self._refresh_programme_list)
         self.episode_list.Bind(wx.EVT_LIST_ITEM_SELECTED, 
@@ -196,6 +199,7 @@ class ProgrammeTab(wx.Panel):
     def _programme_change(self, event):
         programme_name = event.GetText()
         if programme_name != "":
+            self.episode_title.SetLabel(programme_name)
             self.episode_list.populate(self.iplayer.programmes[programme_name])
                 
     def _episode_change(self, event):
