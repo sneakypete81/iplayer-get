@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 # Todo:
+#  * Change download "episode" column to title (programme+episode)
 #  * Download manager
 #  * Allow deleted programmes to be reshown / undeleted
 #  * Thumbnails (cache?)
@@ -109,36 +110,53 @@ class IPlayerFrame(wx.Frame):
         self.SetSize((800,600))    # Default size
 
 class IPlayerPanel(wx.Panel):
+    TAB_PROGRAMME = 0
+    TAB_DOWNLOAD = 1
+    TAB_LOG = 2
+
     def __init__(self, *args, **kwargs):
         wx.Panel.__init__(self, *args, **kwargs) 
 
-        nb = wx.Notebook(self, style=wx.NB_TOP) 
+        self.nb = wx.Notebook(self, style=wx.NB_TOP) 
 
-        self.log = LogTab(nb)
+        self.log = LogTab(self.nb)
         iplayer = IPlayer(self.log)
 
-        self.programme_tab = ProgrammeTab(nb, 
+        self.programme_tab = ProgrammeTab(self.nb, 
                                 iplayer, 
                                 download_callback=self._download_episode,
                                 log=self.log)
-        self.download_tab = DownloadTab(nb, 
+        self.download_tab = DownloadTab(self.nb, 
                                 iplayer, 
-                                refresh_callback=self._refresh_programme_tab,
+                                refresh_callback=self._download_complete,
                                 log=self.log)
 
-        nb.AddPage(self.programme_tab, "Programmes")
-        nb.AddPage(self.download_tab, "Downloads")
-        nb.AddPage(self.log, "Log")
+        self.nb.InsertPage(self.TAB_PROGRAMME, self.programme_tab, "Programmes")
+        self.nb.InsertPage(self.TAB_DOWNLOAD, self.download_tab, "Downloads")
+        self.nb.InsertPage(self.TAB_LOG, self.log, "Log")
 
         topbox = wx.BoxSizer(wx.VERTICAL)
-        topbox.Add(nb, proportion=1, flag=wx.EXPAND)
+        topbox.Add(self.nb, proportion=1, flag=wx.EXPAND)
         self.SetSizerAndFit(topbox)
 
     def _download_episode(self, episode):
         self.download_tab.add(episode)
+        self._update_download_count()
 
-    def _refresh_programme_tab(self):
+    def _download_complete(self):
         self.programme_tab.refresh()
+        self._update_download_count()
+
+    def _update_download_count(self):
+        """ Update the count in the download tab title """
+        count = self.download_tab.list.queue_size
+        if count == 0:
+            text = "Downloads"
+        else:
+            text = "Downloads (%d)" % count
+
+        self.nb.SetPageText(self.TAB_DOWNLOAD, text)
+
         
 class ProgrammeTab(wx.Panel):
     def __init__(self, parent, iplayer, download_callback, log):
@@ -392,6 +410,7 @@ class DownloadList(wx.ListCtrl, listmix.ListCtrlAutoWidthMixin):
         self.refresh_callback = refresh_callback
         self.current_item = None
         self.episodes = {}
+        self.queue_size = 0
         wx.ListCtrl.__init__(self, parent, 
                              style=wx.LC_REPORT | 
                                    wx.LC_SINGLE_SEL |
@@ -441,7 +460,8 @@ class DownloadList(wx.ListCtrl, listmix.ListCtrlAutoWidthMixin):
 
     def add(self, episode):
         self.log.write("Adding episode %s to the download queue." % episode.Pid)
-        item = self.InsertStringItem(sys.maxint, episode.Episode)
+        label = "%s: %s" % (episode.Name, episode.Episode)
+        item = self.InsertStringItem(sys.maxint, label)
 
         # Take a copy, so we can handle multiple instances of the same episode
         self.episodes[item] = copy.copy(episode)
@@ -452,6 +472,7 @@ class DownloadList(wx.ListCtrl, listmix.ListCtrlAutoWidthMixin):
         episode.error_message = ""
         self.SetStringItem(item, self.COL_STATUS, "Queued")
         self.episodes[item] = episode
+        self.queue_size += 1
 
         if self.current_item is None:
             self.download_next()
@@ -549,8 +570,10 @@ class DownloadList(wx.ListCtrl, listmix.ListCtrlAutoWidthMixin):
                                episode.error_message)
         else:
             self.iplayer.mark_as_downloaded(episode)
-            self.refresh_callback()
             
+        self.queue_size -= 1
+        self.refresh_callback()
+
         episode.queued = False
         self.current_item = None
         self.download_next()
