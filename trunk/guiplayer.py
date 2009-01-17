@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 # Todo:
-#  * Change download "episode" column to title (programme+episode)
 #  * Download manager
 #  * Allow deleted programmes to be reshown / undeleted
 #  * Thumbnails (cache?)
@@ -181,15 +180,14 @@ class ProgrammeTab(wx.Panel):
         vbox.Add(self.episode_title)
 
         self.episode_list = EpisodeList(self, self.iplayer, self._refresh_programme_list)
-        self.episode_list.Bind(wx.EVT_LIST_ITEM_SELECTED, 
-                               self._episode_change,
-                               self.episode_list)
+        self.episode_list.Bind(wx.EVT_LISTBOX, 
+                               self._episode_change)
         vbox.Add(self.episode_list, proportion=1, flag=wx.EXPAND)
 
         self.episode_panel = EpisodePanel(self, self.iplayer, 
                              refresh_callback=self._refresh_episode_list,
                              download_callback=download_callback)
-        vbox.Add(self.episode_panel, proportion=1, flag=wx.EXPAND)
+        vbox.Add(self.episode_panel, flag=wx.EXPAND)
 
         hbox.Add(vbox, proportion=1, flag=wx.EXPAND | wx.ALL, border=5)
         self.SetSizerAndFit(hbox)
@@ -200,10 +198,15 @@ class ProgrammeTab(wx.Panel):
         programme_name = event.GetText()
         if programme_name != "":
             self.episode_title.SetLabel(programme_name)
-            self.episode_list.populate(self.iplayer.programmes[programme_name])
+            programme = self.iplayer.programmes[programme_name]
+
+            self.episode_list.populate(programme)
+            index = self.episode_list.GetSelection()
+            if index >= 0:
+                self.episode_panel.populate(programme[index])
                 
     def _episode_change(self, event):
-        index = event.GetIndex()
+        index = event.GetSelection()
         if index != wx.NOT_FOUND:
             episode = self.episode_list.programme[index]
             self.episode_panel.populate(episode)
@@ -294,42 +297,49 @@ class ProgrammeList(wx.Panel):
                                    wx.LIST_STATE_SELECTED)
 
 
-class EpisodeList(wx.ListCtrl):
-    DOWNLOADED_ITEM_COLOUR = wx.LIGHT_GREY
-
+class EpisodeList(wx.HtmlListBox):
     def __init__(self, parent, iplayer, refresh_callback):
         self.iplayer = iplayer
         self.refresh_callback = refresh_callback
         self.programme = []
-        wx.ListCtrl.__init__(self, parent, 
-                             style=wx.LC_REPORT | 
-                                   wx.LC_SINGLE_SEL |
-                                   wx.LC_NO_HEADER |
-                                   wx.BORDER_SUNKEN)
-        self.InsertColumn(0, "")
+        wx.HtmlListBox.__init__(self, parent, style=wx.BORDER_SUNKEN)
 
-    def populate(self, programme):
+    def populate(self, programme): 
+        print "populate"
         self.programme = programme
+        self.SetItemCount(len(programme))
+        self.Refresh()
 
-        self.DeleteAllItems()
-        self.SetColumnWidth(0, self.GetSize().width)
+        # Automatically select the first un-downloaded episode
+        for (index, episode) in enumerate(programme):
+            if episode.Pid not in self.iplayer.downloaded_episodes:
+                self.SetSelection(index)
+                return
+        self.SetSelection(-1)
 
-        for episode in programme:
-            item = self.InsertStringItem(sys.maxint, episode.Episode)
+    def OnGetItem(self, index):
+        episode = self.programme[index]
 
-            if episode.Pid in self.iplayer.downloaded_episodes:
-                self.SetItemTextColour(item, self.DOWNLOADED_ITEM_COLOUR)
-
-        if len(programme) > 0:
-            # Select the first item
-            self.SetItemState(0, wx.LIST_STATE_SELECTED, wx.LIST_STATE_SELECTED)
+        if episode.Pid in self.iplayer.downloaded_episodes:
+            html = ("<font color=grey>%s</font><br>" % episode.Episode +
+                    "<table><td></td><td>" + # Indent
+                    "<font color=grey size=-1>%s</font>" % episode.Desc +
+                    "</td></table>")
+        
+        else:
+            html = ("<strong>%s</strong><br>" % episode.Episode +
+                    "<table><td></td><td>" + # Indent
+                    "<font size=-1>%s</font>" % episode.Desc +
+                    "</td></table>")
+        
+        return html
 
     def refresh(self):
-        next_item = self.GetNextItem(-1, state=wx.LIST_STATE_SELECTED) + 1
+#        next_item = self.GetNextItem(-1, state=wx.LIST_STATE_SELECTED) + 1
         self.refresh_callback()
-        self.populate(self.programme)
-        if next_item != -1 and next_item < self.GetItemCount():
-            self.SetItemState(next_item, wx.LIST_STATE_SELECTED, wx.LIST_STATE_SELECTED)
+#        self.populate(self.programme)
+#        if next_item != -1 and next_item < self.GetItemCount():
+#            self.SetItemState(next_item, wx.LIST_STATE_SELECTED, wx.LIST_STATE_SELECTED)
 
 class EpisodePanel(wx.Panel):
     def __init__(self, parent, iplayer, refresh_callback, download_callback):
@@ -340,16 +350,16 @@ class EpisodePanel(wx.Panel):
         wx.Panel.__init__(self, parent)
         
         vbox = wx.BoxSizer(wx.VERTICAL)
-        hbox = wx.BoxSizer(wx.HORIZONTAL)
+#        hbox = wx.BoxSizer(wx.HORIZONTAL)
 
 #        self.thumbnail = wx.StaticBitmap(self)
 #        hbox.Add(self.thumbnail)
         
-        self.description = wx.TextCtrl(self, style=wx.TE_READONLY | 
-                                                   wx.TE_MULTILINE)
-        hbox.Add(self.description, proportion=2, flag=wx.EXPAND)
+#        self.description = wx.TextCtrl(self, style=wx.TE_READONLY | 
+#                                                   wx.TE_MULTILINE)
+#        hbox.Add(self.description, proportion=2, flag=wx.EXPAND)
 
-        vbox.Add(hbox, proportion=2, flag=wx.EXPAND | wx.TOP, border=20)
+#        vbox.Add(hbox, proportion=2, flag=wx.EXPAND | wx.TOP, border=20)
         
         hbox = wx.BoxSizer(wx.HORIZONTAL)
         but = wx.Button(self, label="Download")
@@ -361,7 +371,7 @@ class EpisodePanel(wx.Panel):
         hbox.Add(but, flag=wx.ALL, border=5)
 
         vbox.Add(hbox)
-        vbox.AddStretchSpacer(1)
+#        vbox.AddStretchSpacer(1)
 
         self.SetSizerAndFit(vbox)
 
