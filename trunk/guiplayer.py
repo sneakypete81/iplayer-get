@@ -206,9 +206,6 @@ class ProgrammeTab(wx.Panel):
             programme = self.iplayer.programmes[programme_name]
 
             self.episode_list.populate(programme)
-            index = self.episode_list.GetSelection()
-            if index >= 0:
-                self.episode_panel.populate(programme[index])
                 
     def refresh(self):
         self._refresh_episode_list()
@@ -295,9 +292,9 @@ class ProgrammeList(wx.Panel):
         if item == -1:
             return
 
-        programme_name = self.list.GetItemText(item)
-        self.log.write("Deleting programme %s..." % programme_name)
-        self.iplayer.ignored_programmes.add(programme_name)
+        name_root = self.list.GetItemText(item).split(": Series")[0]
+        self.log.write("Deleting programme %s..." % name_root)
+        self.iplayer.ignored_programmes.add(name_root)
         self.list.DeleteItem(item)
 
         # Select the next item automatically
@@ -332,13 +329,13 @@ class EpisodeList(wx.HtmlListBox):
 
         if episode.Pid in self.iplayer.downloaded_episodes:
             html = ("<font color=grey>%s</font><br>" % episode.Episode +
-                    "<table><td></td><td>" + # Indent
+                    "<table><td>&nbsp;</td><td>" + # Indent
                     "<font color=grey size=-1>%s</font>" % episode.Desc +
                     "</td></table>")
         
         else:
             html = ("<strong>%s</strong><br>" % episode.Episode +
-                    "<table><td></td><td>" + # Indent
+                    "<table><td>&nbsp;</td><td>" + # Indent
                     "<font size=-1>%s</font>" % episode.Desc +
                     "</td></table>")
         
