@@ -55,6 +55,9 @@ class IPlayer():
             self.log.write("Error reading options file: %s" % str(inst))
             pass
 
+#        self.ignored_programmes.remove("A History of Scotland")
+
+
     def __del__(self):
         file = open(self.OPTIONS_FILE, "w")
         pickle.dump(self.ignored_programmes, file)
@@ -226,7 +229,7 @@ class ProgrammeTab(wx.Panel):
         self.programme_list.refresh()
 
     def _refresh_episode_list(self):
-        self.episode_list.refresh()
+        self.episode_list.Refresh()
  
 class ProgrammeList(wx.Panel):
     DOWNLOADED_ITEM_COLOUR = wx.LIGHT_GREY
@@ -458,7 +461,7 @@ class DownloadList(wx.ListCtrl, listmix.ListCtrlAutoWidthMixin):
         self.SetStringItem(item, self.COL_STATUS, "Downloading")
         self.current_item = item
         self.log.write("Downloading episode %s..." % episode.Pid)
-        cmd = "get_iplayer --output %s --get %s" % (self.iplayer.download_dir, 
+        cmd = "get_iplayer --force-download --output %s --get %s" % (self.iplayer.download_dir, 
                                                     episode.Pid)
         self.process = wx.Process(self)
         self.process.Redirect();
@@ -501,15 +504,25 @@ class DownloadList(wx.ListCtrl, listmix.ListCtrlAutoWidthMixin):
             self.episodes[self.current_item].error = True
             self.episodes[self.current_item].error_message += error_message
         try:
-            (downloaded, line) = line.split(" / ")
-            (size, rate, line) = line.split("  ", 2)
-            (percent, line) = line.split("%, ")
-            (remaining_time, line) = line.split(" remaining")
+            (downloaded, line) = line.split("/")
+            line = line.strip()
+            (size, line) = line.split(" ", 1)
+            line = line.strip()
+            (rate, line) = line.split(" ", 1)
+            line = line.strip()
+            (percent, line) = line.split("%,")
+            line = line.strip()
+            (remaining_time, line) = line.split("remaining")
+            line = line.strip()
             
-            self.SetStringItem(self.current_item, self.COL_SIZE, "%s / %s" % (downloaded, size))
-            self.SetStringItem(self.current_item, self.COL_PROGRESS, "%s%%" % percent)
-            self.SetStringItem(self.current_item, self.COL_SPEED, rate)
-            self.SetStringItem(self.current_item, self.COL_REMAINING_TIME, remaining_time)
+            self.SetStringItem(self.current_item, self.COL_SIZE, 
+                               "%s / %s" % (downloaded.strip(), size.strip()))
+            self.SetStringItem(self.current_item, self.COL_PROGRESS, 
+                               "%s%%" % percent.strip())
+            self.SetStringItem(self.current_item, self.COL_SPEED, 
+                               rate.strip())
+            self.SetStringItem(self.current_item, self.COL_REMAINING_TIME, 
+                               remaining_time.strip())
 
         except ValueError, msg:
             # Couldn't understand the line - ignore
