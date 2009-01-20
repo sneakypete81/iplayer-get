@@ -36,14 +36,19 @@ class IPlayer():
 
     PROFILE_DIR = os.path.join(HOME_DIR, ".get_iplayer")
     TV_CACHE_FILE = os.path.join(PROFILE_DIR, "tv.cache")
+    ITV_CACHE_FILE = os.path.join(PROFILE_DIR, "itv.cache")
     OPTIONS_FILE = os.path.join(PROFILE_DIR, ".guiplayer")
 
     download_dir = "/home/pete/Movies"
 
     def __init__(self, log):
         self.log = log
+        self.programmes = {}
+        self.ignored_programmes = None
+        self.downloaded_episodes = None
         self._refresh_cache()
-        self._parse_cache()
+        self._parse_cache(self.TV_CACHE_FILE)
+        self._parse_cache(self.ITV_CACHE_FILE)
         self.ignored_programmes = set()
         self.downloaded_episodes = set()
         self.log.write("Reading options file...")
@@ -59,22 +64,25 @@ class IPlayer():
 
 
     def __del__(self):
-        file = open(self.OPTIONS_FILE, "w")
-        pickle.dump(self.ignored_programmes, file)
-        pickle.dump(self.downloaded_episodes, file)
+        if self.ignored_programmes != None and self.downloaded_episodes != None:
+            file = open(self.OPTIONS_FILE, "w")
+            pickle.dump(self.ignored_programmes, file)
+            pickle.dump(self.downloaded_episodes, file)
 
     def mark_as_downloaded(self, episode):
-        self.log.write("Marking episode %s as downloaded..." % episode.Pid)
-        self.downloaded_episodes.add(episode.Pid)
+        self.log.write("Marking episode %s as downloaded..." % episode.pid)
+        self.downloaded_episodes.add(episode.pid)
 
     def _refresh_cache(self):
         self.log.write("Refreshing cache...")
-        result = subprocess.check_call("get_iplayer --quiet", shell=True)
+        result = subprocess.check_call("get_iplayer " +
+                                       "--type=tv,itv " + # ITV and BBC
+                                       "--expiry 360 " +  # Refresh every hour
+                                       "--quiet", shell=True)
 
-    def _parse_cache(self):
-        self.log.write("Parsing cache...")
-        self.programmes = {}
-        f = open(self.TV_CACHE_FILE)
+    def _parse_cache(self, cache_file):
+        self.log.write("Parsing cache %s..." % cache_file)
+        f = open(cache_file)
         # Parse the headings
         first_line = f.readline().strip()
         if first_line[0] != "#":
@@ -95,13 +103,15 @@ class IPlayer():
             for i,heading in enumerate(headings):
                 episode.__dict__[heading] = split_line[i]
 
-            episode.Name = unicode(episode.Name, 'utf-8')
+            episode.name = unicode(episode.name, 'utf-8')
+            if episode.type == "itv":
+                episode.pid = "itv:"+episode.pid
 
             # Create a new programme if necessary
-            if episode.Name not in self.programmes:
-                self.programmes[episode.Name] = []
+            if episode.name not in self.programmes:
+                self.programmes[episode.name] = []
                 
-            self.programmes[episode.Name].append(episode)
+            self.programmes[episode.name].append(episode)
 
         self.log.write("Cache parsing complete.")
 
@@ -277,7 +287,7 @@ class ProgrammeList(wx.Panel):
 
             item = self.list.InsertStringItem(sys.maxint, name)
 
-            programme_pids = set([episode.Pid for episode in programme])
+            programme_pids = set([episode.pid for episode in programme])
             if programme_pids.issubset(self.iplayer.downloaded_episodes):
                 self.list.SetItemTextColour(item, 
                                             self.DOWNLOADED_ITEM_COLOUR)
@@ -322,7 +332,7 @@ class EpisodeList(wx.HtmlListBox):
 
         # Automatically select the first un-downloaded episode
         for (index, episode) in enumerate(programme):
-            if episode.Pid not in self.iplayer.downloaded_episodes:
+            if episode.pid not in self.iplayer.downloaded_episodes:
                 self.SetSelection(index)
                 return
         self.SetSelection(-1)
@@ -330,16 +340,16 @@ class EpisodeList(wx.HtmlListBox):
     def OnGetItem(self, index):
         episode = self.programme[index]
 
-        if episode.Pid in self.iplayer.downloaded_episodes:
-            html = ("<font color=grey>%s</font><br>" % episode.Episode +
+        if episode.pid in self.iplayer.downloaded_episodes:
+            html = ("<font color=grey>%s</font><br>" % episode.episode +
                     "<table><td>&nbsp;</td><td>" + # Indent
-                    "<font color=grey size=-1>%s</font>" % episode.Desc +
+                    "<font color=grey size=-1>%s</font>" % episode.desc +
                     "</td></table>")
         
         else:
-            html = ("<strong>%s</strong><br>" % episode.Episode +
+            html = ("<strong>%s</strong><br>" % episode.episode +
                     "<table><td>&nbsp;</td><td>" + # Indent
-                    "<font size=-1>%s</font>" % episode.Desc +
+                    "<font size=-1>%s</font>" % episode.desc +
                     "</td></table>")
         
         return html
@@ -429,8 +439,8 @@ class DownloadList(wx.ListCtrl, listmix.ListCtrlAutoWidthMixin):
         self.DeleteItem(0)
 
     def add(self, episode):
-        self.log.write("Adding episode %s to the download queue." % episode.Pid)
-        label = "%s: %s" % (episode.Name, episode.Episode)
+        self.log.write("Adding episode %s to the download queue." % episode.pid)
+        label = "%s: %s" % (episode.name, episode.episode)
         item = self.InsertStringItem(sys.maxint, label)
 
         # Take a copy, so we can handle multiple instances of the same episode
@@ -460,9 +470,9 @@ class DownloadList(wx.ListCtrl, listmix.ListCtrlAutoWidthMixin):
         episode = self.episodes[item]
         self.SetStringItem(item, self.COL_STATUS, "Downloading")
         self.current_item = item
-        self.log.write("Downloading episode %s..." % episode.Pid)
-        cmd = "get_iplayer --force-download --output %s --get %s" % (self.iplayer.download_dir, 
-                                                    episode.Pid)
+        self.log.write("Downloading episode %s..." % episode.pid)
+        cmd = "get_iplayer --force-download --output %s --pid %s" % \
+            (self.iplayer.download_dir, episode.pid)
         self.process = wx.Process(self)
         self.process.Redirect();
         result = wx.Execute(cmd, wx.EXEC_ASYNC, self.process)
