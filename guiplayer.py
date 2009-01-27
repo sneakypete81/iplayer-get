@@ -577,6 +577,9 @@ class LogTab(wx.Panel):
         self.text = wx.TextCtrl(self, style=wx.TE_MULTILINE | 
                                             wx.TE_READONLY |
                                             wx.BORDER_SUNKEN)
+        bg = self.text.GetBackgroundColour()
+        self.text.Enable(False)
+        self.text.SetBackgroundColour(bg)
         topbox.Add(self.text, 
                    proportion=1, 
                    border=5,
@@ -585,12 +588,13 @@ class LogTab(wx.Panel):
         self.SetSizerAndFit(topbox)
 
     def write(self, text):
-        self.text.AppendText("%s\n" % text)
+        self.text.WriteText("%s\n" % text)
+
 
     def error(self, text):
-        self.text.AppendText("***********\n")
-        self.text.AppendText("*** ERROR : %s\n" % text)
-        self.text.AppendText("***********\n")
+        self.text.WriteText("***********\n")
+        self.text.WriteText("*** ERROR : %s\n" % text)
+        self.text.WriteText("***********\n")
 
 def run():
     app = wx.App(redirect=False)
