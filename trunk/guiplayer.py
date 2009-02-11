@@ -132,7 +132,12 @@ class IPlayerPanel(wx.Panel):
         self.nb = wx.Notebook(self, style=wx.NB_TOP) 
 
         self.log = LogTab(self.nb)
+
+        progress = wx.ProgressDialog(parent=self, message="Downloading Programme List...",
+                                         title="BBC iPlayer Downloader")
+        progress.Update(0)
         iplayer = IPlayer(self.log)
+        progress.Destroy()
 
         self.programme_tab = ProgrammeTab(self.nb, 
                                 iplayer, 
@@ -209,7 +214,9 @@ class ProgrammeTab(wx.Panel):
 
         topbox.Add(vbox, proportion=1, flag=wx.EXPAND | wx.ALL, border=5)
         self.SetSizerAndFit(topbox)
+        self.populate()
 
+    def populate(self):
         self.programme_list.populate()
 
     def _programme_change(self, event):
