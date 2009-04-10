@@ -7,8 +7,7 @@
 #  * Configurable download location
 #  * Auto-install / update get_iplayer
 
-import async_subprocess
-import subprocess
+import async_subprocess as subprocess
 import time
 import tempfile
 import pickle
@@ -81,12 +80,11 @@ class IPlayer():
 
     def _refresh_cache(self, progress):
         self.log.write("Refreshing cache...")
-        proc = async_subprocess.Popen("get_iplayer " +
-                                      "--type=tv " + # BBC only
-                                      "--refresh " + # Refresh the cache
-                                      "--quiet", 
-                                      shell=True,
-                                      stdout=subprocess.PIPE)
+        proc = subprocess.Popen("get_iplayer " +
+                                "--type=tv " + # BBC only
+                                "--quiet", 
+                                shell=True,
+                                stdout=subprocess.PIPE)
         while proc.poll() == None:
             progress.Pulse()
             time.sleep(0.04)
@@ -460,13 +458,10 @@ class DownloadList(wx.ListCtrl, listmix.ListCtrlAutoWidthMixin):
         self.timer = wx.Timer(self)
         self.Bind(wx.EVT_TIMER, self._on_timer)
         self.process = None
-        self.Bind(wx.EVT_END_PROCESS, self._on_process_ended)
 
     def __del__(self):
         if self.process is not None:
-            self.process.Detach()
-            self.process.CloseOutput()
-            self.process = None
+            self.process.kill()
             self.timer.Stop()
 
     def size_columns(self):
@@ -517,31 +512,36 @@ class DownloadList(wx.ListCtrl, listmix.ListCtrlAutoWidthMixin):
         self.SetStringItem(item, self.COL_STATUS, "Downloading")
         self.current_item = item
         self.log.write("Downloading episode %s..." % episode.pid)
-        cmd = "get_iplayer --force-download --isodate --output %s --pid %s" % \
-            (self.iplayer.download_dir, episode.pid)
-        self.process = wx.Process(self)
-        self.process.Redirect();
-        result = wx.Execute(cmd, wx.EXEC_ASYNC, self.process)
-        if result <= 0:
+        cmd = ("get_iplayer " +
+               "--force-download " +
+               "--vmode=iphone " +
+               "--vmode=flashvhigh,flashhigh,iphone,flashnormal " +
+               "--file-prefix \"<name> <availabledate> <episode> <pid>\" " +
+               "--output %s " % self.iplayer.download_dir +
+               "--pid %s" % episode.pid)
+
+        try:
+            self.process = subprocess.Popen(cmd, shell=True, 
+                                            stdout=subprocess.PIPE,
+                                            stderr=subprocess.STDOUT)
+        except OSError, inst:
             episode.error = True
             episode.error_message = ("Could not execute get_iplayer " +
-                                     "(error code %d)" % result)
+                                     "(%s)" % str(inst))
             self.log.error(error_message)
             self._on_process_ended()
             return
-            
-        self.stream = self.process.GetInputStream()
+
         self.data = ""
         self.timer.Start(self.PROCESS_READ_INTERVAL)
         self.log.write("Started get_iplayer process.")
-
         
     def read(self):
-        if self.stream.CanRead():
-            data = self.stream.read()
+        data = self.process.recv()
+        if data is not None:
             data = self.data + data
 
-            # Split at \n's and \r's
+        # Split at \n's and \r's
             lines = data.split("\n")
             items = []
             for line in lines:
@@ -551,6 +551,18 @@ class DownloadList(wx.ListCtrl, listmix.ListCtrlAutoWidthMixin):
                 self._process_line(items.pop(0).strip())
             self.data = items[0]
 
+        exitcode = self.process.poll()
+        if exitcode is not None:
+            if data is None:
+                if exitcode != 0:
+                    episode.error = True
+                    episode.error_message = ("Error executing get_iplayer " +
+                                             "(Error code %d)" % exitcode)
+                    self.log.error(error_message)
+
+                self._on_process_ended()
+            else: # Recurse until there's no data left in the pipe
+                self.read()
 
     def _process_line(self, line):
         self.log.write("get-iplayer : %s" % line)
@@ -559,6 +571,11 @@ class DownloadList(wx.ListCtrl, listmix.ListCtrlAutoWidthMixin):
             self.log.error(error_message)
             self.episodes[self.current_item].error = True
             self.episodes[self.current_item].error_message += error_message
+        if not self._process_rtmpdump_line(line):
+            self._process_iphone_line(line)
+
+            
+    def _process_iphone_line(self, line):
         try:
             (downloaded, line) = line.split("/")
             line = line.strip()
@@ -569,7 +586,6 @@ class DownloadList(wx.ListCtrl, listmix.ListCtrlAutoWidthMixin):
             (percent, line) = line.split("%,")
             line = line.strip()
             (remaining_time, line) = line.split("remaining")
-            line = line.strip()
             
             self.SetStringItem(self.current_item, self.COL_SIZE, 
                                "%s / %s" % (downloaded.strip(), size.strip()))
@@ -579,19 +595,42 @@ class DownloadList(wx.ListCtrl, listmix.ListCtrlAutoWidthMixin):
                                rate.strip())
             self.SetStringItem(self.current_item, self.COL_REMAINING_TIME, 
                                remaining_time.strip())
+            return True
+        except ValueError, msg:
+            # Couldn't understand the line - ignore
+            return False
+            
+    def _process_rtmpdump_line(self, line):
+        try:
+            (downloaded, line) = line.split(" KB (")
+            line = line.strip()
+            (percent, line) = line.split("%)")
+
+            try:
+                kb = int(float(downloaded))
+                if kb < 1024:
+                    downloaded = "%d KB" % kb
+                else:
+                    downloaded = "%d MB" % (kb/1024)
+            except ValueError, inst:
+                downloaded = downloaded + " KB"
+            
+            self.SetStringItem(self.current_item, self.COL_SIZE, 
+                               "%s" % downloaded.strip())
+            self.SetStringItem(self.current_item, self.COL_PROGRESS, 
+                               "%s%%" % percent.strip())
+            return True
 
         except ValueError, msg:
             # Couldn't understand the line - ignore
-            pass
+            return False
             
     def _on_timer(self, event):
         self.read()
 
-    def _on_process_ended(self, event):
+    def _on_process_ended(self, event=None):
         episode = self.episodes[self.current_item]
         self.log.write("get-iplayer process ended")
-        self.read()
-        self.process.Destroy()
         self.process = None
         self.timer.Stop()
 
