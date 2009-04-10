@@ -1,10 +1,10 @@
 import os
 import subprocess
+from subprocess import *
 import errno
 import time
 import sys
 
-PIPE = subprocess.PIPE
 
 if subprocess.mswindows:
     from win32file import ReadFile, WriteFile
