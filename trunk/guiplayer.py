@@ -1,14 +1,15 @@
 #!/usr/bin/env python
 
 # Todo:
-#  * Download manager
 #  * Allow deleted programmes to be reshown / undeleted
 #  * Thumbnails (cache?)
 #  * Highlight featured programmes
 #  * Configurable download location
 #  * Auto-install / update get_iplayer
 
+import async_subprocess
 import subprocess
+import time
 import tempfile
 import pickle
 import copy
@@ -41,26 +42,26 @@ class IPlayer():
 
     download_dir = "/home/pete/Movies"
 
-    def __init__(self, log):
+    def __init__(self, log, progress):
         self.log = log
         self.programmes = {}
-        self.ignored_programmes = None
-        self.downloaded_episodes = None
-        self._refresh_cache()
+        self._refresh_cache(progress)
         self._parse_cache(self.TV_CACHE_FILE)
-        self._parse_cache(self.ITV_CACHE_FILE)
+#        self._parse_cache(self.ITV_CACHE_FILE)
         self.ignored_programmes = set()
         self.downloaded_episodes = set()
+        self.ignored_episodes = set()
         self.log.write("Reading options file...")
         try:
             file = open(self.OPTIONS_FILE, "r")
             self.ignored_programmes = pickle.load(file)
             self.downloaded_episodes = pickle.load(file)
+            self.ignored_episodes = pickle.load(file)
         except Exception, inst:
             self.log.write("Error reading options file: %s" % str(inst))
             pass
 
-#        self.ignored_programmes.remove("A History of Scotland")
+#        self.ignored_programmes.remove("My Family")
 
 
     def __del__(self):
@@ -68,17 +69,27 @@ class IPlayer():
             file = open(self.OPTIONS_FILE, "w")
             pickle.dump(self.ignored_programmes, file)
             pickle.dump(self.downloaded_episodes, file)
+            pickle.dump(self.ignored_episodes, file)
 
     def mark_as_downloaded(self, episode):
         self.log.write("Marking episode %s as downloaded..." % episode.pid)
         self.downloaded_episodes.add(episode.pid)
 
-    def _refresh_cache(self):
+    def mark_as_ignored(self, episode):
+        self.log.write("Marking episode %s as ignored..." % episode.pid)
+        self.ignored_episodes.add(episode.pid)
+
+    def _refresh_cache(self, progress):
         self.log.write("Refreshing cache...")
-        result = subprocess.check_call("get_iplayer " +
-                                       "--type=tv,itv " + # ITV and BBC
-                                       "--expiry 360 " +  # Refresh every hour
-                                       "--quiet", shell=True)
+        proc = async_subprocess.Popen("get_iplayer " +
+                                      "--type=tv " + # BBC only
+                                      "--refresh " + # Refresh the cache
+                                      "--quiet", 
+                                      shell=True,
+                                      stdout=subprocess.PIPE)
+        while proc.poll() == None:
+            progress.Pulse()
+            time.sleep(0.04)
 
     def _parse_cache(self, cache_file):
         self.log.write("Parsing cache %s..." % cache_file)
@@ -118,8 +129,24 @@ class IPlayer():
 class IPlayerFrame(wx.Frame):
     def __init__(self, *args, **kwargs):
         wx.Frame.__init__(self, *args, **kwargs)
-        IPlayerPanel(self)
+        self.panel = IPlayerPanel(self)
         self.SetSize((800,600))    # Default size
+        self.Bind(wx.EVT_CLOSE, self._on_close)
+
+    def _on_close(self, event):
+        if event.CanVeto() and self.panel.download_tab.list.queue_size > 0:
+            try:
+                dlg = wx.MessageDialog(self, "There are downloads in progress.\n" +
+                                       "Are you sure you want to exit?", 
+                                       "BBC iPlayer Downloader",
+                                       wx.YES_NO|wx.ICON_QUESTION)
+                if dlg.ShowModal() == wx.ID_NO:
+                    event.Veto()
+                    return
+            finally:
+                dlg.Destroy
+
+        self.Destroy()
 
 class IPlayerPanel(wx.Panel):
     TAB_PROGRAMME = 0
@@ -133,10 +160,10 @@ class IPlayerPanel(wx.Panel):
 
         self.log = LogTab(self.nb)
 
-        progress = wx.ProgressDialog(parent=self, message="Downloading Programme List...",
+        progress = wx.ProgressDialog(parent=self, message="Refreshing Programme List...",
                                          title="BBC iPlayer Downloader")
-        progress.Update(0)
-        iplayer = IPlayer(self.log)
+        progress.CentreOnScreen()
+        iplayer = IPlayer(self.log, progress)
         progress.Destroy()
 
         self.programme_tab = ProgrammeTab(self.nb, 
@@ -173,7 +200,6 @@ class IPlayerPanel(wx.Panel):
             text = "Downloads (%d)" % count
 
         self.nb.SetPageText(self.TAB_DOWNLOAD, text)
-
         
 class ProgrammeTab(wx.Panel):
     def __init__(self, parent, iplayer, download_callback, log):
@@ -206,8 +232,8 @@ class ProgrammeTab(wx.Panel):
         but.Bind(wx.EVT_BUTTON, self.download)
         hbox.Add(but)
 
-        but = wx.Button(self, label="Mark as Downloaded")
-        but.Bind(wx.EVT_BUTTON, self.mark_as_downloaded)
+        but = wx.Button(self, label="Ignore")
+        but.Bind(wx.EVT_BUTTON, self.mark_as_ignored)
         hbox.Add(but, flag=wx.LEFT, border=5)
 
         vbox.Add(hbox, flag=wx.TOP, border=5)
@@ -242,6 +268,12 @@ class ProgrammeTab(wx.Panel):
             self.iplayer.mark_as_downloaded(episode)
             self.refresh()
 
+    def mark_as_ignored(self, event):
+        episode = self.episode_list.get_selected_episode()
+        if episode is not None:
+            self.iplayer.mark_as_ignored(episode)
+            self.refresh()
+
     def _refresh_programme_list(self):
         self.programme_list.refresh()
 
@@ -249,7 +281,7 @@ class ProgrammeTab(wx.Panel):
         self.episode_list.Refresh()
  
 class ProgrammeList(wx.Panel):
-    DOWNLOADED_ITEM_COLOUR = wx.LIGHT_GREY
+    DOWNLOADED_OR_IGNORED_ITEM_COLOUR = wx.LIGHT_GREY
 
     def __init__(self, parent, iplayer, log):  
         self.iplayer = iplayer
@@ -270,8 +302,8 @@ class ProgrammeList(wx.Panel):
         but = wx.Button(self, label="Delete")
         but.Bind(wx.EVT_BUTTON, self.delete_selected)
         but_box.Add(but)
-        but = wx.Button(self, label="Show Deleted")
-        but_box.Add(but, flag=wx.LEFT, border=5)
+#        but = wx.ToggleButton(self, label="Show Deleted")
+#        but_box.Add(but, flag=wx.LEFT, border=5)
         vbox.Add(but_box, flag=wx.TOP, border=5)
 
         self.SetSizerAndFit(vbox)
@@ -284,7 +316,6 @@ class ProgrammeList(wx.Panel):
 
     def populate(self, ignore=True):
         self.list.DeleteAllItems()
-        self.list.SetColumnWidth(0, self.GetSize().width)
 
         for (name, programme) in sorted(self.iplayer.programmes.items()):
             # Don't compare episode-specific title text
@@ -295,9 +326,12 @@ class ProgrammeList(wx.Panel):
             item = self.list.InsertStringItem(sys.maxint, name)
 
             programme_pids = set([episode.pid for episode in programme])
-            if programme_pids.issubset(self.iplayer.downloaded_episodes):
+            ignored_or_downloaded = self.iplayer.downloaded_episodes.union \
+                                    (self.iplayer.ignored_episodes)
+            if programme_pids.issubset(ignored_or_downloaded):
                 self.list.SetItemTextColour(item, 
-                                            self.DOWNLOADED_ITEM_COLOUR)
+                                            self.DOWNLOADED_OR_IGNORED_ITEM_COLOUR)
+        self.list.SetColumnWidth(0, wx.LIST_AUTOSIZE)
 
     def refresh(self):
         item = self.list.GetNextItem(-1, state=wx.LIST_STATE_SELECTED)
@@ -337,9 +371,10 @@ class EpisodeList(wx.HtmlListBox):
         self.SetItemCount(len(programme))
         self.Refresh()
 
-        # Automatically select the first un-downloaded episode
+        # Automatically select the first un-downloaded/ignored episode
         for (index, episode) in enumerate(programme):
-            if episode.pid not in self.iplayer.downloaded_episodes:
+            if episode.pid not in self.iplayer.downloaded_episodes and \
+               episode.pid not in self.iplayer.ignored_episodes:
                 self.SetSelection(index)
                 return
         self.SetSelection(-1)
@@ -352,7 +387,11 @@ class EpisodeList(wx.HtmlListBox):
                     "<table><td>&nbsp;</td><td>" + # Indent
                     "<font color=grey size=-1>%s</font>" % episode.desc +
                     "</td></table>")
-        
+        elif episode.pid in self.iplayer.ignored_episodes:
+            html = ("<font color=red>%s</font><br>" % episode.episode +
+                    "<table><td>&nbsp;</td><td>" + # Indent
+                    "<font color=red size=-1>%s</font>" % episode.desc +
+                    "</td></table>")
         else:
             html = ("<strong>%s</strong><br>" % episode.episode +
                     "<table><td>&nbsp;</td><td>" + # Indent
@@ -478,7 +517,7 @@ class DownloadList(wx.ListCtrl, listmix.ListCtrlAutoWidthMixin):
         self.SetStringItem(item, self.COL_STATUS, "Downloading")
         self.current_item = item
         self.log.write("Downloading episode %s..." % episode.pid)
-        cmd = "get_iplayer --force-download --output %s --pid %s" % \
+        cmd = "get_iplayer --force-download --isodate --output %s --pid %s" % \
             (self.iplayer.download_dir, episode.pid)
         self.process = wx.Process(self)
         self.process.Redirect();
