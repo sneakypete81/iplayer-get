@@ -19,6 +19,8 @@ import cStringIO
 import wx
 import wx.lib.mixins.listctrl as listmix
 
+import iplayer_icon
+
 class Series():
     pass
 
@@ -129,6 +131,9 @@ class IPlayerFrame(wx.Frame):
         wx.Frame.__init__(self, *args, **kwargs)
         self.panel = IPlayerPanel(self)
         self.SetSize((800,600))    # Default size
+
+        self.SetIcon(iplayer_icon.getIplayerIcon())
+
         self.Bind(wx.EVT_CLOSE, self._on_close)
 
     def _on_close(self, event):
@@ -158,9 +163,12 @@ class IPlayerPanel(wx.Panel):
 
         self.log = LogTab(self.nb)
 
-        progress = wx.ProgressDialog(parent=self, message="Refreshing Programme List...",
-                                         title="BBC iPlayer Downloader")
+        progress = wx.ProgressDialog(parent=self, 
+                                     message="Refreshing Programme List...",
+                                     title="BBC iPlayer Downloader")
         progress.CentreOnScreen()
+        progress.SetIcon(iplayer_icon.getIplayerIcon())
+
         iplayer = IPlayer(self.log, progress)
         progress.Destroy()
 
