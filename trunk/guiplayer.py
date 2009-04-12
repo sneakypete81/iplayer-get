@@ -83,6 +83,7 @@ class IPlayer():
     def _refresh_cache(self, progress):
         self.log.write("Refreshing cache...")
         proc = subprocess.Popen("get_iplayer " +
+                                "--refresh " + # Force update of cache
                                 "--type=tv " + # BBC only
                                 "--quiet", 
                                 shell=True,
@@ -308,8 +309,9 @@ class ProgrammeList(wx.Panel):
         but = wx.Button(self, label="Delete")
         but.Bind(wx.EVT_BUTTON, self.delete_selected)
         but_box.Add(but)
-#        but = wx.ToggleButton(self, label="Show Deleted")
-#        but_box.Add(but, flag=wx.LEFT, border=5)
+        but = wx.Button(self, label="Show Deleted...")
+        but.Bind(wx.EVT_BUTTON, self.show_deleted)
+        but_box.Add(but, flag=wx.LEFT, border=5)
         vbox.Add(but_box, flag=wx.TOP, border=5)
 
         self.SetSizerAndFit(vbox)
@@ -325,7 +327,7 @@ class ProgrammeList(wx.Panel):
 
         for (name, programme) in sorted(self.iplayer.programmes.items()):
             # Don't compare episode-specific title text
-            name_root = name.split(": Series")[0]
+            name_root = self.name_root(name)
             if ignore and name_root in self.iplayer.ignored_programmes:
                 continue
 
@@ -352,7 +354,7 @@ class ProgrammeList(wx.Panel):
         if item == -1:
             return
 
-        name_root = self.list.GetItemText(item).split(": Series")[0]
+        name_root = self.name_root(self.list.GetItemText(item))
         self.log.write("Deleting programme %s..." % name_root)
         self.iplayer.ignored_programmes.add(name_root)
         self.list.DeleteItem(item)
@@ -364,6 +366,28 @@ class ProgrammeList(wx.Panel):
             self.list.SetItemState(item, 
                                    wx.LIST_STATE_SELECTED, 
                                    wx.LIST_STATE_SELECTED)
+
+    def name_root(self, name):
+        return name.split(": Series")[0]
+
+    def show_deleted(self, event=None):
+        current_deleted_names = [name for name in self.iplayer.programmes.keys()
+                                 if self.name_root(name) in self.iplayer.ignored_programmes]
+        current_deleted_names.sort()
+        dlg = wx.MultiChoiceDialog(self, 
+                                   "Select programmes to restore:",
+                                   "Deleted Programmes",
+                                   current_deleted_names)
+        dlg.SetSize((-1, self.GetSize().height))
+        if dlg.ShowModal() == wx.ID_OK:
+            for item in dlg.GetSelections():
+                name_root = self.name_root(current_deleted_names[item])
+                self.log.write("Restoring programme %s..." % name_root)
+                try:
+                    self.iplayer.ignored_programmes.remove(name_root)
+                except KeyError:
+                    self.log.write("Programme not found in deleted list.")
+            self.refresh()
 
 
 class EpisodeList(wx.HtmlListBox):
