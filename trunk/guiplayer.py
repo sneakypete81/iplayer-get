@@ -39,6 +39,7 @@ class IPlayer():
     PROFILE_DIR = os.path.join(HOME_DIR, ".get_iplayer")
     TV_CACHE_FILE = os.path.join(PROFILE_DIR, "tv.cache")
     ITV_CACHE_FILE = os.path.join(PROFILE_DIR, "itv.cache")
+    CH4_CACHE_FILE = os.path.join(PROFILE_DIR, "ch4.cache")
     OPTIONS_FILE = os.path.join(PROFILE_DIR, ".guiplayer")
 
     download_dir = "/home/pete/Movies"
@@ -46,9 +47,17 @@ class IPlayer():
     def __init__(self, log, progress):
         self.log = log
         self.programmes = {}
-        self._refresh_cache(progress)
+
+        progress.Pulse("Downloading BBC Programme List...")
+        self._refresh_cache("tv", progress)
         self._parse_cache(self.TV_CACHE_FILE)
-#        self._parse_cache(self.ITV_CACHE_FILE)
+        progress.Pulse("Downloading ITV Programme List...")
+        self._refresh_cache("itv", progress)
+        self._parse_cache(self.ITV_CACHE_FILE)
+        progress.Pulse("Downloading Channel 4 Programme List...")
+        self._refresh_cache("ch4", progress)
+        self._parse_cache(self.CH4_CACHE_FILE)
+
         self.ignored_programmes = set()
         self.downloaded_episodes = set()
         self.ignored_episodes = set()
@@ -61,9 +70,6 @@ class IPlayer():
         except Exception, inst:
             self.log.write("Error reading options file: %s" % str(inst))
             pass
-
-#        self.ignored_programmes.remove("My Family")
-
 
     def __del__(self):
         if self.ignored_programmes != None and self.downloaded_episodes != None:
@@ -80,11 +86,11 @@ class IPlayer():
         self.log.write("Marking episode %s as ignored..." % episode.pid)
         self.ignored_episodes.add(episode.pid)
 
-    def _refresh_cache(self, progress):
-        self.log.write("Refreshing cache...")
+    def _refresh_cache(self, type, progress):
+        self.log.write("Refreshing %s cache..." % type)
         proc = subprocess.Popen("get_iplayer " +
                                 "--refresh " + # Force update of cache
-                                "--type=tv " + # BBC only
+                                "--type=%s " % type +
                                 "--quiet", 
                                 shell=True,
                                 stdout=subprocess.PIPE)
@@ -118,6 +124,8 @@ class IPlayer():
             episode.name = unicode(episode.name, 'utf-8')
             if episode.type == "itv":
                 episode.pid = "itv:"+episode.pid
+            if episode.type == "ch4":
+                episode.pid = "ch4:"+episode.pid
 
             # Create a new programme if necessary
             if episode.name not in self.programmes:
@@ -165,7 +173,7 @@ class IPlayerPanel(wx.Panel):
         self.log = LogTab(self.nb)
 
         progress = wx.ProgressDialog(parent=self, 
-                                     message="Refreshing Programme List...",
+                                     message="Downloading BBC Programme List...",
                                      title="BBC iPlayer Downloader")
         progress.CentreOnScreen()
         progress.SetIcon(iplayer_icon.getIplayerIcon())
@@ -324,22 +332,33 @@ class ProgrammeList(wx.Panel):
 
     def populate(self, ignore=True):
         self.list.DeleteAllItems()
+        bbc_programmes = [p for p in self.iplayer.programmes.items() 
+                          if p[1][0].type == "tv"]
+        other_programmes = [p for p in self.iplayer.programmes.items() 
+                            if p[1][0].type != "tv"]
 
-        for (name, programme) in sorted(self.iplayer.programmes.items()):
-            # Don't compare episode-specific title text
-            name_root = self.name_root(name)
-            if ignore and name_root in self.iplayer.ignored_programmes:
-                continue
+        for (name, programme) in sorted(bbc_programmes):
+            self.add_programme(name, programme, ignore)
+        for (name, programme) in sorted(other_programmes):
+            self.add_programme(name, programme, ignore)
 
-            item = self.list.InsertStringItem(sys.maxint, name)
 
-            programme_pids = set([episode.pid for episode in programme])
-            ignored_or_downloaded = self.iplayer.downloaded_episodes.union \
-                                    (self.iplayer.ignored_episodes)
-            if programme_pids.issubset(ignored_or_downloaded):
-                self.list.SetItemTextColour(item, 
-                                            self.DOWNLOADED_OR_IGNORED_ITEM_COLOUR)
         self.list.SetColumnWidth(0, wx.LIST_AUTOSIZE)
+
+    def add_programme(self, name, programme, ignore):
+        # Don't compare episode-specific title text
+        name_root = self.name_root(name)
+        if ignore and name_root in self.iplayer.ignored_programmes:
+            return
+
+        item = self.list.InsertStringItem(sys.maxint, name)
+
+        programme_pids = set([episode.pid for episode in programme])
+        ignored_or_downloaded = self.iplayer.downloaded_episodes.union \
+                                (self.iplayer.ignored_episodes)
+        if programme_pids.issubset(ignored_or_downloaded):
+            self.list.SetItemTextColour(item, 
+                                        self.DOWNLOADED_OR_IGNORED_ITEM_COLOUR)
 
     def refresh(self):
         item = self.list.GetNextItem(-1, state=wx.LIST_STATE_SELECTED)
