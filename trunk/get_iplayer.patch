@@ -1,0 +1,27 @@
+--- get_iplayer.before_patch	2009-04-29 21:39:39.000000000 +0100
++++ get_iplayer	2009-04-29 22:01:59.000000000 +0100
+@@ -1360,6 +1360,13 @@
+ 			# If the download was successful then copy over this script and make executable after making a backup of this script
+ 			if ( $res->is_success ) {
+ 				if ( copy($script_file, $script_file.'.old') ) {
++
++                    logger "INFO: Applyng patch\n";
++                    copy($script_file.'.tmp', $script_file.'.before_patch');
++                    my $cmd = "patch $script_file.tmp $script_file.patch";
++                    my $return = system($cmd) >> 8;
++                    logger "INFO: Command exit code = $return\n" if $opt->{verbose};
++
+ 					move($script_file.'.tmp', $script_file);
+ 					chmod 0755, $script_file;
+ 					logger "INFO: Copied new version $latest_ver into place (previous version is now called '${script_file}.old')\n";
+@@ -2537,6 +2544,10 @@
+ 	# If we dont have longname defined just set it to name
+ 	$prog->{longname} = $prog->{name} if ! $prog->{longname};
+ 
++    # Create availabledate from available field
++    $prog->{availabledate} = $prog->{available};
++    $prog->{availabledate} =~ s/T.*$//;
++
+ 	# substitute fields and sanitize $prog->{fileprefix}
+ 	main::logger "DEBUG: Substituted '$prog->{fileprefix}' as " if $opt->{debug};
+ 	$prog->{fileprefix} = $prog->substitute( $prog->{fileprefix} );
