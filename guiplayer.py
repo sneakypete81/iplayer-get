@@ -40,6 +40,7 @@ class IPlayer():
     TV_CACHE_FILE = os.path.join(PROFILE_DIR, "tv.cache")
     ITV_CACHE_FILE = os.path.join(PROFILE_DIR, "itv.cache")
     CH4_CACHE_FILE = os.path.join(PROFILE_DIR, "ch4.cache")
+    FIVE_CACHE_FILE = os.path.join(PROFILE_DIR, "five.cache")
     OPTIONS_FILE = os.path.join(PROFILE_DIR, ".guiplayer")
 
     download_dir = "/home/pete/Movies"
@@ -57,6 +58,9 @@ class IPlayer():
         progress.Pulse("Downloading Channel 4 Programme List...")
         self._refresh_cache("ch4", progress)
         self._parse_cache(self.CH4_CACHE_FILE)
+        progress.Pulse("Downloading Five Programme List...")
+        self._refresh_cache("five", progress)
+        self._parse_cache(self.FIVE_CACHE_FILE)
 
         self.ignored_programmes = set()
         self.downloaded_episodes = set()
@@ -126,6 +130,8 @@ class IPlayer():
                 episode.pid = "itv:"+episode.pid
             if episode.type == "ch4":
                 episode.pid = "ch4:"+episode.pid
+            if episode.type == "five":
+                episode.pid = "five:"+episode.pid
 
             # Create a new programme if necessary
             if episode.name not in self.programmes:
