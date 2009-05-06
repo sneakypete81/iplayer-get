@@ -281,3 +281,7 @@
 2009-05-04 16:50:36 : R 78eabcf7 4 2.70 | 5 6 2 2 2 | 5 16 | 43 -1 | 3.8
 2009-05-04 16:50:43 : Saved database 62 71 219
 2009-05-04 16:50:43 : Program stopped
+2009-05-06 19:05:53 : Program started : Mnemosyne 1.2 posix linux2
+2009-05-06 19:05:54 : Loaded database 73 71 219
+2009-05-06 19:05:58 : Saved database 73 71 219
+2009-05-06 19:05:58 : Program stopped
