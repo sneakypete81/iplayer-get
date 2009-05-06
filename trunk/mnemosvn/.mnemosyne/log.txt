@@ -285,3 +285,8 @@
 2009-05-06 19:05:54 : Loaded database 73 71 219
 2009-05-06 19:05:58 : Saved database 73 71 219
 2009-05-06 19:05:58 : Program stopped
+2009-05-06 19:10:20 : Program started : Mnemosyne 1.2 posix linux2
+2009-05-06 19:10:21 : Loaded database 73 71 219
+2009-05-06 19:10:31 : R 2d9b76db 4 2.44 | 4 4 1 2 2 | 5 18 | 43 3 | 4.4
+2009-05-06 19:10:32 : Saved database 72 71 219
+2009-05-06 19:10:32 : Program stopped
