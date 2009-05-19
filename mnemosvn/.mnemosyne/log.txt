@@ -290,3 +290,45 @@
 2009-05-06 19:10:31 : R 2d9b76db 4 2.44 | 4 4 1 2 2 | 5 18 | 43 3 | 4.4
 2009-05-06 19:10:32 : Saved database 72 71 219
 2009-05-06 19:10:32 : Program stopped
+2009-05-19 20:47:32 : Program started : Mnemosyne 1.2 posix linux2
+2009-05-19 20:47:32 : Loaded database 86 71 219
+2009-05-19 20:48:56 : New item 488eab2e 0 0
+2009-05-19 20:48:56 : New item 488eab2e.inv 0 0
+2009-05-19 21:38:40 : New item 87d9c24f 0 0
+2009-05-19 21:38:40 : New item 87d9c24f.inv 0 0
+2009-05-19 21:39:38 : New item 0c26d3c6 0 0
+2009-05-19 21:39:38 : New item 0c26d3c6.inv 0 0
+2009-05-19 21:39:50 : New item 5a15b30e 0 0
+2009-05-19 21:39:50 : New item 5a15b30e.inv 0 0
+2009-05-19 21:40:37 : New item 8efbe8cf 0 0
+2009-05-19 21:40:37 : New item 8efbe8cf.inv 0 0
+2009-05-19 21:40:57 : New item 1fec0035 2 1
+2009-05-19 21:40:57 : New item 1fec0035.inv 2 1
+2009-05-19 21:41:05 : New item 86f84c04 2 1
+2009-05-19 21:41:05 : New item 86f84c04.inv 2 1
+2009-05-19 21:41:35 : New item 2881313d 0 0
+2009-05-19 21:41:35 : New item 2881313d.inv 0 0
+2009-05-19 21:41:49 : New item e03f9460 0 0
+2009-05-19 21:41:49 : New item e03f9460.inv 0 0
+2009-05-19 21:41:59 : New item 9f721c72 0 0
+2009-05-19 21:41:59 : New item 9f721c72.inv 0 0
+2009-05-19 21:42:14 : New item 6e33177e 0 0
+2009-05-19 21:42:14 : New item 6e33177e.inv 0 0
+2009-05-19 21:42:32 : New item efa33b87 0 0
+2009-05-19 21:42:32 : New item efa33b87.inv 0 0
+2009-05-19 21:42:41 : New item a98340be 0 0
+2009-05-19 21:42:41 : New item a98340be.inv 0 0
+2009-05-19 21:43:22 : New item 3f747de3 0 0
+2009-05-19 21:43:22 : New item 3f747de3.inv 0 0
+2009-05-19 21:43:33 : New item 83931d15 0 0
+2009-05-19 21:43:33 : New item 83931d15.inv 0 0
+2009-05-19 21:44:07 : New item 8301282c 0 0
+2009-05-19 21:44:07 : New item 8301282c.inv 0 0
+2009-05-19 21:44:44 : New item cb2a3dbd 0 0
+2009-05-19 21:44:44 : New item cb2a3dbd.inv 0 0
+2009-05-19 21:44:54 : New item a3a07072 0 0
+2009-05-19 21:44:54 : New item a3a07072.inv 0 0
+2009-05-19 21:45:15 : New item ffeb6af8 0 0
+2009-05-19 21:45:15 : New item ffeb6af8.inv 0 0
+2009-05-19 21:45:34 : Saved database 86 105 257
+2009-05-19 21:45:34 : Program stopped
