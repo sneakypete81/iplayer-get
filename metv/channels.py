@@ -1,0 +1,170 @@
+#!/usr/bin/env python
+
+import os
+import async_subprocess as subprocess
+import time
+import threading
+from wx.lib.pubsub import Publisher
+from wx import CallAfter
+
+import programme
+
+if 'HOME' in os.environ:
+    HOME_DIR = os.environ['HOME']
+elif 'USERPROFILE' in os.environ:
+    HOME_DIR = os.environ['USERPROFILE']
+else:
+    HOME_DIR = os.expanduser("~")
+    
+PROFILE_DIR = os.path.join(HOME_DIR, ".get_iplayer")
+
+class Channels(list):
+    TOPIC_REFRESH_PROGRESS = "refresh.progress"
+    TOPIC_REFRESH_COMPLETE = "refresh.complete"
+    TOPIC_REFRESH_ERROR    = "refresh.error"
+
+    def __init__(self):
+        list.__init__(self, [Channel("BBC TV", "tv"),
+                             Channel("ITV", "itv"),
+                             ])
+
+    def refresh_all(self):
+        for channel in self:
+            channel.refresh()
+
+class Channel():
+    PROCESS_READ_INTERVAL = 0.5 # suck on the pipe every half second
+
+    def __init__(self, title, code):
+        self.title = title
+        self.code = code
+        self.programmes = {}
+        self.subscribed_programmes = []
+        self.unsubscribed_programmes = []
+        self.is_refreshing = False
+        self.error_message = None
+
+        self._cache_filename = os.path.join(PROFILE_DIR, "%s.cache" % code)
+        
+        self._process = None
+        self._process_timer = threading.Timer(self.PROCESS_READ_INTERVAL,
+                                              self._on_process_timer)
+
+    def __del__(self):
+        print "deleting"
+        if self.is_refreshing:
+            self._process.kill()
+            self._process_timer.cancel()
+
+    def refresh(self):
+        """ Start get_iplayer process to refresh the cache """
+        self.error_message = None
+        self.is_refreshing = True
+        cmd = ("c:\programs\python2.5\python ./get_iplayer ")
+#        cmd = ("get_iplayer " 
+#               "--refresh " + # Force update of cache
+#               "--type=%s " % self.code +
+#               "--quiet")
+        try:
+            self._process = subprocess.Popen(cmd, shell=False, 
+                                             stdout=subprocess.PIPE,
+                                             stderr=subprocess.STDOUT)
+        except OSError, inst:
+            self._on_process_error("Could not start get_iplayer.")
+            return
+
+        self._process_data = ""
+        self._process_timer.start()
+        print "Started refresh process: %s" % self.title
+
+    def _on_process_timer(self, event=None):
+        """ Read data from stdout/err """
+        print "tick"
+        data = ""
+        chunk = self._process.recv()
+        while chunk is not None:
+            data = data + chunk
+            chunk = self._process.recv()
+
+        print "rx"
+        print data
+  
+       # See if we're finished
+        exitcode = self._process.poll()
+        if exitcode is None:
+            self._process_timer.start()
+        else:
+            if exitcode == 0:
+                self._on_process_ended()
+            else:
+                self._on_process_error("iplayer-get returned exit code %d" % exitcode)
+                   
+    def _on_process_ended(self):
+        """ iplayer_get process has finished """
+        print "Refresh process finished: %s" % self.title
+        # use CallAfter to switch back to the main GUI thread
+        CallAfter(Publisher().sendMessage, 
+                  topic=Channels.TOPIC_REFRESH_COMPLETE,
+                  data=self)
+        self.is_refreshing = False
+        self._process = None
+
+    def _on_process_error(self, message):
+        """ iplayer_get process returned an error """
+        # use CallAfter to switch back to the main GUI thread
+        CallAfter(Publisher().sendMessage, 
+                  topic=Channels.TOPIC_REFRESH_ERROR,
+                  data=self)
+        self.error_message = message
+        self.is_refreshing = False
+        self._process = None
+
+    def parse_cache(self):
+        try:
+            f = open(self._cache_filename)
+            # Parse the headings
+            first_line = f.readline().strip()
+            if first_line[0] != "#":
+    #             self.log.write("Invalid cache file format.")
+    #             self.log.write("First line was: '%s'" % first_line)
+                raise ValueError("Invalid cache file format.")
+
+            headings = first_line[1:].split("|")       
+    #         self.log.write("Cache headings: %s" % str(headings))
+
+            lines = f.readlines()
+    #         self.log.write("Parsing %d lines from cache..." % len(lines))
+
+            for line in lines:
+                # Create an episode object
+                episode = programme.Episode()
+                split_line = line.split("|")
+                for i,heading in enumerate(headings):
+                    episode.__dict__[heading] = split_line[i]
+
+                episode.name = unicode(episode.name, 'utf-8')
+                if episode.type == "itv":
+                    episode.pid = "itv:"+episode.pid
+                if episode.type == "ch4":
+                    episode.pid = "ch4:"+episode.pid
+                if episode.type == "five":
+                    episode.pid = "five:"+episode.pid
+
+                # Create a new programme if necessary
+                if episode.name not in self.programmes:
+                    self.programmes[episode.name] = programme.Programme(channel=self, 
+                                                                        name=episode.name)
+
+                self.programmes[episode.name].episodes.append(episode)
+
+    #         self.log.write("Cache parsing complete.")
+        except Exception, inst:
+            self._on_process_error(str(inst))
+
+    def unsubscribe(self, programme):
+        if programme.name in programmes:
+            del programmes[programme.name]
+
+            self.unsubscribed_programmes.append(programme.name)
+            if programme.name in self.subscribed_programmes:
+                self.subscribed_programmes.remove(programme.name)
