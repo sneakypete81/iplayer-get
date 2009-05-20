@@ -3,8 +3,23 @@
 import pysvn
 import sys
 import subprocess
+import getpass
 
 MNEMOSYNE_SVN_DIR = ".mnemosyne"
+
+def _get_login( realm, username, may_save ):
+    new_username = raw_input("Username [%s] >" % username)
+    if new_username == "":
+        new_username = username
+    
+    password = getpass.getpass("Password >")
+    
+    return True, new_username, password, True
+
+def _ssl_server_trust_prompt(trust_dict):
+      """ ssl_server_trust_prompt will be called when we need ssl ok
+      """
+      return True, 0, False
 
 def is_clean(client):
     """ Ensure that mnemosyne svn directory is completely clean """
@@ -26,6 +41,8 @@ def remove_missing(client):
 
 def run():
     client = pysvn.Client()
+    client.callback_get_login = _get_login
+    client.callback_ssl_server_trust_prompt = _ssl_server_trust_prompt
     
     if not is_clean(client):
         raise Exception("Mnemosyne SVN directory not clean.")
@@ -36,7 +53,10 @@ def run():
     print "Done"
 
     print "Launching mnemosyne..."
-    subprocess.call("mnemosyne", shell=True)
+    if sys.platform == "win32":
+        subprocess.call("c:\progra~1\mnemosyne\mnemosyne.exe", shell=True)
+    else:
+        subprocess.call("mnemosyne", shell=True)
 
     add_unversioned(client)
     remove_missing(client)
