@@ -332,3 +332,8 @@
 2009-05-19 21:45:15 : New item ffeb6af8.inv 0 0
 2009-05-19 21:45:34 : Saved database 86 105 257
 2009-05-19 21:45:34 : Program stopped
+2009-05-20 18:42:41 : Program started : Mnemosyne 1.2.1 nt win32
+2009-05-20 18:42:41 : Loaded database 90 105 257
+2009-05-20 18:42:45 : R 1fec0035 5 2.65 | 1 1 0 1 1 | 1 1 | 6 -1 | 1.5
+2009-05-20 18:42:46 : Saved database 89 105 257
+2009-05-20 18:42:46 : Program stopped
