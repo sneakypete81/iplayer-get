@@ -8,6 +8,7 @@ from wx.lib.pubsub import Publisher
 from wx import CallAfter
 
 import programme
+import settings
 
 if 'HOME' in os.environ:
     HOME_DIR = os.environ['HOME']
@@ -24,17 +25,20 @@ class Channels(list):
     TOPIC_REFRESH_ERROR    = "refresh.error"
 
     def __init__(self):
-        list.__init__(self, [Channel("BBC TV", "tv"),
-                             Channel("ITV", "itv"),
-                             Channel("Channel 4", "ch4"),
-                             Channel("Five", "five"),
-                             Channel("BBC Podcasts", "podcast"),
-                             Channel("BBC Radio", "radio"),
-#                             Channel("Hulu", "hulu"),
+        self.settings = settings.Settings()
+        list.__init__(self, [Channel("BBC TV", "tv", self.settings),
+                             Channel("ITV", "itv", self.settings),
+                             Channel("Channel 4", "ch4", self.settings),
+                             Channel("Five", "five", self.settings),
+                             Channel("BBC Podcasts", "podcast", self.settings),
+                             Channel("BBC Radio", "radio", self.settings),
+#                             Channel("Hulu", "hulu", self.settings),
                              ])
 
     def __del__(self):
-        """ Make sure all refresh subprocesses get stopped """
+        """ Make sure all refresh subprocesses get stopped,
+            and all settings are saved."""
+        self.settings.write()
         for channel in self:
             channel.cancel_refresh()
 
@@ -45,16 +49,16 @@ class Channels(list):
 class Channel():
     PROCESS_READ_INTERVAL = 0.5 # suck on the pipe every half second
 
-    def __init__(self, title, code):
+    def __init__(self, title, code, settings):
         self.title = title
         self.code = code
         self.programmes = {}
-        self.subscribed_programmes = []
-        self.unsubscribed_programmes = []
         self.is_refreshing = False
         self.error_message = None
 
         self._cache_filename = os.path.join(PROFILE_DIR, "%s.cache" % code)
+
+        self.settings = settings.get_channel_settings(title)
         
         self._process = None
         self._process_timer = None
@@ -63,6 +67,13 @@ class Channel():
         """ Start get_iplayer process to refresh the cache """
         self.error_message = None
         self.is_refreshing = True
+
+        
+        # Temp to disable cache refresh
+        self._on_process_ended()
+        return
+
+
         cmd = ("get_iplayer " 
                "--refresh " + # Force update of cache
                "--nopurge " +  # Prevent old episode deletion prompt
@@ -162,10 +173,18 @@ class Channel():
                 if episode.type == "five":
                     episode.pid = "five:"+episode.pid
 
+                # Ignore if programme is unsubscribed
+                if episode.name in self.settings.unsubscribed_programmes:
+                    continue
+                if (self.settings.require_subscription and 
+                    episode.name not in self.settings.subscribed_programmes):
+                    continue
+
                 # Create a new programme if necessary
                 if episode.name not in self.programmes:
-                    self.programmes[episode.name] = programme.Programme(channel=self, 
-                                                                        name=episode.name)
+                    self.programmes[episode.name] = \
+                        programme.Programme(channel=self, 
+                                            name=episode.name)
 
                 self.programmes[episode.name].episodes.append(episode)
 
@@ -177,6 +196,6 @@ class Channel():
         if programme.name in self.programmes:
             del self.programmes[programme.name]
 
-            self.unsubscribed_programmes.append(programme.name)
-            if programme.name in self.subscribed_programmes:
-                self.subscribed_programmes.remove(programme.name)
+            self.settings.unsubscribed_programmes.append(programme.name)
+            if programme.name in self.settings.subscribed_programmes:
+                self.settings.subscribed_programmes.remove(programme.name)
