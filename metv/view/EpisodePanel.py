@@ -50,6 +50,9 @@ class EpisodePanel(wx.Panel):
             self.episode_list.Append(self._generate_html(episode),
                                      clientData=episode)
 
+        # Select the first episode
+        self.episode_list.SetSelection(0)
+
     def _generate_html(self, episode):
 #         if episode.pid in self.iplayer.downloaded_episodes:
 #             html = ("<font color=grey>%s</font><br>" % episode.episode +
@@ -75,7 +78,7 @@ class EpisodePanel(wx.Panel):
         if index == wx.NOT_FOUND:
             return None
         else:
-            return self.episode_list.GetClientObject(index)
+            return self.episode_list.GetClientData(index)
         
 # end of class EpisodePanel
 

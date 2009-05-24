@@ -161,6 +161,8 @@ class Channel():
             for line in lines:
                 # Create an episode object
                 episode = programme.Episode()
+                episode.channel_obj = self
+
                 split_line = line.split("|")
                 for i,heading in enumerate(headings):
                     episode.__dict__[heading] = split_line[i]
@@ -183,7 +185,7 @@ class Channel():
                 # Create a new programme if necessary
                 if episode.name not in self.programmes:
                     self.programmes[episode.name] = \
-                        programme.Programme(channel=self, 
+                        programme.Programme(channel_obj=self, 
                                             name=episode.name)
 
                 self.programmes[episode.name].episodes.append(episode)
@@ -196,6 +198,15 @@ class Channel():
         if programme.name in self.programmes:
             del self.programmes[programme.name]
 
-            self.settings.unsubscribed_programmes.append(programme.name)
+            if programme.name not in self.settings.unsubscribed_programmes:
+                self.settings.unsubscribed_programmes.append(programme.name)
             if programme.name in self.settings.subscribed_programmes:
                 self.settings.subscribed_programmes.remove(programme.name)
+
+    def download(self, episode):
+        print "download %s" % episode.episode
+        pass
+
+    def ignore(self, episode):
+        print "ignore %s %s" % (episode.episode, episode.pid)
+        pass

@@ -41,15 +41,15 @@ class Presenter(object):
     def unsubscribe(self, programme):
         """ Call to unsubscribe from the specified programme """
         if programme is not None:
-            programme.channel.unsubscribe(programme)
+            programme.channel_obj.unsubscribe(programme)
             self.view.delete_programme(programme)
 
     def download(self, episode):
         """ Call to add an episode to the download queue """
         if episode is not None:
-            print "download"
+            episode.channel_obj.download(episode)
 
     def ignore(self, episode):
         """ Call to add an episode to the list of ignored episodes """
         if episode is not None:
-            print "ignore"
+            episode.channel_obj.ignore(episode)
