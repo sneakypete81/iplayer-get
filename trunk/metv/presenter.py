@@ -22,7 +22,7 @@ class Presenter(object):
         for channel in channels:
             view.add_channel(channel)
         view.start()
-        
+
     def _msg_refresh_complete(self, message):
         """ Called when a channel refresh is completed """
         channel = message.data

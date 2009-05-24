@@ -33,6 +33,11 @@ class Channels(list):
 #                             Channel("Hulu", "hulu"),
                              ])
 
+    def __del__(self):
+        """ Make sure all refresh subprocesses get stopped """
+        for channel in self:
+            channel.cancel_refresh()
+
     def refresh_all(self):
         for channel in self:
             channel.refresh()
@@ -54,12 +59,6 @@ class Channel():
         self._process = None
         self._process_timer = None
 
-    def __del__(self):
-        print "deleting"
-        if self.is_refreshing:
-            self._process.kill()
-            self._process_timer.cancel()
-
     def refresh(self):
         """ Start get_iplayer process to refresh the cache """
         self.error_message = None
@@ -80,6 +79,10 @@ class Channel():
         self._start_process_timer()
         print "Started refresh process: %s" % self.title
 
+    def cancel_refresh(self):
+        if self.is_refreshing:
+            self._process.kill()
+            self._process_timer.cancel()
 
     def _start_process_timer(self):
         if self._process_timer is not None:

@@ -13,15 +13,23 @@ class Interactor(object):
         view.channel_panel.tree.Bind(wx.EVT_TREE_SEL_CHANGED, self._on_channel_change)
         view.channel_panel.tree.Bind(wx.EVT_CHAR, self._on_tree_key)
 
-        view.channel_panel.channel_toolbar.Bind(wx.EVT_TOOL, self._on_subscribe,
-                                                id=view.channel_panel.channel_toolbar.ID_SUBSCRIBE)
-        view.channel_panel.channel_toolbar.Bind(wx.EVT_TOOL, self._on_unsubscribe,
-                                                id=view.channel_panel.channel_toolbar.ID_UNSUBSCRIBE)
+        # Toolbar buttons:
+                  
+        view.channel_panel.channel_toolbar.Bind(wx.EVT_TOOL, 
+                                                self._on_subscribe,
+             id=view.channel_panel.channel_toolbar.ID_SUBSCRIBE)
 
-        view.episode_panel.episode_toolbar.Bind(wx.EVT_TOOL, self._on_download,
-                                                id=view.episode_panel.episode_toolbar.ID_DOWNLOAD)
-        view.episode_panel.episode_toolbar.Bind(wx.EVT_TOOL, self._on_ignore,
-                                                id=view.episode_panel.episode_toolbar.ID_IGNORE)
+        view.channel_panel.channel_toolbar.Bind(wx.EVT_TOOL, 
+                                                self._on_unsubscribe,
+             id=view.channel_panel.channel_toolbar.ID_UNSUBSCRIBE)
+
+        view.episode_panel.episode_toolbar.Bind(wx.EVT_TOOL, 
+                                                self._on_download,
+             id=view.episode_panel.episode_toolbar.ID_DOWNLOAD)
+
+        view.episode_panel.episode_toolbar.Bind(wx.EVT_TOOL, 
+                                                self._on_ignore,
+             id=view.episode_panel.episode_toolbar.ID_IGNORE)
 
     def _on_channel_change(self, event):
         programme = self.view.get_selected_programme()
