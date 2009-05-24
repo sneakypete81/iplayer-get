@@ -45,7 +45,6 @@ class Interactor(object):
         pass
 
     def _on_unsubscribe(self, event=None):
-        print "unsubscribe"
         programme = self.view.get_selected_programme()
         self.presenter.unsubscribe(programme)
 

@@ -69,9 +69,10 @@ class ChannelPanel(wx.Panel):
             programmes = channel.programmes.values()
             programmes.sort(key=operator.attrgetter('name'))
             for programme in programmes:
-                self.tree.AppendItem(parent=channel_item,
-                                     text=programme.name,
-                                     data=wx.TreeItemData(programme))
+                item = self.tree.AppendItem(parent=channel_item,
+                                            text=programme.name,
+                                            data=wx.TreeItemData(programme))
+                programme.view_item = item
 
     def get_selected_programme(self):
         item = self.tree.GetSelection()
@@ -84,6 +85,19 @@ class ChannelPanel(wx.Panel):
         else:
             return None
 
+    def delete_programme(self, programme):
+        # After deletion, go to the next item
+        next_item = self.tree.GetNextSibling(programme.view_item)
+        # Or the previous item
+        if not next_item.IsOk():
+            next_item = self.tree.GetPrevSibling(programme.view_item)
+        # Or the parent
+        if not next_item.IsOk():
+            next_item = self.tree.GetParent(programme.view_item)
+
+        self.tree.Delete(programme.view_item)
+
+        self.tree.SelectItem(next_item)
 # end of class ChannelPanel
 
 
