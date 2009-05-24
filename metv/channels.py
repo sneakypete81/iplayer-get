@@ -26,6 +26,11 @@ class Channels(list):
     def __init__(self):
         list.__init__(self, [Channel("BBC TV", "tv"),
                              Channel("ITV", "itv"),
+                             Channel("Channel 4", "ch4"),
+                             Channel("Five", "five"),
+                             Channel("BBC Podcasts", "podcast"),
+                             Channel("BBC Radio", "radio"),
+#                             Channel("Hulu", "hulu"),
                              ])
 
     def refresh_all(self):
@@ -47,8 +52,7 @@ class Channel():
         self._cache_filename = os.path.join(PROFILE_DIR, "%s.cache" % code)
         
         self._process = None
-        self._process_timer = threading.Timer(self.PROCESS_READ_INTERVAL,
-                                              self._on_process_timer)
+        self._process_timer = None
 
     def __del__(self):
         print "deleting"
@@ -60,39 +64,44 @@ class Channel():
         """ Start get_iplayer process to refresh the cache """
         self.error_message = None
         self.is_refreshing = True
-        cmd = ("c:\programs\python2.5\python ./get_iplayer ")
-#        cmd = ("get_iplayer " 
-#               "--refresh " + # Force update of cache
-#               "--type=%s " % self.code +
-#               "--quiet")
+        cmd = ("get_iplayer " 
+               "--refresh " + # Force update of cache
+               "--nopurge " +  # Prevent old episode deletion prompt
+               "--type=%s " % self.code)
         try:
-            self._process = subprocess.Popen(cmd, shell=False, 
+            self._process = subprocess.Popen(cmd, shell=True, 
                                              stdout=subprocess.PIPE,
                                              stderr=subprocess.STDOUT)
         except OSError, inst:
             self._on_process_error("Could not start get_iplayer.")
-            return
+            raise
 
         self._process_data = ""
-        self._process_timer.start()
+        self._start_process_timer()
         print "Started refresh process: %s" % self.title
+
+
+    def _start_process_timer(self):
+        if self._process_timer is not None:
+            self._process_timer.cancel()
+        self._process_timer = threading.Timer(self.PROCESS_READ_INTERVAL,
+                                              self._on_process_timer)
+        self._process_timer.start()
+
 
     def _on_process_timer(self, event=None):
         """ Read data from stdout/err """
-        print "tick"
+        self._process_timer = None
         data = ""
         chunk = self._process.recv()
-        while chunk is not None:
+        while chunk is not None and chunk != "":
             data = data + chunk
             chunk = self._process.recv()
-
-        print "rx"
-        print data
   
        # See if we're finished
         exitcode = self._process.poll()
         if exitcode is None:
-            self._process_timer.start()
+            self._start_process_timer()
         else:
             if exitcode == 0:
                 self._on_process_ended()
@@ -162,8 +171,8 @@ class Channel():
             self._on_process_error(str(inst))
 
     def unsubscribe(self, programme):
-        if programme.name in programmes:
-            del programmes[programme.name]
+        if programme.name in self.programmes:
+            del self.programmes[programme.name]
 
             self.unsubscribed_programmes.append(programme.name)
             if programme.name in self.subscribed_programmes:

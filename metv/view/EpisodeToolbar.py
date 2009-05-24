@@ -18,8 +18,8 @@ class EpisodeToolbar(wx.ToolBar):
         # begin wxGlade: EpisodeToolbar.__init__
         kwds["style"] = wx.TB_FLAT|wx.TB_TEXT
         wx.ToolBar.__init__(self, *args, **kwds)
-        self.AddLabelTool(self.ID_DOWNLOAD, "Download", wx.Bitmap("C:\\linuxshare\\projects\\iplayer-get\\metv\\view\\iplayer-temp.png", wx.BITMAP_TYPE_ANY), wx.NullBitmap, wx.ITEM_NORMAL, "Download the selected episode", "")
-        self.AddLabelTool(self.ID_IGNORE, "Ignore", wx.Bitmap("C:\\linuxshare\\projects\\iplayer-get\\metv\\view\\iplayer-temp.png", wx.BITMAP_TYPE_ANY), wx.NullBitmap, wx.ITEM_NORMAL, "Mark the selected episode as \"Ignored\"", "")
+        self.AddLabelTool(self.ID_DOWNLOAD, "Download", wx.Bitmap("iplayer-temp.png", wx.BITMAP_TYPE_ANY), wx.NullBitmap, wx.ITEM_NORMAL, "Download the selected episode", "")
+        self.AddLabelTool(self.ID_IGNORE, "Ignore", wx.Bitmap("iplayer-temp.png", wx.BITMAP_TYPE_ANY), wx.NullBitmap, wx.ITEM_NORMAL, "Mark the selected episode as \"Ignored\"", "")
 
         self.__set_properties()
         self.__do_layout()
