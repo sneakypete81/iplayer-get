@@ -60,6 +60,9 @@ class MeTvFrame(wx.Frame):
     def get_selected_programme(self):
         return self.channel_panel.get_selected_programme()
 
+    def delete_programme(self, programme):
+        self.channel_panel.delete_programme(programme)
+
     def update_episodes(self, programme):
         self.episode_panel.update(programme)
 
