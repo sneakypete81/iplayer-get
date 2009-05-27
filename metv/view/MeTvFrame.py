@@ -57,6 +57,9 @@ class MeTvFrame(wx.Frame):
     def update_channel(self, channel):
         self.channel_panel.update(channel)
 
+    def refresh_selected_programme(self):
+        self.channel_panel.refresh_selected_programme()
+
     def get_selected_programme(self):
         return self.channel_panel.get_selected_programme()
 

@@ -63,5 +63,5 @@ class Presenter(object):
         else:
             episode.channel_obj.ignore(episode)
             self.view.refresh_selected_episode()
+            self.view.refresh_selected_programme()
             self.view.select_next_episode()
-

@@ -8,8 +8,10 @@ from ChannelToolbar import ChannelToolbar
 # begin wxGlade: dependencies
 # end wxGlade
 
+NORMAL_TEXT_COLOUR = "BLACK"
 REFRESH_TEXT_COLOUR = "DIM GREY"
 ERROR_TEXT_COLOUR = "RED"
+DOWNLOADED_TEXT_COLOUR = "DIM GREY"
 
 class ChannelPanel(wx.Panel):
     def __init__(self, *args, **kwds):
@@ -73,6 +75,22 @@ class ChannelPanel(wx.Panel):
                                             text=programme.name,
                                             data=wx.TreeItemData(programme))
                 programme.view_item = item
+                self.update_programme_text_colour(programme)
+
+    def refresh_selected_programme(self):
+        self.update_programme_text_colour(self.get_selected_programme())
+
+    def update_programme_text_colour(self, programme):
+        """ Update the display colour of the specified programme """
+        if programme is not None:
+            for episode in programme.episodes:
+                if not episode.downloaded and not episode.ignored:
+                    self.tree.SetItemTextColour(programme.view_item,
+                                                wx.NamedColour(NORMAL_TEXT_COLOUR))
+                    return
+            # Programme contains only downloaded or ignored episodes
+            self.tree.SetItemTextColour(programme.view_item,
+                                        wx.NamedColour(DOWNLOADED_TEXT_COLOUR))
 
     def get_selected_programme(self):
         item = self.tree.GetSelection()
