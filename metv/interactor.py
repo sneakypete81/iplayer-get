@@ -13,6 +13,8 @@ class Interactor(object):
         view.channel_panel.tree.Bind(wx.EVT_TREE_SEL_CHANGED, self._on_channel_change)
         view.channel_panel.tree.Bind(wx.EVT_CHAR, self._on_tree_key)
 
+        view.episode_panel.episode_list.Bind(wx.EVT_LISTBOX, self._on_episode_change)
+
         # Toolbar buttons:
                   
         view.channel_panel.channel_toolbar.Bind(wx.EVT_TOOL, 
@@ -34,6 +36,10 @@ class Interactor(object):
     def _on_channel_change(self, event):
         programme = self.view.get_selected_programme()
         self.presenter.update_episodes(programme)
+
+    def _on_episode_change(self, event):
+        episode = self.view.get_selected_episode()
+        self.presenter.on_episode_select(episode)
 
     def _on_tree_key(self, event):
         if event.GetKeyCode() == wx.WXK_DELETE:

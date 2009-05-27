@@ -52,25 +52,26 @@ class EpisodePanel(wx.Panel):
 
         # Select the first episode
         self.episode_list.SetSelection(0)
+        self.update_episode_toolbar(self.episode_list.GetClientData(0))
 
     def _generate_html(self, episode):
-#         if episode.pid in self.iplayer.downloaded_episodes:
-#             html = ("<font color=grey>%s</font><br>" % episode.episode +
-#                     "<table><td>&nbsp;</td><td>" + # Indent
-#                     "<font color=grey size=-1>%s</font>" % episode.desc +
-#                     "</td></table>")
-#         elif episode.pid in self.iplayer.ignored_episodes:
-#             html = ("<font color=red>%s</font><br>" % episode.episode +
-#                     "<table><td>&nbsp;</td><td>" + # Indent
-#                     "<font color=red size=-1>%s</font>" % episode.desc +
-#                     "</td></table>")
-#         else:
+         if episode.downloaded:
+             html = ("<font color=grey>%s</font><br>" % episode.episode +
+                     "<table><td>&nbsp;</td><td>" + # Indent
+                     "<font color=grey size=-1>%s</font>" % episode.desc +
+                     "</td></table>")
+         elif episode.ignored:
+             html = ("<em><font color=red>%s</font><br>" % episode.episode +
+                     "<table><td>&nbsp;</td><td>" + # Indent
+                     "<font color=red size=-1>%s</font>" % episode.desc +
+                     "</td></table></em>")
+         else:
             html = ("<strong>%s</strong><br>" % episode.episode +
                     "<table><td>&nbsp;</td><td>" + # Indent
                     "<font size=-1>%s</font>" % episode.desc +
                     "</td></table>")
 
-            return html
+         return html
 
     def get_selected_episode(self):
         """ Returns the episode object for the current selection """
@@ -79,7 +80,39 @@ class EpisodePanel(wx.Panel):
             return None
         else:
             return self.episode_list.GetClientData(index)
-        
+
+    def refresh_selected_episode(self):
+        index = self.episode_list.GetSelection()
+        if index == wx.NOT_FOUND:
+            return
+
+        episode = self.episode_list.GetClientData(index)
+        self.episode_list.SetString(index, self._generate_html(episode))
+        self.update_episode_toolbar(episode)
+
+    def update_episode_toolbar(self, episode):
+        self.episode_toolbar.update(episode)
+
+    def select_next_episode(self):
+        """ 
+        Selects the next episode not marked as "ignored" or "downloaded"
+        """        
+        index = self.episode_list.GetSelection()
+        if index == wx.NOT_FOUND:
+            self.update_episode_toolbar(None)
+            return
+        start_index = index
+
+        while index < self.episode_list.GetCount():
+            episode = self.episode_list.GetClientData(index)
+            if not episode.downloaded and not episode.ignored:
+                self.episode_list.SetSelection(index)
+                self.update_episode_toolbar(self.episode_list.GetClientData(index))
+                return
+            index += 1
+
+        return 
+
 # end of class EpisodePanel
 
 
