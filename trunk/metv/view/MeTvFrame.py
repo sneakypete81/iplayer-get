@@ -69,6 +69,15 @@ class MeTvFrame(wx.Frame):
     def get_selected_episode(self):
         return self.episode_panel.get_selected_episode()
 
+    def refresh_selected_episode(self):
+        self.episode_panel.refresh_selected_episode()
+
+    def select_next_episode(self):
+        self.episode_panel.select_next_episode()
+
+    def update_episode_toolbar(self, episode):
+        self.episode_panel.update_episode_toolbar(episode)
+
 # end of class MeTvFrame
 
 

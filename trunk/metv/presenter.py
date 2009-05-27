@@ -37,6 +37,10 @@ class Presenter(object):
     def update_episodes(self, programme):
         """ Called when a programme is selected in the left panel """
         self.view.update_episodes(programme)
+        self.view.select_next_episode()
+
+    def on_episode_select(self, episode):
+        self.view.update_episode_toolbar(episode)
 
     def unsubscribe(self, programme):
         """ Call to unsubscribe from the specified programme """
@@ -48,8 +52,16 @@ class Presenter(object):
         """ Call to add an episode to the download queue """
         if episode is not None:
             episode.channel_obj.download(episode)
+            self.view.refresh_selected_episode()
+            self.view.select_next_episode()
 
     def ignore(self, episode):
         """ Call to add an episode to the list of ignored episodes """
-        if episode is not None:
+        if episode is None:
+            # Ensure the ignore toolbar button doesn't get set
+            self.view.update_episode_toolbar(None)
+        else:
             episode.channel_obj.ignore(episode)
+            self.view.refresh_selected_episode()
+            self.view.select_next_episode()
+
