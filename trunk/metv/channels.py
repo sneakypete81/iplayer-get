@@ -9,6 +9,7 @@ from wx import CallAfter
 
 import programme
 import settings
+import downloader
 
 if 'HOME' in os.environ:
     HOME_DIR = os.environ['HOME']
@@ -34,6 +35,7 @@ class Channels(list):
                              Channel("BBC Radio", "radio", self.settings),
 #                             Channel("Hulu", "hulu", self.settings),
                              ])
+        self.downloader = downloader.Downloader(self.settings)
 
     def __del__(self):
         """ Make sure all refresh subprocesses get stopped,
