@@ -18,50 +18,53 @@ class Presenter(object):
 
         channels.refresh_all()
 
-        view.delete_all_channels()
+        view.channel_tree.clear()
         for channel in channels:
-            view.add_channel(channel)
+            view.channel_tree.add(channel)
         view.start()
 
     def _msg_refresh_complete(self, message):
         """ Called when a channel refresh is completed """
         channel = message.data
         channel.parse_cache()
-        self.view.update_channel(channel)
+        self.view.channel_tree.update(channel)
 
     def _msg_refresh_error(self, message):
         """ Called when a channel refresh is completed """
         channel = message.data
-        self.view.update_channel(channel)
+        self.view.channel_tree.update(channel)
 
     def update_episodes(self, programme):
         """ Called when a programme is selected in the left panel """
-        self.view.update_episodes(programme)
-        self.view.select_next_episode()
+        self.view.episode_list.update(programme)
+        episode = self.view.episode_list.select_next_episode()
+        self.view.episode_toolbar.update(episode)
 
     def on_episode_select(self, episode):
-        self.view.update_episode_toolbar(episode)
+        self.view.episode_toolbar.update(episode)
 
     def unsubscribe(self, programme):
         """ Call to unsubscribe from the specified programme """
         if programme is not None:
             programme.channel_obj.unsubscribe(programme)
-            self.view.delete_programme(programme)
+            self.view.channel_tree.delete_programme(programme)
 
     def download(self, episode):
         """ Call to add an episode to the download queue """
         if episode is not None:
             episode.channel_obj.download(episode)
-            self.view.refresh_selected_episode()
-            self.view.select_next_episode()
+            self.view.episode_list.refresh_selected_episode()
+            episode = self.view.episode_list.select_next_episode()
+            self.view.episode_toolbar.update(episode)
 
     def ignore(self, episode):
         """ Call to add an episode to the list of ignored episodes """
         if episode is None:
             # Ensure the ignore toolbar button doesn't get set
-            self.view.update_episode_toolbar(None)
+            self.view.episode_toolbar.update(None)
         else:
             episode.channel_obj.ignore(episode)
-            self.view.refresh_selected_episode()
-            self.view.refresh_selected_programme()
-            self.view.select_next_episode()
+            self.view.episode_list.refresh_selected_episode()
+            self.view.channel_tree.refresh_selected_programme()
+            episode = self.view.episode_list.select_next_episode()
+            self.view.episode_toolbar.update(episode)
