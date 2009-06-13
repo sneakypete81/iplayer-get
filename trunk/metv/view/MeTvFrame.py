@@ -4,9 +4,11 @@
 import wx
 
 # begin wxGlade: dependencies
-from EpisodePanel import EpisodePanel
-from ChannelPanel import ChannelPanel
 # end wxGlade
+from ChannelToolbar import ChannelToolbar
+from EpisodeToolbar import EpisodeToolbar
+from ChannelTree import ChannelTree
+from EpisodeList import EpisodeList
 from DownloadList import DownloadList
 
 # begin wxGlade: extracode
@@ -24,9 +26,13 @@ class MeTvFrame(wx.Frame):
         self.notebook = wx.Notebook(self, -1, style=0)
         self.notebook_downloads = wx.Panel(self.notebook, -1)
         self.notebook_programmes = wx.Panel(self.notebook, -1)
-        self.channel_panel = ChannelPanel(self.notebook_programmes, -1)
+        self.episode_panel = wx.Panel(self.notebook_programmes, -1)
+        self.channel_panel = wx.Panel(self.notebook_programmes, -1)
+        self.channel_toolbar = ChannelToolbar(self.channel_panel, -1)
+        self.channel_tree = ChannelTree(self.channel_panel, -1, style=wx.TR_HAS_BUTTONS|wx.TR_NO_LINES|wx.TR_LINES_AT_ROOT|wx.TR_HIDE_ROOT|wx.TR_DEFAULT_STYLE|wx.STATIC_BORDER)
         self.static_line_1 = wx.StaticLine(self.notebook_programmes, -1, style=wx.LI_VERTICAL)
-        self.episode_panel = EpisodePanel(self.notebook_programmes, -1)
+        self.episode_toolbar = EpisodeToolbar(self.episode_panel, -1)
+        self.episode_list = EpisodeList(self.episode_panel, -1, choices=[])
         self.download_list = DownloadList(self.notebook_downloads, -1, style=wx.LC_REPORT|wx.SUNKEN_BORDER)
 
         self.__set_properties()
@@ -37,6 +43,7 @@ class MeTvFrame(wx.Frame):
         # begin wxGlade: MeTvFrame.__set_properties
         self.SetTitle("meTV")
         self.SetSize((600, 500))
+        self.episode_list.SetWindowStyle(wx.STATIC_BORDER)
         # end wxGlade
 
     def __do_layout(self):
@@ -44,8 +51,16 @@ class MeTvFrame(wx.Frame):
         sizer_1 = wx.BoxSizer(wx.HORIZONTAL)
         sizer_3 = wx.BoxSizer(wx.VERTICAL)
         sizer_1_copy = wx.BoxSizer(wx.HORIZONTAL)
+        sizer_4 = wx.BoxSizer(wx.VERTICAL)
+        sizer_2 = wx.BoxSizer(wx.VERTICAL)
+        sizer_2.Add(self.channel_toolbar, 0, wx.EXPAND, 2)
+        sizer_2.Add(self.channel_tree, 1, wx.LEFT|wx.RIGHT|wx.BOTTOM|wx.EXPAND, 2)
+        self.channel_panel.SetSizer(sizer_2)
         sizer_1_copy.Add(self.channel_panel, 3, wx.EXPAND, 0)
         sizer_1_copy.Add(self.static_line_1, 0, wx.EXPAND, 0)
+        sizer_4.Add(self.episode_toolbar, 0, wx.EXPAND, 2)
+        sizer_4.Add(self.episode_list, 1, wx.LEFT|wx.RIGHT|wx.BOTTOM|wx.EXPAND, 2)
+        self.episode_panel.SetSizer(sizer_4)
         sizer_1_copy.Add(self.episode_panel, 4, wx.EXPAND, 0)
         self.notebook_programmes.SetSizer(sizer_1_copy)
         sizer_3.Add(self.download_list, 1, wx.EXPAND, 0)
@@ -64,53 +79,53 @@ class MeTvFrame(wx.Frame):
 # Channel Panel
 ###############
 
-    def delete_all_channels(self):
-        self.channel_panel.clear()
+#     def delete_all_channels(self):
+#         self.channel_panel.clear()
 
-    def add_channel(self, channel):
-        self.channel_panel.add(channel)
+#     def add_channel(self, channel):
+#         self.channel_panel.add(channel)
             
-    def update_channel(self, channel):
-        self.channel_panel.update(channel)
+#     def update_channel(self, channel):
+#         self.channel_panel.update(channel)
 
-    def refresh_selected_programme(self):
-        self.channel_panel.refresh_selected_programme()
+#     def refresh_selected_programme(self):
+#         self.channel_panel.refresh_selected_programme()
 
-    def get_selected_programme(self):
-        return self.channel_panel.get_selected_programme()
+#     def get_selected_programme(self):
+#         return self.channel_panel.get_selected_programme()
 
-    def delete_programme(self, programme):
-        self.channel_panel.delete_programme(programme)
+#     def delete_programme(self, programme):
+#         self.channel_panel.delete_programme(programme)
 
-# Episode Panel
-###############
+# # Episode Panel
+# ###############
 
-    def update_episodes(self, programme):
-        self.episode_panel.update(programme)
+#     def update_episodes(self, programme):
+#         self.episode_panel.update(programme)
 
-    def get_selected_episode(self):
-        return self.episode_panel.get_selected_episode()
+#     def get_selected_episode(self):
+#         return self.episode_panel.get_selected_episode()
 
-    def refresh_selected_episode(self):
-        self.episode_panel.refresh_selected_episode()
+#     def refresh_selected_episode(self):
+#         self.episode_panel.refresh_selected_episode()
 
-    def select_next_episode(self):
-        self.episode_panel.select_next_episode()
+#     def select_next_episode(self):
+#         self.episode_panel.select_next_episode()
 
-    def update_episode_toolbar(self, episode):
-        self.episode_panel.update_episode_toolbar(episode)
+#     def update_episode_toolbar(self, episode):
+#         self.episode_panel.update_episode_toolbar(episode)
 
-# Download List
-###############
+# # Download List
+# ###############
 
-    def update_downloads(self, downloader):
-        self.download_list.update(downloader)
+#     def update_downloads(self, downloader):
+#         self.download_list.update(downloader)
 
-# Download Log
-##############
+# # Download Log
+# ##############
 
-    def update_log(self, episode):
-        self.download_log.update(episode)
+#     def update_log(self, episode):
+#         self.download_log.update(episode)
 
 
 
