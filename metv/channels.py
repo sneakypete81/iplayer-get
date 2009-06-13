@@ -2,7 +2,6 @@
 
 import os
 import async_subprocess as subprocess
-import time
 import threading
 from wx.lib.pubsub import Publisher
 from wx import CallAfter
@@ -215,9 +214,9 @@ class Channel():
             if programme.name in self.settings.subscribed_programmes:
                 self.settings.subscribed_programmes.remove(programme.name)
 
-    def download(self, episode):
-        print "download %s" % episode.episode
-        pass
+    def mark_downloaded(self, episode):
+        self.settings.downloaded_episodes.append(episode.pid)
+        episode.downloaded = True
 
     def ignore(self, episode):
         """ Toggle ignore status """

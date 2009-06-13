@@ -3,6 +3,8 @@
 import os
 import async_subprocess as subprocess
 import threading
+from wx.lib.pubsub import Publisher
+from wx import CallAfter
 
 class Downloader:
     DOWNLOAD_PENDING = 0
@@ -10,6 +12,10 @@ class Downloader:
     DOWNLOAD_COMPLETE = 2
 
     PROCESS_READ_INTERVAL = 0.5 # suck on the pipe every half second
+
+    TOPIC_DOWNLOAD_PROGRESS = "download.progress"
+    TOPIC_DOWNLOAD_COMPLETE = "download.complete"
+    TOPIC_DOWNLOAD_ERROR = "download.complete"
 
     def __init__(self, settings):
         self.episodes = []
@@ -22,8 +28,8 @@ class Downloader:
     def add_episode(self, episode):
         self.episodes.append(episode)
         episode.download_state = self.DOWNLOAD_PENDING
-        episode.download_error = False
         episode.download_message = None
+        episode.error_message = None
         self._check_downloads()
 
     def _check_downloads(self):
@@ -57,9 +63,9 @@ class Downloader:
             self._processes.append((episode, process))
 
         except OSError, inst:
-            self._on_process_error(episode, "Could not execute get_iplayer " +
-                                   "(%s)" % str(inst))
-            raise
+            episode.error_message = ("Could not execute get_iplayer " +
+                                     "(%s)" % str(inst))
+            self._on_process_ended(episode)
 
         episode._process_data = ""
         self._start_process_timer()
@@ -75,6 +81,10 @@ class Downloader:
     def _on_process_timer(self, event=None):
         for (episode, process) in self._processes:
             self.read_episode(episode, process)
+
+        # use CallAfter to switch back to the main GUI thread
+        CallAfter(Publisher().sendMessage, 
+                  topic=self.TOPIC_DOWNLOAD_PROGRESS)
 
         if len(self._processes) > 0:
             self._start_process_timer()
@@ -98,20 +108,16 @@ class Downloader:
 
         exitcode = process.poll()
         if exitcode is not None:
-            if exitcode == 0:
-                self._on_process_ended(episode)
-            else:
-                self._on_process_error("iplayer-get returned exit code %d" % exitcode)
-
+            if exitcode != 0:
+                episode.error_message = ("iplayer-get returned exit code %d" 
+                                         % exitcode)
+            self._on_process_ended(episode)
             self._processes.remove((episode, process))
             
     def _process_line(self, episode, line):
 #        self.log.write("get-iplayer : %s" % line)
         if line.startswith("ERROR:"):
-            error_message = line[6:].strip()
-            print error_message
-            episode.download_error = True
-            episode.download_message = error_message
+            episode.error_message = line[6:].strip()
         if not self._process_rtmpdump_line(episode, line):
             self._process_iphone_line(episode, line)
 
@@ -164,16 +170,17 @@ class Downloader:
     def _on_process_ended(self, episode):
         print "get-iplayer process ended: %s" % episode.pid
         episode.download_state = self.DOWNLOAD_COMPLETE
-        episode.download_message = "Downloaded"
 
-        if episode.error:
-            self.SetStringItem(self.current_item, self.COL_STATUS, "Error: %s" %
-                               episode.error_message)
+        if episode.error_message is None:
+            episode.download_message = "Downloaded"
+            topic = self.TOPIC_DOWNLOAD_COMPLETE
         else:
-            self.iplayer.mark_as_downloaded(episode)
+            episode.download_message = "Error: %s" % episode.error_message
+            topic = self.TOPIC_DOWNLOAD_ERROR
+
+        # use CallAfter to switch back to the main GUI thread
+        CallAfter(Publisher().sendMessage, 
+                  topic=topic,
+                  data=episode)
+
             
-    def _on_process_error(self, episode, message):
-        episode.download_error = True
-        episode.download_state = self.DOWNLOAD_COMPLETE
-        episode.download_message = message
-        print message

@@ -13,14 +13,24 @@ class Presenter(object):
 
         interactor.install(self, view)
 
-        Publisher().subscribe(self._msg_refresh_complete, channels.TOPIC_REFRESH_COMPLETE)
-        Publisher().subscribe(self._msg_refresh_error, channels.TOPIC_REFRESH_ERROR)
+        Publisher().subscribe(self._msg_refresh_complete, 
+                              channels.TOPIC_REFRESH_COMPLETE)
+        Publisher().subscribe(self._msg_refresh_error, 
+                              channels.TOPIC_REFRESH_ERROR)
+        Publisher().subscribe(self._msg_download_progress, 
+                              channels.downloader.TOPIC_DOWNLOAD_PROGRESS)
+        Publisher().subscribe(self._msg_download_complete, 
+                              channels.downloader.TOPIC_DOWNLOAD_COMPLETE)
+#         Publisher().subscribe(self._msg_download_error, 
+#                               channels.downloader.TOPIC_DOWNLOAD_ERROR)
 
         channels.refresh_all()
 
         view.channel_tree.clear()
         for channel in channels:
             view.channel_tree.add(channel)
+
+        view.download_list.set_downloader(channels.downloader)
         view.start()
 
     def _msg_refresh_complete(self, message):
@@ -33,6 +43,14 @@ class Presenter(object):
         """ Called when a channel refresh is completed """
         channel = message.data
         self.view.channel_tree.update(channel)
+
+    def _msg_download_progress(self, message):
+        self.view.download_list.update()
+
+    def _msg_download_complete(self, message):
+        self.view.download_list.update()
+        episode = message.data
+        episode.channel_obj.mark_downloaded(episode)
 
     def update_episodes(self, programme):
         """ Called when a programme is selected in the left panel """
@@ -52,8 +70,8 @@ class Presenter(object):
     def download(self, episode):
         """ Call to add an episode to the download queue """
         if episode is not None:
-            episode.channel_obj.download(episode)
-            self.view.episode_list.refresh_selected_episode()
+            self.channels.downloader.add_episode(episode)
+            self.view.download_list.update()
             episode = self.view.episode_list.select_next_episode()
             self.view.episode_toolbar.update(episode)
 
