@@ -10,10 +10,13 @@ class Interactor(object):
         self.presenter = presenter
         self.view = view
 
-        view.channel_panel.tree.Bind(wx.EVT_TREE_SEL_CHANGED, self._on_channel_change)
-        view.channel_panel.tree.Bind(wx.EVT_CHAR, self._on_tree_key)
-
-        view.episode_panel.episode_list.Bind(wx.EVT_LISTBOX, self._on_episode_change)
+        view.channel_panel.tree.Bind(wx.EVT_TREE_SEL_CHANGED, 
+                                     self._on_channel_change)
+        view.channel_panel.tree.Bind(wx.EVT_CHAR, 
+                                     self._on_tree_key)
+        view.episode_panel.episode_list.Bind(wx.EVT_LISTBOX, 
+                                             self._on_episode_change)
+#        view.download_list.Bind(EVT_LIST_ITEM_SELECTED
 
         # Toolbar buttons:
                   

@@ -7,6 +7,7 @@ import wx
 from EpisodePanel import EpisodePanel
 from ChannelPanel import ChannelPanel
 # end wxGlade
+from DownloadList import DownloadList
 
 # begin wxGlade: extracode
 
@@ -20,9 +21,13 @@ class MeTvFrame(wx.Frame):
         # begin wxGlade: MeTvFrame.__init__
         kwds["style"] = wx.DEFAULT_FRAME_STYLE
         wx.Frame.__init__(self, *args, **kwds)
-        self.channel_panel = ChannelPanel(self, -1)
-        self.static_line_1 = wx.StaticLine(self, -1, style=wx.LI_VERTICAL)
-        self.episode_panel = EpisodePanel(self, -1)
+        self.notebook = wx.Notebook(self, -1, style=0)
+        self.notebook_downloads = wx.Panel(self.notebook, -1)
+        self.notebook_programmes = wx.Panel(self.notebook, -1)
+        self.channel_panel = ChannelPanel(self.notebook_programmes, -1)
+        self.static_line_1 = wx.StaticLine(self.notebook_programmes, -1, style=wx.LI_VERTICAL)
+        self.episode_panel = EpisodePanel(self.notebook_programmes, -1)
+        self.download_list = DownloadList(self.notebook_downloads, -1, style=wx.LC_REPORT|wx.SUNKEN_BORDER)
 
         self.__set_properties()
         self.__do_layout()
@@ -37,9 +42,17 @@ class MeTvFrame(wx.Frame):
     def __do_layout(self):
         # begin wxGlade: MeTvFrame.__do_layout
         sizer_1 = wx.BoxSizer(wx.HORIZONTAL)
-        sizer_1.Add(self.channel_panel, 3, wx.EXPAND, 0)
-        sizer_1.Add(self.static_line_1, 0, wx.EXPAND, 0)
-        sizer_1.Add(self.episode_panel, 4, wx.EXPAND, 0)
+        sizer_3 = wx.BoxSizer(wx.VERTICAL)
+        sizer_1_copy = wx.BoxSizer(wx.HORIZONTAL)
+        sizer_1_copy.Add(self.channel_panel, 3, wx.EXPAND, 0)
+        sizer_1_copy.Add(self.static_line_1, 0, wx.EXPAND, 0)
+        sizer_1_copy.Add(self.episode_panel, 4, wx.EXPAND, 0)
+        self.notebook_programmes.SetSizer(sizer_1_copy)
+        sizer_3.Add(self.download_list, 1, wx.EXPAND, 0)
+        self.notebook_downloads.SetSizer(sizer_3)
+        self.notebook.AddPage(self.notebook_programmes, "Programmes")
+        self.notebook.AddPage(self.notebook_downloads, "Downloads")
+        sizer_1.Add(self.notebook, 1, wx.EXPAND, 0)
         self.SetSizer(sizer_1)
         self.Layout()
         # end wxGlade
@@ -47,6 +60,9 @@ class MeTvFrame(wx.Frame):
     def start(self):
         self.Show()
         self.app.MainLoop()
+
+# Channel Panel
+###############
 
     def delete_all_channels(self):
         self.channel_panel.clear()
@@ -66,6 +82,9 @@ class MeTvFrame(wx.Frame):
     def delete_programme(self, programme):
         self.channel_panel.delete_programme(programme)
 
+# Episode Panel
+###############
+
     def update_episodes(self, programme):
         self.episode_panel.update(programme)
 
@@ -80,6 +99,20 @@ class MeTvFrame(wx.Frame):
 
     def update_episode_toolbar(self, episode):
         self.episode_panel.update_episode_toolbar(episode)
+
+# Download List
+###############
+
+    def update_downloads(self, downloader):
+        self.download_list.update(downloader)
+
+# Download Log
+##############
+
+    def update_log(self, episode):
+        self.download_log.update(episode)
+
+
 
 # end of class MeTvFrame
 
