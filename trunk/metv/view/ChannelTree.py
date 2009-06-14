@@ -20,6 +20,7 @@ class ChannelTree(wx.TreeCtrl):
         item = self.AppendItem(parent=self.GetRootItem(),
                                text=channel.title,
                                data=wx.TreeItemData(channel))
+        self.SetItemBold(item)
         channel.view_item = item
         self.update(channel)
         self.Expand(item)

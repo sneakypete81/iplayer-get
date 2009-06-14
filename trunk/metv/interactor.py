@@ -10,6 +10,8 @@ class Interactor(object):
         self.presenter = presenter
         self.view = view
 
+        view.Bind(wx.EVT_CLOSE, self._on_app_close)
+
         view.channel_tree.Bind(wx.EVT_TREE_SEL_CHANGED, 
                                self._on_channel_change)
         view.channel_tree.Bind(wx.EVT_CHAR, 
@@ -35,6 +37,9 @@ class Interactor(object):
         view.episode_toolbar.Bind(wx.EVT_TOOL, 
                                   self._on_ignore,
                                   id=view.episode_toolbar.ID_IGNORE)
+
+    def _on_app_close(self, event):
+        self.presenter.on_close(event)
 
     def _on_channel_change(self, event):
         programme = self.view.channel_tree.get_selected_programme()

@@ -33,6 +33,11 @@ class Presenter(object):
         view.download_list.set_downloader(channels.downloader)
         view.start()
 
+    def on_close(self, event):
+        # Make sure we first shut down any processes & save our settings
+        self.channels.shutdown()
+        self.view.Destroy()
+
     def _msg_refresh_complete(self, message):
         """ Called when a channel refresh is completed """
         channel = message.data

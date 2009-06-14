@@ -22,10 +22,10 @@ class EpisodeList(wx.SimpleHtmlListBox):
 
     def _generate_html(self, episode):
          if episode.downloaded:
-             html = ("<font color=grey>%s</font><br>" % episode.episode +
+             html = ("<em><font color=grey>%s</font><br>" % episode.episode +
                      "<table><td>&nbsp;</td><td>" + # Indent
                      "<font color=grey size=-1>%s</font>" % episode.desc +
-                     "</td></table>")
+                     "</td></table></em>")
          elif episode.ignored:
              html = ("<em><font color=red>%s</font><br>" % episode.episode +
                      "<table><td>&nbsp;</td><td>" + # Indent

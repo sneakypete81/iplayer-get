@@ -36,12 +36,13 @@ class Channels(list):
                              ])
         self.downloader = downloader.Downloader(self.settings)
 
-    def __del__(self):
-        """ Make sure all refresh subprocesses get stopped,
+    def shutdown(self):
+        """ Make sure all subprocesses get stopped,
             and all settings are saved."""
         self.settings.write()
         for channel in self:
             channel.cancel_refresh()
+        self.downloader.cancel_all()
 
     def refresh_all(self):
         for channel in self:
@@ -68,12 +69,10 @@ class Channel():
         """ Start get_iplayer process to refresh the cache """
         self.error_message = None
         self.is_refreshing = True
-
         
         # Temp to disable cache refresh
-        self._on_process_ended()
-        return
-
+#         self._on_process_ended()
+#         return
 
         cmd = ("get_iplayer " 
                "--refresh " + # Force update of cache
@@ -89,7 +88,6 @@ class Channel():
 
         self._process_data = ""
         self._start_process_timer()
-        print "Started refresh process: %s" % self.title
 
     def cancel_refresh(self):
         if self.is_refreshing:
@@ -125,7 +123,6 @@ class Channel():
                    
     def _on_process_ended(self):
         """ iplayer_get process has finished """
-        print "Refresh process finished: %s" % self.title
         # use CallAfter to switch back to the main GUI thread
         CallAfter(Publisher().sendMessage, 
                   topic=Channels.TOPIC_REFRESH_COMPLETE,
