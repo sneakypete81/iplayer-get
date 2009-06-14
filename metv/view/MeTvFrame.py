@@ -33,7 +33,7 @@ class MeTvFrame(wx.Frame):
         self.static_line_1 = wx.StaticLine(self.notebook_programmes, -1, style=wx.LI_VERTICAL)
         self.episode_toolbar = EpisodeToolbar(self.episode_panel, -1)
         self.episode_list = EpisodeList(self.episode_panel, -1, choices=[])
-        self.download_list = DownloadList(self.notebook_downloads, -1, style=wx.LC_REPORT|wx.LC_VIRTUAL|wx.SUNKEN_BORDER)
+        self.download_list = DownloadList(self.notebook_downloads, -1, style=wx.LC_REPORT|wx.LC_VIRTUAL|wx.LC_SINGLE_SEL|wx.SUNKEN_BORDER)
 
         self.__set_properties()
         self.__do_layout()

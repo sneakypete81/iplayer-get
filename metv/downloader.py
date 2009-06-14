@@ -26,11 +26,18 @@ class Downloader:
         self._process_timer = None
 
     def add_episode(self, episode):
-        self.episodes.append(episode)
+        if episode not in self.episodes:
+            self.episodes.append(episode)
         episode.download_state = self.DOWNLOAD_PENDING
-        episode.download_message = None
+        episode.download_message = ""
         episode.error_message = None
         self._check_downloads()
+
+    def cancel_all(self):
+        if self._process_timer is not None:
+            self._process_timer.cancel()
+        for (episode, process) in self._processes:
+            process.kill()
 
     def _check_downloads(self):
         # Are we downloading enough already?
@@ -47,7 +54,6 @@ class Downloader:
                 
     def _download_start(self, episode):
         episode.download_state = self.DOWNLOAD_RUNNING
-        print("Downloading episode %s..." % episode.pid)
         cmd = ("get_iplayer " +
                "--force-download " +
                "--vmode=iphone " +
@@ -69,7 +75,6 @@ class Downloader:
 
         episode._process_data = ""
         self._start_process_timer()
-        print "Started download of %s" % episode.pid
 
     def _start_process_timer(self):
         if self._process_timer is not None:
@@ -133,10 +138,10 @@ class Downloader:
             line = line.strip()
             (remaining_time, line) = line.split("remaining")
 
-            episode.download_message = "Downloading %s / %s (%s%%) %skbps, %s remaining" \
-                % (downloaded.strip(),
+            episode.download_message = "Downloading %s%% (%s/%s) %s, %s remaining" \
+                % (percent.strip(),
+                   downloaded.strip(),
                    size.strip(),
-                   percent.strip(),
                    rate.strip(),
                    remaining_time.strip())
             return True
@@ -159,8 +164,8 @@ class Downloader:
             except ValueError, inst:
                 downloaded = downloaded + " KB"
             
-            episode.download_message = "Downloading %s (%s%%)" \
-                % (downloaded.strip(), percent.strip())
+            episode.download_message = "Downloading %s%% (%s)" \
+                % (percent.strip(), downloaded.strip())
             return True
 
         except ValueError, msg:
@@ -168,7 +173,6 @@ class Downloader:
             return False
             
     def _on_process_ended(self, episode):
-        print "get-iplayer process ended: %s" % episode.pid
         episode.download_state = self.DOWNLOAD_COMPLETE
 
         if episode.error_message is None:
