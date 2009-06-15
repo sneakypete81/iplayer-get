@@ -97,10 +97,11 @@ class Downloader:
     def read_episode(self, episode, process):
         data = episode._process_data
         chunk = process.recv()
+#        print chunk,
         while chunk is not None and chunk != "":
             data = data + chunk
             chunk = process.recv()
-
+#            print chunk,
         # Split at \n's and \r's
         lines = data.split("\n")
         items = []
