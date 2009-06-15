@@ -41,7 +41,7 @@ class MeTvFrame(wx.Frame):
 
     def __set_properties(self):
         # begin wxGlade: MeTvFrame.__set_properties
-        self.SetTitle("meTV")
+        self.SetTitle("The Idiot Box")
         self.SetSize((600, 500))
         self.episode_list.SetWindowStyle(wx.STATIC_BORDER)
         # end wxGlade
