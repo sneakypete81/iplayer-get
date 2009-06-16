@@ -23,6 +23,16 @@ class DownloadList(wx.ListCtrl, listmix.ListCtrlAutoWidthMixin):
             self.SetItemCount(count)
             self.RefreshItems(0, count-1)
 
+    def get_selected_episode(self):
+        item = self.GetNextItem(wx.NOT_FOUND,
+                                wx.LIST_NEXT_ALL,
+                                wx.LIST_STATE_SELECTED);
+        if (item == wx.NOT_FOUND):
+            return None
+        else:
+            return self.downloader.episodes[item]
+
+
     def OnGetItemText(self, item, col):
         if col == 0:
             return (self.downloader.episodes[item].name + " - " +

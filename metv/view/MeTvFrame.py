@@ -10,6 +10,7 @@ from EpisodeToolbar import EpisodeToolbar
 from ChannelTree import ChannelTree
 from EpisodeList import EpisodeList
 from DownloadList import DownloadList
+from DownloadLogDialog import DownloadLogDialog
 
 # begin wxGlade: extracode
 
@@ -38,6 +39,8 @@ class MeTvFrame(wx.Frame):
         self.__set_properties()
         self.__do_layout()
         # end wxGlade
+
+        self.download_log = None
 
     def __set_properties(self):
         # begin wxGlade: MeTvFrame.__set_properties
@@ -75,6 +78,16 @@ class MeTvFrame(wx.Frame):
     def start(self):
         self.Show()
         self.app.MainLoop()
+
+    def show_download_log(self, episode):
+        self.download_log = DownloadLogDialog(self, episode=episode)
+        self.download_log.ShowModal()
+        self.download_log = None
+
+    def update_download_log(self):
+        if self.download_log is not None:
+            self.download_log.update()
+
 
 # Channel Panel
 ###############
