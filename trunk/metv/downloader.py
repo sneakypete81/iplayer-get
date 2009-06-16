@@ -28,6 +28,7 @@ class Downloader:
     def add_episode(self, episode):
         if episode not in self.episodes:
             self.episodes.append(episode)
+        episode.download_chunks = []
         episode.download_state = self.DOWNLOAD_PENDING
         episode.download_message = ""
         episode.error_message = None
@@ -97,11 +98,10 @@ class Downloader:
     def read_episode(self, episode, process):
         data = episode._process_data
         chunk = process.recv()
-#        print chunk,
         while chunk is not None and chunk != "":
+            episode.download_chunks.append(chunk)
             data = data + chunk
             chunk = process.recv()
-#            print chunk,
         # Split at \n's and \r's
         lines = data.split("\n")
         items = []

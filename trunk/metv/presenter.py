@@ -51,6 +51,8 @@ class Presenter(object):
 
     def _msg_download_progress(self, message):
         self.view.download_list.update()
+        if self.view.download_log is not None:
+            self.view.download_log.update()
 
     def _msg_download_complete(self, message):
         self.view.download_list.update()
@@ -91,3 +93,7 @@ class Presenter(object):
             self.view.channel_tree.refresh_selected_programme()
             episode = self.view.episode_list.select_next_episode()
             self.view.episode_toolbar.update(episode)
+
+    def show_download_log(self, episode):
+        if episode is not None:
+            self.view.show_download_log(episode)

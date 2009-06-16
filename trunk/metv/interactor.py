@@ -18,7 +18,8 @@ class Interactor(object):
                                self._on_tree_key)
         view.episode_list.Bind(wx.EVT_LISTBOX, 
                                self._on_episode_change)
-#        view.download_list.Bind(EVT_LIST_ITEM_SELECTED
+        view.download_list.Bind(wx.EVT_LIST_ITEM_ACTIVATED,
+                                self._on_download_doubleclick)
 
         # Toolbar buttons:
                   
@@ -69,3 +70,7 @@ class Interactor(object):
     def _on_ignore(self, event):
         episode = self.view.episode_list.get_selected_episode()
         self.presenter.ignore(episode)
+
+    def _on_download_doubleclick(self, event):
+        episode = self.view.download_list.get_selected_episode()
+        self.presenter.show_download_log(episode)
