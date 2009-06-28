@@ -25,7 +25,7 @@ class Interactor(object):
                   
         view.channel_toolbar.Bind(wx.EVT_TOOL, 
                                   self._on_subscribe,
-             id=view.channel_toolbar.ID_SUBSCRIBE)
+                                  id=view.channel_toolbar.ID_SUBSCRIBE)
 
         view.channel_toolbar.Bind(wx.EVT_TOOL, 
                                   self._on_unsubscribe,
@@ -38,6 +38,8 @@ class Interactor(object):
         view.episode_toolbar.Bind(wx.EVT_TOOL, 
                                   self._on_ignore,
                                   id=view.episode_toolbar.ID_IGNORE)
+
+        # Subscriptions Dialog:
 
     def _on_app_close(self, event):
         self.presenter.on_close(event)
@@ -57,7 +59,7 @@ class Interactor(object):
             event.Skip()
 
     def _on_subscribe(self, event):
-        pass
+        self.presenter.show_subscriptions_dialog()
 
     def _on_unsubscribe(self, event=None):
         programme = self.view.channel_tree.get_selected_programme()
@@ -74,3 +76,8 @@ class Interactor(object):
     def _on_download_doubleclick(self, event):
         episode = self.view.download_list.get_selected_episode()
         self.presenter.show_download_log(episode)
+
+# Subscriptions Dialog
+######################
+
+

@@ -94,6 +94,16 @@ class Presenter(object):
             episode = self.view.episode_list.select_next_episode()
             self.view.episode_toolbar.update(episode)
 
+# Download Log
+##############
+
     def show_download_log(self, episode):
         if episode is not None:
             self.view.show_download_log(episode)
+
+# Subscriptions Dialog
+######################
+
+    def show_subscriptions_dialog(self):
+        self.view.show_subscriptions_dialog(self.channels)
+
