@@ -54,14 +54,17 @@ class Channel():
     def __init__(self, title, code, settings):
         self.title = title
         self.code = code
-        self.programmes = {}
+        self.all_programmes = {}
+        self.subscribed_programmes = {}
         self.is_refreshing = False
         self.error_message = None
 
         self._cache_filename = os.path.join(PROFILE_DIR, "%s.cache" % code)
 
         self.settings = settings.get_channel_settings(title)
-        
+
+#        self.settings.unsubscribed_programmes.remove("Personal Affairs")
+
         self._process = None
         self._process_timer = None
 
@@ -173,13 +176,6 @@ class Channel():
                 if episode.type == "five":
                     episode.pid = "five:"+episode.pid
 
-                # Ignore if programme is unsubscribed
-                if episode.name in self.settings.unsubscribed_programmes:
-                    continue
-                if (self.settings.require_subscription and 
-                    episode.name not in self.settings.subscribed_programmes):
-                    continue
-
                 if episode.pid in self.settings.downloaded_episodes:
                     episode.downloaded = True
                 else:
@@ -191,20 +187,33 @@ class Channel():
                     episode.ignored = False
 
                 # Create a new programme if necessary
-                if episode.name not in self.programmes:
-                    self.programmes[episode.name] = \
-                        programme.Programme(channel_obj=self, 
-                                            name=episode.name)
+                if episode.name in self.all_programmes:
+                    prog = self.all_programmes[episode.name]
+                else:
+                    prog = programme.Programme(channel_obj=self, 
+                                               name=episode.name)
+                    self.all_programmes[episode.name] = prog
 
-                self.programmes[episode.name].episodes.append(episode)
+                prog.episodes.append(episode)
+
+                # Check if programme is unsubscribed
+                if episode.name in self.settings.unsubscribed_programmes:
+                    continue
+                if (self.settings.require_subscription and 
+                    episode.name not in self.settings.subscribed_programmes):
+                    continue
+
+                self.subscribed_programmes[episode.name] = prog
+
+
 
     #         self.log.write("Cache parsing complete.")
         except Exception, inst:
             self._on_process_error(str(inst))
 
     def unsubscribe(self, programme):
-        if programme.name in self.programmes:
-            del self.programmes[programme.name]
+        if programme.name in self.subscribed_programmes:
+            del self.subscribed_programmes[programme.name]
 
             if programme.name not in self.settings.unsubscribed_programmes:
                 self.settings.unsubscribed_programmes.append(programme.name)
