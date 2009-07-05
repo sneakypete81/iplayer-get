@@ -38,7 +38,6 @@ class SubscriptionsList(wx.ListCtrl, listmix.ListCtrlAutoWidthMixin):
         for programme in programmes:
             if programme in self.programmes:
                 item = self.programmes.index(programme)
-                print "select %s" % programme
                 self.SetItemState(item, state=wx.LIST_STATE_SELECTED,
                                   stateMask=wx.LIST_STATE_SELECTED)
 

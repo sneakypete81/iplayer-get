@@ -119,8 +119,8 @@ class Presenter(object):
         if channel.title in self.view.subscriptions_dialog.panes:
             pane = self.view.subscriptions_dialog.panes[channel.title]
             pane.hidden_list.clear_selection()
-            pane.subscribed_list.select_programmes(programmes)
             pane.update()
+            pane.subscribed_list.select_programmes(programmes)
 
     def subscriptions_unsubscribe(self, channel, programmes):
         channel.settings.unsubscribed_programmes.extend(programmes)
@@ -131,5 +131,5 @@ class Presenter(object):
         if channel.title in self.view.subscriptions_dialog.panes:
             pane = self.view.subscriptions_dialog.panes[channel.title]
             pane.subscribed_list.clear_selection()
-            pane.hidden_list.select_programmes(programmes)
             pane.update()
+            pane.hidden_list.select_programmes(programmes)
