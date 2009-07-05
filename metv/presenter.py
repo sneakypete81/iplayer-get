@@ -43,6 +43,8 @@ class Presenter(object):
         channel = message.data
         channel.parse_cache()
         self.view.channel_tree.update(channel)
+        if channel.title in self.view.subscriptions_dialog.panes:
+            self.view.subscriptions_dialog.panes[channel.title].update()
 
     def _msg_refresh_error(self, message):
         """ Called when a channel refresh is completed """
@@ -107,3 +109,27 @@ class Presenter(object):
     def show_subscriptions_dialog(self):
         self.view.show_subscriptions_dialog(self.channels)
 
+    def subscriptions_subscribe(self, channel, programmes):
+        for programme in programmes:
+            channel.settings.unsubscribed_programmes.remove(programme)
+            if programme in channel.all_programmes:
+                channel.subscribed_programmes[programme] = channel.all_programmes[programme]
+
+        self.view.channel_tree.update(channel)
+        if channel.title in self.view.subscriptions_dialog.panes:
+            pane = self.view.subscriptions_dialog.panes[channel.title]
+            pane.hidden_list.clear_selection()
+            pane.subscribed_list.select_programmes(programmes)
+            pane.update()
+
+    def subscriptions_unsubscribe(self, channel, programmes):
+        channel.settings.unsubscribed_programmes.extend(programmes)
+        for programme in programmes:
+            del channel.subscribed_programmes[programme]
+
+        self.view.channel_tree.update(channel)
+        if channel.title in self.view.subscriptions_dialog.panes:
+            pane = self.view.subscriptions_dialog.panes[channel.title]
+            pane.subscribed_list.clear_selection()
+            pane.hidden_list.select_programmes(programmes)
+            pane.update()

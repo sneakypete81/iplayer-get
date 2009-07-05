@@ -41,7 +41,7 @@ class ChannelTree(wx.TreeCtrl):
             self.SetItemTextColour(refresh_text, 
                                    wx.NamedColour(ERROR_TEXT_COLOUR))
         else:
-            programmes = channel.programmes.values()
+            programmes = channel.subscribed_programmes.values()
             programmes.sort(key=operator.attrgetter('name'))
             for programme in programmes:
                 item = self.AppendItem(parent=channel_item,

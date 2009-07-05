@@ -41,6 +41,9 @@ class Interactor(object):
 
         # Subscriptions Dialog:
 
+        view.subscriptions_dialog.notebook.Bind(wx.EVT_BUTTON,
+                                                self._on_subscriptions_button)
+
     def _on_app_close(self, event):
         self.presenter.on_close(event)
 
@@ -80,4 +83,13 @@ class Interactor(object):
 # Subscriptions Dialog
 ######################
 
-
+    def _on_subscriptions_button(self, event):
+        pane = event.GetEventObject().GetParent()
+        channel = pane.channel
+        
+        if event.GetEventObject() == pane.show_button:
+            programmes = pane.hidden_list.get_selected_programmes()
+            self.presenter.subscriptions_subscribe(channel, programmes)
+        else:
+            programmes = pane.subscribed_list.get_selected_programmes()
+            self.presenter.subscriptions_unsubscribe(channel, programmes)
