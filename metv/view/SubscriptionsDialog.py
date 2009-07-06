@@ -26,6 +26,10 @@ class SubscriptionsDialog(wx.Dialog):
         self.Bind(wx.EVT_BUTTON, self._on_close, self.button_1)
         # end wxGlade
 
+        # This pane is just for design time - delete it.
+        self.notebook.RemovePage(0)
+        self.notebook_1_pane_1.Destroy()
+
         self.panes = {}
 
     def __set_properties(self):
@@ -50,10 +54,6 @@ class SubscriptionsDialog(wx.Dialog):
 
     def ShowModal(self, *args, **kwds):
         channels = kwds.pop("channels")
-        self.panes = {}
-
-        for page in range(self.notebook.GetPageCount()):
-            self.notebook.RemovePage(0)
 
         for channel in channels:
             pane = SubscriptionsPane(self.notebook, channel=channel) 
@@ -62,6 +62,13 @@ class SubscriptionsDialog(wx.Dialog):
 
         wx.Dialog.ShowModal(self, *args, **kwds)
         
+        # Remove and destroy all tabs
+        for page in range(self.notebook.GetPageCount()):
+            self.notebook.RemovePage(0)
+        for pane in self.panes.values():
+            pane.Destroy()
+        self.panes = {}
+
 
 # end of class SubscriptionsDialog
 

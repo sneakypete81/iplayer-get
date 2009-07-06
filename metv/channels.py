@@ -110,9 +110,11 @@ class Channel():
         self._process_timer = None
         data = ""
         chunk = self._process.recv()
+#        print chunk
         while chunk is not None and chunk != "":
             data = data + chunk
             chunk = self._process.recv()
+#            print chunk
   
        # See if we're finished
         exitcode = self._process.poll()
@@ -122,7 +124,7 @@ class Channel():
             if exitcode == 0:
                 self._on_process_ended()
             else:
-                self._on_process_error("iplayer-get returned exit code %d" % exitcode)
+                self._on_process_error("get_iplayer returned exit code %d" % exitcode)
                    
     def _on_process_ended(self):
         """ iplayer_get process has finished """
