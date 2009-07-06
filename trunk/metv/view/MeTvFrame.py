@@ -89,6 +89,11 @@ class MeTvFrame(wx.Frame):
         self.download_log.ShowModal()
         self.download_log = None
 
+    def show_channel_log(self, channel):
+        self.download_log = DownloadLogDialog(self, channel=channel)
+        self.download_log.ShowModal()
+        self.download_log = None
+
 # Subscriptions Dialog
 ######################
 

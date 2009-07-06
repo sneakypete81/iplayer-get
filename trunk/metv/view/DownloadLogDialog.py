@@ -11,8 +11,20 @@ import wx
 # end wxGlade
 
 class DownloadLogDialog(wx.Dialog):
+    """ Use the channel keyword arg to display channel download log,
+        or  the episode keyword arg to display episode download log.
+    """
     def __init__(self, *args, **kwds):
-        self.episode = kwds.pop("episode")
+        if "episode" in kwds:
+            self._episode = kwds.pop("episode")
+        else:
+            self._episode = None
+        if "channel" in kwds:
+            self._channel = kwds.pop("channel")
+        else:
+            self._channel = None
+
+
         self._chunk_count = 0
 
         # begin wxGlade: DownloadLogDialog.__init__
@@ -52,10 +64,18 @@ class DownloadLogDialog(wx.Dialog):
 
     def update(self):
         """ Append any new chunks to the end of the log """
-        new_chunk_count = len(self.episode.download_chunks)
-        for chunk in self.episode.download_chunks[self._chunk_count:]:
-            self.log_text.WriteText(chunk)
-        self._chunk_count = new_chunk_count
+        if self._episode is not None:
+            new_chunk_count = len(self._episode.download_chunks)
+            for chunk in self._episode.download_chunks[self._chunk_count:]:
+                self.log_text.WriteText(chunk)
+            self._chunk_count = new_chunk_count
+        
+        else:
+            new_chunk_count = len(self._channel.download_chunks)
+            for chunk in self._channel.download_chunks[self._chunk_count:]:
+                self.log_text.WriteText(chunk)
+            self._chunk_count = new_chunk_count
+
 # end of class DownloadLogDialog
 
 

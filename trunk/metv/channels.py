@@ -58,6 +58,7 @@ class Channel():
         self.subscribed_programmes = {}
         self.is_refreshing = False
         self.error_message = None
+        self.download_chunks = []
 
         self._cache_filename = os.path.join(PROFILE_DIR, "%s.cache" % code)
 
@@ -111,6 +112,7 @@ class Channel():
         chunk = self._process.recv()
 #        print chunk
         while chunk is not None and chunk != "":
+            self.download_chunks.append(chunk)
             data = data + chunk
             chunk = self._process.recv()
 #            print chunk

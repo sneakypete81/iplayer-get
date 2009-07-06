@@ -16,11 +16,12 @@ class Interactor(object):
                                self._on_channel_change)
         view.channel_tree.Bind(wx.EVT_CHAR, 
                                self._on_tree_key)
+        view.channel_tree.Bind(wx.EVT_TREE_ITEM_ACTIVATED,
+                               self._on_tree_doubleclick)
         view.episode_list.Bind(wx.EVT_LISTBOX, 
                                self._on_episode_change)
         view.download_list.Bind(wx.EVT_LIST_ITEM_ACTIVATED,
                                 self._on_download_doubleclick)
-
         # Toolbar buttons:
                   
         view.channel_toolbar.Bind(wx.EVT_TOOL, 
@@ -60,6 +61,10 @@ class Interactor(object):
             self._on_unsubscribe()
         else:
             event.Skip()
+
+    def _on_tree_doubleclick(self, event):
+        channel = self.view.channel_tree.get_selected_channel()
+        self.presenter.show_channel_log(channel)
 
     def _on_subscribe(self, event):
         self.presenter.show_subscriptions_dialog()
