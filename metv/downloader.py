@@ -55,7 +55,7 @@ class Downloader:
                 
     def _download_start(self, episode):
         episode.download_state = self.DOWNLOAD_RUNNING
-        cmd = ("get_iplayer " +
+        cmd = (self.settings.config.get_iplayer_cmd + " " +
                "--force-download " +
                "--vmode=iphone " +
                "--vmode=flashvhigh,flashhigh,iphone,flashnormal " +

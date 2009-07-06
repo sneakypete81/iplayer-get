@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 import pickle
 import os
+import sys
 
-SETTINGS_FILE = os.path.expanduser("~/.metv")
+SETTINGS_FILE = os.path.expanduser("~/.idiotbox")
 
 class Settings():
     def __init__(self):
@@ -37,6 +38,12 @@ class Settings():
 
 class ConfigSettings():
     def __init__(self):
+        if sys.platform == "win32":
+            self.get_iplayer_cmd = ("c:\Progra~1\get_iplayer\perl.exe " +
+                                    "c:\Progra~1\get_iplayer\get_iplayer.pl")
+        else:
+            self.get_iplayer_cmd = "get_iplayer"
+
         self.download_dir = "."
         self.total_simultaneous_downloads = 3
 

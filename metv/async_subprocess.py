@@ -15,6 +15,13 @@ else:
     import fcntl
 
 class Popen(subprocess.Popen):
+    def kill(self):
+        """ only works with Python 2.6 and above """
+        try:
+            subprocess.Popen.kill(self)
+        except AttributeError:
+            pass
+
     def recv(self, maxsize=None):
         return self._recv('stdout', maxsize)
     
