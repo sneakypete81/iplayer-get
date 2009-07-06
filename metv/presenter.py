@@ -103,6 +103,10 @@ class Presenter(object):
         if episode is not None:
             self.view.show_download_log(episode)
 
+    def show_channel_log(self, channel):
+        if channel is not None:
+            self.view.show_channel_log(channel)
+
 # Subscriptions Dialog
 ######################
 

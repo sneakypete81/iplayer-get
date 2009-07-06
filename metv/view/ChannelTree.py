@@ -69,12 +69,23 @@ class ChannelTree(wx.TreeCtrl):
         item = self.GetSelection()
         if not item.IsOk():
             return None
-
+   
         programme = self.GetItemData(item).GetData()
         if hasattr(programme, "episodes"):
             return programme
         else:
             return None
+
+    def get_selected_channel(self):
+        """ Return the channel of the currently selected item """
+        item = self.GetSelection()
+        if not item.IsOk():
+            return None
+
+        parent = self.GetItemParent(item)
+        channel = self.GetItemData(parent).GetData()
+        return channel
+        
 
     def delete_programme(self, programme):
         # After deletion, go to the next item
@@ -84,7 +95,7 @@ class ChannelTree(wx.TreeCtrl):
             next_item = self.GetPrevSibling(programme.view_item)
         # Or the parent
         if not next_item.IsOk():
-            next_item = self.GetParent(programme.view_item)
+            next_item = self.GetItemParent(programme.view_item)
 
         self.Delete(programme.view_item)
         self.SelectItem(next_item)
