@@ -60,7 +60,7 @@ class SubscriptionsPane(wx.Panel):
         # end wxGlade
 
     def update(self):
-        unsubscribed_programmes = self.channel.settings.unsubscribed_programmes
+        unsubscribed_programmes = self.channel.channel_settings.unsubscribed_programmes
         available_unsubscribed = [prog for prog in self.channel.all_programmes
                                   if prog in unsubscribed_programmes]
         subscribed_programmes = self.channel.subscribed_programmes.keys()

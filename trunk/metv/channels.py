@@ -28,7 +28,7 @@ class Channels(list):
         self.settings = settings.Settings()
         list.__init__(self, [Channel("BBC TV", "tv", self.settings),
                              Channel("ITV", "itv", self.settings),
-                             Channel("Channel 4", "ch4", self.settings),
+#                             Channel("Channel 4", "ch4", self.settings),
                              Channel("Five", "five", self.settings),
                              Channel("BBC Podcasts", "podcast", self.settings),
                              Channel("BBC Radio", "radio", self.settings),
@@ -61,9 +61,8 @@ class Channel():
 
         self._cache_filename = os.path.join(PROFILE_DIR, "%s.cache" % code)
 
-        self.settings = settings.get_channel_settings(title)
-
-#        self.settings.unsubscribed_programmes.remove("Personal Affairs")
+        self.settings = settings
+        self.channel_settings = settings.get_channel_settings(title)
 
         self._process = None
         self._process_timer = None
@@ -77,7 +76,7 @@ class Channel():
 #         self._on_process_ended()
 #         return
 
-        cmd = ("get_iplayer " 
+        cmd = (self.settings.config.get_iplayer_cmd + " " +
                "--refresh " + # Force update of cache
                "--nopurge " +  # Prevent old episode deletion prompt
                "--type=%s " % self.code)
@@ -178,12 +177,12 @@ class Channel():
                 if episode.type == "five":
                     episode.pid = "five:"+episode.pid
 
-                if episode.pid in self.settings.downloaded_episodes:
+                if episode.pid in self.channel_settings.downloaded_episodes:
                     episode.downloaded = True
                 else:
                     episode.downloaded = False
 
-                if episode.pid in self.settings.ignored_episodes:
+                if episode.pid in self.channel_settings.ignored_episodes:
                     episode.ignored = True
                 else:
                     episode.ignored = False
@@ -199,10 +198,10 @@ class Channel():
                 prog.episodes.append(episode)
 
                 # Check if programme is unsubscribed
-                if episode.name in self.settings.unsubscribed_programmes:
+                if episode.name in self.channel_settings.unsubscribed_programmes:
                     continue
-                if (self.settings.require_subscription and 
-                    episode.name not in self.settings.subscribed_programmes):
+                if (self.channel_settings.require_subscription and 
+                    episode.name not in self.channel_settings.subscribed_programmes):
                     continue
 
                 self.subscribed_programmes[episode.name] = prog
@@ -217,20 +216,20 @@ class Channel():
         if programme.name in self.subscribed_programmes:
             del self.subscribed_programmes[programme.name]
 
-            if programme.name not in self.settings.unsubscribed_programmes:
-                self.settings.unsubscribed_programmes.append(programme.name)
-            if programme.name in self.settings.subscribed_programmes:
-                self.settings.subscribed_programmes.remove(programme.name)
+            if programme.name not in self.channel_settings.unsubscribed_programmes:
+                self.channel_settings.unsubscribed_programmes.append(programme.name)
+            if programme.name in self.channel_settings.subscribed_programmes:
+                self.channel_settings.subscribed_programmes.remove(programme.name)
 
     def mark_downloaded(self, episode):
-        self.settings.downloaded_episodes.append(episode.pid)
+        self.channel_settings.downloaded_episodes.append(episode.pid)
         episode.downloaded = True
 
     def ignore(self, episode):
         """ Toggle ignore status """
-        if episode.pid in self.settings.ignored_episodes:
-            self.settings.ignored_episodes.remove(episode.pid)
+        if episode.pid in self.channel_settings.ignored_episodes:
+            self.channel_settings.ignored_episodes.remove(episode.pid)
             episode.ignored = False
         else:
-            self.settings.ignored_episodes.append(episode.pid)
+            self.channel_settings.ignored_episodes.append(episode.pid)
             episode.ignored = True

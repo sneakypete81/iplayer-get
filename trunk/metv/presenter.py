@@ -111,7 +111,7 @@ class Presenter(object):
 
     def subscriptions_subscribe(self, channel, programmes):
         for programme in programmes:
-            channel.settings.unsubscribed_programmes.remove(programme)
+            channel.channel_settings.unsubscribed_programmes.remove(programme)
             if programme in channel.all_programmes:
                 channel.subscribed_programmes[programme] = channel.all_programmes[programme]
 
@@ -123,7 +123,7 @@ class Presenter(object):
             pane.subscribed_list.select_programmes(programmes)
 
     def subscriptions_unsubscribe(self, channel, programmes):
-        channel.settings.unsubscribed_programmes.extend(programmes)
+        channel.channel_settings.unsubscribed_programmes.extend(programmes)
         for programme in programmes:
             del channel.subscribed_programmes[programme]
 
