@@ -9,6 +9,7 @@ from wx import CallAfter
 import programme
 import settings
 import downloader
+import streamer
 
 if 'HOME' in os.environ:
     HOME_DIR = os.environ['HOME']
@@ -29,12 +30,13 @@ class Channels(list):
         list.__init__(self, [Channel("BBC TV", "tv", self.settings),
                              Channel("ITV", "itv", self.settings),
 #                             Channel("Channel 4", "ch4", self.settings),
-                             Channel("Five", "five", self.settings),
-                             Channel("BBC Podcasts", "podcast", self.settings),
-                             Channel("BBC Radio", "radio", self.settings),
+#                             Channel("Five", "five", self.settings),
+#                             Channel("BBC Podcasts", "podcast", self.settings),
+#                             Channel("BBC Radio", "radio", self.settings),
 #                             Channel("Hulu", "hulu", self.settings),
                              ])
         self.downloader = downloader.Downloader(self.settings)
+        self.streamer = streamer.Streamer(self.settings)
 
     def shutdown(self):
         """ Make sure all subprocesses get stopped,
@@ -43,6 +45,7 @@ class Channels(list):
         for channel in self:
             channel.cancel_refresh()
         self.downloader.cancel_all()
+        self.streamer.cancel()
 
     def refresh_all(self):
         for channel in self:
