@@ -76,6 +76,14 @@ class Presenter(object):
             programme.channel_obj.unsubscribe(programme)
             self.view.channel_tree.delete_programme(programme)
 
+    def play(self, episode):
+        if episode is not None:
+            self.channels.streamer.stream(episode)
+
+            episode.channel_obj.mark_downloaded(episode)
+            self.view.episode_list.refresh_selected_episode()
+            self.view.channel_tree.refresh_selected_programme()
+
     def download(self, episode):
         """ Call to add an episode to the download queue """
         if episode is not None:

@@ -33,6 +33,10 @@ class Interactor(object):
                                   id=view.channel_toolbar.ID_UNSUBSCRIBE)
 
         view.episode_toolbar.Bind(wx.EVT_TOOL, 
+                                  self._on_play,
+                                  id=view.episode_toolbar.ID_PLAY)
+
+        view.episode_toolbar.Bind(wx.EVT_TOOL, 
                                   self._on_download,
                                   id=view.episode_toolbar.ID_DOWNLOAD)
 
@@ -72,6 +76,10 @@ class Interactor(object):
     def _on_unsubscribe(self, event=None):
         programme = self.view.channel_tree.get_selected_programme()
         self.presenter.unsubscribe(programme)
+
+    def _on_play(self, event):
+        episode = self.view.episode_list.get_selected_episode()
+        self.presenter.play(episode)
 
     def _on_download(self, event):
         episode = self.view.episode_list.get_selected_episode()
