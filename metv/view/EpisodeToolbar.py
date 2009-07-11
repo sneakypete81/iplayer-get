@@ -4,10 +4,15 @@ import images
 class EpisodeToolbar(wx.ToolBar):
     ID_DOWNLOAD = 101
     ID_IGNORE = 102
+    ID_PLAY = 103
 
     def __init__(self, *args, **kwds):
         kwds["style"] = wx.TB_FLAT|wx.TB_TEXT
         wx.ToolBar.__init__(self, *args, **kwds)
+        self.AddLabelTool(self.ID_PLAY, 
+                          label="Play", 
+                          bitmap=images.getIPlayerBitmap(), 
+                          shortHelp="Play the selected episode")
         self.AddLabelTool(self.ID_DOWNLOAD, 
                           label="Download", 
                           bitmap=images.getIPlayerBitmap(), 
