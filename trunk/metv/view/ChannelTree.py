@@ -57,11 +57,11 @@ class ChannelTree(wx.TreeCtrl):
         """ Update the display colour of the specified programme """
         if programme is not None:
             for episode in programme.episodes:
-                if not episode.downloaded and not episode.ignored:
+                if not episode.downloaded:
                     self.SetItemTextColour(programme.view_item,
                                            wx.NamedColour(NORMAL_TEXT_COLOUR))
                     return
-            # Programme contains only downloaded or ignored episodes
+            # Programme contains only downloaded episodes
             self.SetItemTextColour(programme.view_item,
                                    wx.NamedColour(DOWNLOADED_TEXT_COLOUR))
 

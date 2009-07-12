@@ -37,5 +37,5 @@ class EpisodeToolbar(wx.ToolBar):
         if episode is None:
             ignored = False
         else:
-            ignored = episode.ignored
+            ignored = episode.downloaded
         self.ToggleTool(self.ID_IGNORE, ignored)

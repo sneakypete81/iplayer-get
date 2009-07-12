@@ -187,11 +187,6 @@ class Channel():
                 else:
                     episode.downloaded = False
 
-                if episode.pid in self.channel_settings.ignored_episodes:
-                    episode.ignored = True
-                else:
-                    episode.ignored = False
-
                 # Create a new programme if necessary
                 if episode.name in self.all_programmes:
                     prog = self.all_programmes[episode.name]
@@ -232,9 +227,9 @@ class Channel():
 
     def ignore(self, episode):
         """ Toggle ignore status """
-        if episode.pid in self.channel_settings.ignored_episodes:
-            self.channel_settings.ignored_episodes.remove(episode.pid)
-            episode.ignored = False
+        if episode.pid in self.channel_settings.downloaded_episodes:
+            self.channel_settings.downloaded_episodes.remove(episode.pid)
+            episode.downloaded = False
         else:
-            self.channel_settings.ignored_episodes.append(episode.pid)
-            episode.ignored = True
+            self.channel_settings.downloaded_episodes.append(episode.pid)
+            episode.downloaded = True

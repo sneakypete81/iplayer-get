@@ -34,7 +34,7 @@ class SubscriptionsDialog(wx.Dialog):
 
     def __set_properties(self):
         # begin wxGlade: SubscriptionsDialog.__set_properties
-        self.SetTitle("subscriptions_dialog")
+        self.SetTitle("Manage Subscriptions")
         self.SetSize((600, 400))
         self.button_1.SetDefault()
         # end wxGlade
