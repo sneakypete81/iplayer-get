@@ -9,12 +9,12 @@ class ChannelToolbar(wx.ToolBar):
         kwds["style"] = wx.TB_FLAT|wx.TB_TEXT
         wx.ToolBar.__init__(self, *args, **kwds)
         self.AddLabelTool(self.ID_SUBSCRIBE, 
-                          label="Subscribe", 
-                          bitmap=images.getIPlayerBitmap(),
-                          shortHelp="Add a new programme to the list")
+                          label="Subscriptions", 
+                          bitmap=images.getEpisodeSubscribeBitmap(),
+                          shortHelp="Manage programme subscriptions")
         self.AddLabelTool(self.ID_UNSUBSCRIBE, 
-                          label="Unsubscribe", 
-                          bitmap=images.getIPlayerBitmap(),
+                          label="Hide", 
+                          bitmap=images.getEditDeleteBitmap(),
                           shortHelp="Remove selected programme from the list")
 
         self.__set_properties()

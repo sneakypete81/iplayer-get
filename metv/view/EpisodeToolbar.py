@@ -11,17 +11,17 @@ class EpisodeToolbar(wx.ToolBar):
         wx.ToolBar.__init__(self, *args, **kwds)
         self.AddLabelTool(self.ID_PLAY, 
                           label="Play", 
-                          bitmap=images.getIPlayerBitmap(), 
+                          bitmap=images.getMediaPlaybackStartBitmap(), 
                           shortHelp="Play the selected episode")
         self.AddLabelTool(self.ID_DOWNLOAD, 
                           label="Download", 
-                          bitmap=images.getIPlayerBitmap(), 
+                          bitmap=images.getEpisodeDownloadBitmap(), 
                           shortHelp="Download the selected episode")
         self.AddLabelTool(self.ID_IGNORE, 
-                          label="Ignore", 
-                          bitmap=images.getIPlayerBitmap(), 
+                          label="Mark", 
+                          bitmap=images.getEpisodeMarkBitmap(), 
                           kind=wx.ITEM_CHECK, 
-                          shortHelp="Mark the selected episode as \"Ignored\"")
+                          shortHelp="Mark the selected episode as \"Viewed\"")
 
         self.__set_properties()
         self.__do_layout()
