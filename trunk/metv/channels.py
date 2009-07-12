@@ -32,7 +32,7 @@ class Channels(list):
 #                             Channel("Channel 4", "ch4", self.settings),
 #                             Channel("Five", "five", self.settings),
 #                             Channel("BBC Podcasts", "podcast", self.settings),
-#                             Channel("BBC Radio", "radio", self.settings),
+                             Channel("BBC Radio", "radio", self.settings),
 #                             Channel("Hulu", "hulu", self.settings),
                              ])
         self.downloader = downloader.Downloader(self.settings)
