@@ -19,8 +19,7 @@ class Settings():
             saved_channels = pickle.load(f)
             for title, saved_channel in saved_channels.items():
                 channel = self.get_channel_settings(title)
-                channel.__dict__.update(saved_channel.__dict__)
-                
+                channel.__dict__.update(saved_channel.__dict__)                
 
         except IOError, inst:#Exception, inst:
             print "Could not read settings: %s" % str(inst)

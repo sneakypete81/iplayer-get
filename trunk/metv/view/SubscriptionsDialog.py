@@ -58,7 +58,7 @@ class SubscriptionsDialog(wx.Dialog):
         for channel in channels:
             pane = SubscriptionsPane(self.notebook, channel=channel) 
             self.panes[channel.title] = pane
-            self.notebook.AddPage(page=pane, text=channel.title)
+            self.notebook.AddPage(page=pane, caption=channel.title)
 
         wx.Dialog.ShowModal(self, *args, **kwds)
         
