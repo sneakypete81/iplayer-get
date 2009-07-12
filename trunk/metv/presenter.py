@@ -86,17 +86,14 @@ class Presenter(object):
 
     def download(self, episode):
         """ Call to add an episode to the download queue """
-        if episode is None:
-            # Ensure the ignore toolbar button doesn't get set
-            self.view.episode_toolbar.update(None)
-        else:
+        if episode is not None:
             self.channels.downloader.add_episode(episode)
             self.view.download_list.update()
             episode = self.view.episode_list.select_next_episode()
             self.view.episode_toolbar.update(episode)
 
     def ignore(self, episode):
-        """ Call to add an episode to the list of ignored episodes """
+        """ Call to add an episode to the list of downloaded episodes """
         if episode is None:
             # Ensure the ignore toolbar button doesn't get set
             self.view.episode_toolbar.update(None)
