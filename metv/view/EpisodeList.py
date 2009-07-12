@@ -22,14 +22,11 @@ class EpisodeList(wx.SimpleHtmlListBox):
 
     def _generate_html(self, episode):
          if episode.downloaded:
-             html = ("<em><font color=grey>%s</font><br>" % episode.episode +
+             html = ("<em><font color='dim grey'>%s</font><br>" 
+                     % episode.episode +
                      "<table><td>&nbsp;</td><td>" + # Indent
-                     "<font color=grey size=-1>%s</font>" % episode.desc +
-                     "</td></table></em>")
-         elif episode.ignored:
-             html = ("<em><font color=red>%s</font><br>" % episode.episode +
-                     "<table><td>&nbsp;</td><td>" + # Indent
-                     "<font color=red size=-1>%s</font>" % episode.desc +
+                     "<font color='dim grey' size=-1>%s</font>" 
+                     % episode.desc +
                      "</td></table></em>")
          else:
             html = ("<strong>%s</strong><br>" % episode.episode +
@@ -57,7 +54,7 @@ class EpisodeList(wx.SimpleHtmlListBox):
 
     def select_next_episode(self):
         """ 
-        Selects the next episode not marked as "ignored" or "downloaded"
+        Selects the next episode not marked as "downloaded"
         Returns the selected episode object
         """        
         index = self.GetSelection()
@@ -68,7 +65,7 @@ class EpisodeList(wx.SimpleHtmlListBox):
 
         while index < self.GetCount():
             episode = self.GetClientData(index)
-            if not episode.downloaded and not episode.ignored:
+            if not episode.downloaded:
                 self.SetSelection(index)
                 return self.GetClientData(index)
             index += 1

@@ -55,4 +55,3 @@ class ChannelSettings():
         self.simultaneous_downloads = 1
 
         self.downloaded_episodes = []
-        self.ignored_episodes = []
