@@ -13,6 +13,10 @@ from DownloadList import DownloadList
 from DownloadLogDialog import DownloadLogDialog
 from SubscriptionsDialog import SubscriptionsDialog
 
+# Use the AUI Notebook, since the GTK notebook has a focus bug
+import wx.aui
+wx.Notebook = wx.aui.AuiNotebook
+
 # begin wxGlade: extracode
 
 # end wxGlade
