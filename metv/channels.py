@@ -59,6 +59,7 @@ class Channel():
         self.code = code
         self.all_programmes = {}
         self.subscribed_programmes = {}
+        self.unsubscribed_programmes = {}
         self.is_refreshing = False
         self.error_message = None
         self.download_chunks = []
@@ -67,6 +68,10 @@ class Channel():
 
         self.settings = settings
         self.channel_settings = settings.get_channel_settings(title)
+
+#         if title == "BBC Radio":
+#             print "true"
+#             self.channel_settings.require_subscription = True
 
         self._process = None
         self._process_timer = None
@@ -198,13 +203,19 @@ class Channel():
                 prog.episodes.append(episode)
 
                 # Check if programme is unsubscribed
-                if episode.name in self.channel_settings.unsubscribed_programmes:
-                    continue
-                if (self.channel_settings.require_subscription and 
-                    episode.name not in self.channel_settings.subscribed_programmes):
-                    continue
+                if (episode.name in 
+                    self.channel_settings.unsubscribed_programmes):
 
-                self.subscribed_programmes[episode.name] = prog
+                    self.unsubscribed_programmes[episode.name] = prog
+
+                elif (self.channel_settings.require_subscription and 
+                      episode.name not in 
+                      self.channel_settings.subscribed_programmes):
+
+                    self.unsubscribed_programmes[episode.name] = prog
+
+                else:
+                    self.subscribed_programmes[episode.name] = prog
 
 
 
