@@ -59,15 +59,39 @@ class SubscriptionsPane(wx.Panel):
         sizer_7.Fit(self)
         # end wxGlade
 
-    def update(self):
-        unsubscribed_programmes = self.channel.channel_settings.unsubscribed_programmes
-        available_unsubscribed = [prog for prog in self.channel.all_programmes
-                                  if prog in unsubscribed_programmes]
-        subscribed_programmes = self.channel.subscribed_programmes.keys()
+# Always show programmes marked "unsubscribed" in the hidden list.
+#    Show in grey if no longer available.
+# Always show programmes marked "subscribed" in the subscribed list.
+#    Show in grey if no longer available.
+#
+# For all other programmes, if "require_subscription" settings is true:
+#    Show as unsubscribed
+# else:
+#    Show as subscribed
 
-        self.hidden_list.update(unsubscribed_programmes, 
+
+    def update(self): 
+        unsubscribed_programmes = set(self.channel.channel_settings.
+                                      unsubscribed_programmes)
+        subscribed_programmes = set(self.channel.channel_settings.
+                                    subscribed_programmes)
+
+        if self.channel.channel_settings.require_subscription:
+            unsubscribed_programmes = unsubscribed_programmes.union(
+                self.channel.unsubscribed_programmes.keys())
+        else:
+            subscribed_programmes = subscribed_programmes.union(
+                self.channel.subscribed_programmes.keys())
+
+        available_unsubscribed = (set(self.channel.all_programmes) -
+                                  subscribed_programmes)
+        available_subscribed = (set(self.channel.all_programmes) -
+                                unsubscribed_programmes)
+
+        self.hidden_list.update(list(unsubscribed_programmes), 
                                 emphasis=available_unsubscribed)
-        self.subscribed_list.update(subscribed_programmes)
+        self.subscribed_list.update(list(subscribed_programmes),
+                                    emphasis=available_subscribed)
 
 # end of class SubscriptionsPane
 

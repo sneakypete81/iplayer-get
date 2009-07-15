@@ -122,10 +122,19 @@ class Presenter(object):
         self.view.show_subscriptions_dialog(self.channels)
 
     def subscriptions_subscribe(self, channel, programmes):
+        # Add to subscribed programmes list if default is to hide
+        if channel.channel_settings.require_subscription:
+            channel.channel_settings.subscribed_programmes.extend(programmes)
+        
         for programme in programmes:
-            channel.channel_settings.unsubscribed_programmes.remove(programme)
+            if programme in channel.channel_settings.unsubscribed_programmes:
+                channel.channel_settings.unsubscribed_programmes. \
+                    remove(programme)
+
             if programme in channel.all_programmes:
-                channel.subscribed_programmes[programme] = channel.all_programmes[programme]
+                del channel.unsubscribed_programmes[programme]
+                channel.subscribed_programmes[programme] = \
+                    channel.all_programmes[programme]
 
         self.view.channel_tree.update(channel)
         if channel.title in self.view.subscriptions_dialog.panes:
@@ -135,9 +144,19 @@ class Presenter(object):
             pane.subscribed_list.select_programmes(programmes)
 
     def subscriptions_unsubscribe(self, channel, programmes):
-        channel.channel_settings.unsubscribed_programmes.extend(programmes)
+        # Add to unsubscribed programmes list if default is to show
+        if not channel.channel_settings.require_subscription:
+            channel.channel_settings.unsubscribed_programmes.extend(programmes)
+
         for programme in programmes:
-            del channel.subscribed_programmes[programme]
+            if programme in channel.channel_settings.subscribed_programmes:
+                channel.channel_settings.subscribed_programmes. \
+                    remove(programme)
+
+            if programme in channel.all_programmes:
+                del channel.subscribed_programmes[programme]
+                channel.unsubscribed_programmes[programme] = \
+                    channel.all_programmes[programme]
 
         self.view.channel_tree.update(channel)
         if channel.title in self.view.subscriptions_dialog.panes:
