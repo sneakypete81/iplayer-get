@@ -83,6 +83,8 @@ class Presenter(object):
             episode.channel_obj.mark_downloaded(episode)
             self.view.episode_list.refresh_selected_episode()
             self.view.channel_tree.refresh_selected_programme()
+            episode = self.view.episode_list.select_next_episode()
+            self.view.episode_toolbar.update(episode)
 
     def download(self, episode):
         """ Call to add an episode to the download queue """
