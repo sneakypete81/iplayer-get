@@ -79,8 +79,8 @@ class Presenter(object):
     def play(self, episode):
         if episode is not None:
             self.channels.streamer.stream(episode)
-
             episode.channel_obj.mark_downloaded(episode)
+
             self.view.episode_list.refresh_selected_episode()
             self.view.channel_tree.refresh_selected_programme()
             episode = self.view.episode_list.select_next_episode()
@@ -91,6 +91,9 @@ class Presenter(object):
         if episode is not None:
             self.channels.downloader.add_episode(episode)
             self.view.download_list.update()
+
+            self.view.episode_list.refresh_selected_episode()
+            self.view.channel_tree.refresh_selected_programme()
             episode = self.view.episode_list.select_next_episode()
             self.view.episode_toolbar.update(episode)
 
@@ -101,6 +104,7 @@ class Presenter(object):
             self.view.episode_toolbar.update(None)
         else:
             episode.channel_obj.ignore(episode)
+
             self.view.episode_list.refresh_selected_episode()
             self.view.channel_tree.refresh_selected_programme()
             episode = self.view.episode_list.select_next_episode()
