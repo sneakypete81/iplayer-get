@@ -85,7 +85,7 @@ VPeggio di cosi si muore
 p36
 sS'last_rep'
 p37
-I562
+I568
 sS'ret_reps'
 p38
 I6
@@ -97,10 +97,10 @@ VWorse than this you die
 p40
 sS'grade'
 p41
-I1
+I4
 sS'acq_reps'
 p42
-I5
+I6
 sS'ret_reps_since_lapse'
 p43
 I0
@@ -115,10 +115,10 @@ p46
 I2
 sS'acq_reps_since_lapse'
 p47
-I0
+I1
 sS'next_rep'
 p48
-I562
+I569
 sS'id'
 p49
 V1ac3ccc9
@@ -131,7 +131,7 @@ S'a'
 VTi piace cucinare?
 p53
 sg37
-I562
+I568
 sg38
 I5
 sg39
@@ -140,9 +140,9 @@ sS'q'
 VDo you like cooking?
 p54
 sg41
-I0
+I3
 sg42
-I4
+I5
 sg43
 I0
 sg44
@@ -152,9 +152,9 @@ F2.4399999999999999
 sg46
 I2
 sg47
-I0
+I1
 sg48
-I562
+I570
 sg49
 S'2d9b76db'
 p55
@@ -166,7 +166,7 @@ S'a'
 VDesidero
 p58
 sg37
-I562
+I568
 sg38
 I6
 sg39
@@ -175,9 +175,9 @@ sS'q'
 VI wish
 p59
 sg41
-I1
+I2
 sg42
-I5
+I7
 sg43
 I0
 sg44
@@ -187,9 +187,9 @@ F2.46
 sg46
 I3
 sg47
-I0
+I2
 sg48
-I562
+I570
 sg49
 S'f9cb82f2'
 p60
@@ -198,11 +198,11 @@ Item
 p61
 (dp62
 S'a'
-Vtu puoi
+Vpuoi
 p63
 sS'last_rep'
 p64
-I562
+I568
 sS'ret_reps'
 p65
 I4
@@ -214,10 +214,10 @@ Vyou can
 p67
 sS'grade'
 p68
-I1
+I3
 sS'acq_reps'
 p69
-I4
+I5
 sS'ret_reps_since_lapse'
 p70
 I0
@@ -231,10 +231,10 @@ p72
 I2
 sS'acq_reps_since_lapse'
 p73
-I0
+I1
 sS'next_rep'
 p74
-I562
+I570
 sS'id'
 p75
 S'88a3c112'
@@ -247,7 +247,7 @@ S'a'
 Vcompito
 p79
 sg37
-I562
+I568
 sg38
 I4
 sg39
@@ -256,9 +256,9 @@ sS'q'
 Vhomework
 p80
 sg41
-I1
+I5
 sg42
-I3
+I4
 sg43
 I0
 sg44
@@ -268,9 +268,9 @@ F2.7000000000000002
 sg46
 I2
 sg47
-I0
+I1
 sg48
-I562
+I569
 sg49
 S'5b9f1487'
 p81
@@ -282,7 +282,7 @@ S'a'
 Vmi piaciono bambini
 p84
 sg37
-I562
+I568
 sg38
 I8
 sg39
@@ -291,9 +291,9 @@ sS'q'
 VI like children
 p85
 sg41
-I1
+I3
 sg42
-I6
+I7
 sg43
 I0
 sg44
@@ -303,9 +303,9 @@ F2.1999999999999997
 sg46
 I3
 sg47
-I0
+I1
 sg48
-I562
+I570
 sg49
 S'900ef1fa'
 p86
@@ -318,7 +318,7 @@ Vat/to/in (city or island)
 p89
 sS'last_rep'
 p90
-I562
+I568
 sS'ret_reps'
 p91
 I3
@@ -329,10 +329,10 @@ sS'q'
 Va
 sS'grade'
 p93
-I0
+I3
 sS'acq_reps'
 p94
-I2
+I3
 sS'ret_reps_since_lapse'
 p95
 I0
@@ -347,10 +347,10 @@ p98
 I1
 sS'acq_reps_since_lapse'
 p99
-I0
+I1
 sS'next_rep'
 p100
-I562
+I569
 sS'id'
 p101
 S'cb447391'
@@ -363,7 +363,7 @@ S'a'
 Vsoccer
 p105
 sg64
-I561
+I568
 sg65
 I6
 sg66
@@ -372,9 +372,9 @@ sS'q'
 Vcalcio
 p106
 sg68
-I1
+I5
 sg69
-I4
+I5
 sg70
 I0
 sg44
@@ -384,9 +384,9 @@ F2.6765882352941222
 sg72
 I3
 sg73
-I0
+I1
 sg74
-I561
+I569
 sg75
 S'c0521dad'
 p107
@@ -399,7 +399,7 @@ Vil termosifone
 p110
 sS'last_rep'
 p111
-I561
+I568
 sS'ret_reps'
 p112
 I4
@@ -411,10 +411,10 @@ Vthe central heating
 p114
 sS'grade'
 p115
-I0
+I4
 sS'acq_reps'
 p116
-I6
+I7
 sS'ret_reps_since_lapse'
 p117
 I0
@@ -429,10 +429,10 @@ p120
 I2
 sS'acq_reps_since_lapse'
 p121
-I0
+I1
 sS'next_rep'
 p122
-I561
+I569
 sS'id'
 p123
 S'3f747de3.inv'
@@ -446,7 +446,7 @@ Vto buy
 p127
 sS'last_rep'
 p128
-I561
+I568
 sS'ret_reps'
 p129
 I3
@@ -458,10 +458,10 @@ Vcomprare
 p131
 sS'grade'
 p132
-I1
+I4
 sS'acq_reps'
 p133
-I2
+I3
 sS'ret_reps_since_lapse'
 p134
 I0
@@ -476,10 +476,10 @@ p137
 I1
 sS'acq_reps_since_lapse'
 p138
-I0
+I1
 sS'next_rep'
 p139
-I561
+I569
 sS'id'
 p140
 S'01a9b383'
@@ -492,7 +492,7 @@ S'a'
 VCi vediamo martedi prossimo
 p144
 sg37
-I561
+I568
 sg38
 I7
 sg39
@@ -501,9 +501,9 @@ sS'q'
 VSee you next tuesday
 p145
 sg41
-I1
+I3
 sg42
-I12
+I13
 sg43
 I0
 sg44
@@ -513,9 +513,9 @@ F2.5
 sg46
 I6
 sg47
-I0
+I1
 sg48
-I561
+I569
 sg49
 S'2e64c59d'
 p146
@@ -562,7 +562,7 @@ S'a'
 Vsedia
 p154
 sg37
-I540
+I568
 sg38
 I4
 sg39
@@ -571,9 +571,9 @@ sS'q'
 Vchair
 p155
 sg41
-I0
+I4
 sg42
-I3
+I4
 sg43
 I0
 sg44
@@ -583,9 +583,9 @@ F2.46
 sg46
 I2
 sg47
-I0
+I1
 sg48
-I540
+I570
 sg49
 S'84f70bf5'
 p156
@@ -597,7 +597,7 @@ S'a'
 Vtravel
 p159
 sg64
-I540
+I568
 sg65
 I4
 sg66
@@ -606,9 +606,9 @@ sS'q'
 Vviaggiare
 p160
 sg68
-I1
+I4
 sg69
-I5
+I7
 sg70
 I0
 sg44
@@ -618,9 +618,9 @@ F2.5765882352941225
 sg72
 I2
 sg73
-I0
+I2
 sg74
-I540
+I570
 sg75
 S'f72b8238'
 p161
@@ -632,7 +632,7 @@ S'a'
 VParto
 p164
 sg37
-I540
+I568
 sg38
 I7
 sg39
@@ -641,9 +641,9 @@ sS'q'
 VI live
 p165
 sg41
-I0
+I4
 sg42
-I9
+I10
 sg43
 I0
 sg44
@@ -653,9 +653,9 @@ F2.5
 sg46
 I5
 sg47
-I0
+I1
 sg48
-I540
+I569
 sg49
 S'16ae6c56'
 p166
@@ -667,7 +667,7 @@ S'a'
 VChe ora e / Che ora sono
 p169
 sg37
-I540
+I568
 sg38
 I6
 sg39
@@ -676,9 +676,9 @@ sS'q'
 VWhat's the time
 p170
 sg41
-I1
+I4
 sg42
-I6
+I7
 sg43
 I0
 sg44
@@ -688,9 +688,9 @@ F2.3399999999999999
 sg46
 I4
 sg47
-I0
+I1
 sg48
-I540
+I569
 sg49
 S'548b9474'
 p171
@@ -702,7 +702,7 @@ S'a'
 Vpotete
 p174
 sg64
-I540
+I568
 sg65
 I6
 sg66
@@ -711,9 +711,9 @@ sS'q'
 Vyou all can
 p175
 sg68
-I1
+I2
 sg69
-I9
+I11
 sg70
 I0
 sg44
@@ -723,9 +723,9 @@ F2.4365882352941211
 sg72
 I3
 sg73
-I0
+I2
 sg74
-I540
+I569
 sg75
 S'64029b6a'
 p176
@@ -737,7 +737,7 @@ S'a'
 Vfrom/by
 p179
 sg90
-I540
+I568
 sg91
 I3
 sg92
@@ -746,9 +746,9 @@ sS'q'
 Vda
 p180
 sg93
-I1
+I2
 sg94
-I3
+I6
 sg95
 I0
 sg96
@@ -758,9 +758,9 @@ F2.4193671623758441
 sg98
 I2
 sg99
-I0
+I3
 sg100
-I540
+I570
 sg101
 S'd7201344'
 p181
@@ -772,7 +772,7 @@ S'a'
 Vl' armadio
 p184
 sg111
-I540
+I568
 sg112
 I3
 sg113
@@ -781,9 +781,9 @@ sS'q'
 Vthe wardrobe
 p185
 sg115
-I0
+I2
 sg116
-I5
+I7
 sg117
 I0
 sg118
@@ -793,9 +793,9 @@ F2.551351598173516
 sg120
 I2
 sg121
-I0
+I2
 sg122
-I540
+I569
 sg123
 S'efa33b87.inv'
 p186
@@ -807,7 +807,7 @@ S'a'
 Vcucina
 p189
 sg90
-I540
+I568
 sg91
 I2
 sg92
@@ -816,9 +816,9 @@ sS'q'
 Vkitchen
 p190
 sg93
-I1
+I4
 sg94
-I2
+I3
 sg95
 I0
 sg96
@@ -828,9 +828,9 @@ F2.6593671623758413
 sg98
 I1
 sg99
-I0
+I1
 sg100
-I540
+I569
 sg101
 S'33568dd6.inv'
 p191
@@ -842,7 +842,7 @@ S'a'
 VNon l'ho fatto
 p194
 sg90
-I567
+I568
 sg91
 I2
 sg92
@@ -851,9 +851,9 @@ sS'q'
 Vno, i haven't done it
 p195
 sg93
-I0
+I2
 sg94
-I5
+I6
 sg95
 I0
 sg96
@@ -863,9 +863,9 @@ F2.4193671623758424
 sg98
 I1
 sg99
-I1
+I2
 sg100
-I567
+I569
 sg101
 S'd72a1e04'
 p196
@@ -877,7 +877,7 @@ S'a'
 Va few (not many)
 p199
 sg90
-I540
+I568
 sg91
 I2
 sg92
@@ -886,9 +886,9 @@ sS'q'
 Vpochi
 p200
 sg93
-I1
+I4
 sg94
-I2
+I3
 sg95
 I0
 sg96
@@ -898,9 +898,9 @@ F2.5593671623758434
 sg98
 I1
 sg99
-I0
+I1
 sg100
-I540
+I569
 sg101
 S'25e3c931'
 p201
@@ -911,7 +911,7 @@ p202
 S'a'
 Va
 sg90
-I567
+I568
 sg91
 I2
 sg92
@@ -919,9 +919,9 @@ g28
 sS'q'
 g89
 sg93
-I1
+I4
 sg94
-I3
+I4
 sg95
 I0
 sg96
@@ -931,9 +931,9 @@ F2.3993671623758446
 sg98
 I1
 sg99
-I1
+I2
 sg100
-I567
+I570
 sg101
 S'cb447391.inv'
 p204
@@ -945,7 +945,7 @@ S'a'
 Vthe television (the concept)
 p207
 sg90
-I540
+I568
 sg91
 I2
 sg92
@@ -954,9 +954,9 @@ sS'q'
 Vla televisione
 p208
 sg93
-I0
+I4
 sg94
-I2
+I3
 sg95
 I0
 sg96
@@ -966,9 +966,9 @@ F2.5593671623758483
 sg98
 I1
 sg99
-I0
+I1
 sg100
-I540
+I569
 sg101
 S'9eea59ee.inv'
 p209
@@ -980,7 +980,7 @@ S'a'
 Vthe television (the object)
 p212
 sg90
-I540
+I568
 sg91
 I2
 sg92
@@ -989,9 +989,9 @@ sS'q'
 Vil televisore
 p213
 sg93
-I0
+I3
 sg94
-I2
+I3
 sg95
 I0
 sg96
@@ -1001,9 +1001,9 @@ F2.5593671623758487
 sg98
 I1
 sg99
-I0
+I1
 sg100
-I540
+I570
 sg101
 S'd0669643.inv'
 p214
@@ -1015,7 +1015,7 @@ S'a'
 VDo you want to try it?
 p217
 sg37
-I540
+I568
 sg38
 I5
 sg39
@@ -1026,7 +1026,7 @@ p218
 sg41
 I0
 sg42
-I4
+I5
 sg43
 I0
 sg44
@@ -1036,9 +1036,9 @@ F2.2199999999999998
 sg46
 I2
 sg47
-I0
+I1
 sg48
-I540
+I568
 sg49
 S'7ed9277a'
 p219
@@ -1050,7 +1050,7 @@ S'a'
 Vpotere
 p222
 sg64
-I540
+I568
 sg65
 I6
 sg66
@@ -1059,9 +1059,9 @@ sS'q'
 Vto be able to
 p223
 sg68
-I0
+I3
 sg69
-I6
+I7
 sg70
 I0
 sg44
@@ -1071,9 +1071,9 @@ F2.2765882352941205
 sg72
 I4
 sg73
-I0
+I1
 sg74
-I540
+I570
 sg75
 S'21950fc1'
 p224
@@ -1085,7 +1085,7 @@ S'a'
 Vlui/lei puó
 p227
 sg64
-I540
+I568
 sg65
 I5
 sg66
@@ -1094,9 +1094,9 @@ sS'q'
 Vhe/she can
 p228
 sg68
-I0
+I2
 sg69
-I5
+I6
 sg70
 I0
 sg44
@@ -1106,9 +1106,9 @@ F2.4365882352941211
 sg72
 I4
 sg73
-I0
+I1
 sg74
-I540
+I570
 sg75
 S'01bf79d7'
 p229
@@ -1363,7 +1363,7 @@ S'a'
 VCom' é il tempo?
 p265
 sg37
-I539
+I568
 sg38
 I5
 sg39
@@ -1372,9 +1372,9 @@ sS'q'
 VWhat's the weather like?
 p266
 sg41
-I1
+I0
 sg42
-I10
+I11
 sg43
 I0
 sg44
@@ -1384,9 +1384,9 @@ F2.5
 sg46
 I5
 sg47
-I0
+I1
 sg48
-I539
+I568
 sg49
 S'2ff38267'
 p267
@@ -1468,7 +1468,7 @@ S'a'
 VAvrei un problema
 p280
 sg90
-I521
+I568
 sg91
 I2
 sg92
@@ -1477,9 +1477,9 @@ sS'q'
 VI have a problem
 p281
 sg93
-I1
+I3
 sg94
-I4
+I5
 sg95
 I0
 sg96
@@ -1489,9 +1489,9 @@ F2.5593671623758469
 sg98
 I1
 sg99
-I1
+I2
 sg100
-I521
+I569
 sg101
 S'7d59052f'
 p282
@@ -1538,20 +1538,20 @@ S'a'
 VChe giorno é oggi?
 p290
 sg37
-I561
+I568
 sg38
-I12
+I13
 sg39
 g9
 sS'q'
 VWhat day of the week is it?
 p291
 sg41
-I3
+I4
 sg42
 I5
 sg43
-I2
+I3
 sg44
 I00
 sg45
@@ -1561,7 +1561,7 @@ I4
 sg47
 I1
 sg48
-I568
+I577
 sg49
 Vd132b4c0
 p292
@@ -1572,7 +1572,7 @@ p293
 S'a'
 g223
 sg64
-I517
+I568
 sg65
 I3
 sg66
@@ -1580,9 +1580,9 @@ g23
 sS'q'
 g222
 sg68
-I1
-sg69
 I4
+sg69
+I5
 sg70
 I0
 sg44
@@ -1592,9 +1592,9 @@ F2.5765882352941203
 sg72
 I2
 sg73
-I0
+I1
 sg74
-I517
+I569
 sg75
 S'0cd17b17'
 p295
@@ -1606,7 +1606,7 @@ S'a'
 VCosa fai nel tempo libero?
 p298
 sg37
-I517
+I568
 sg38
 I3
 sg39
@@ -1615,9 +1615,9 @@ sS'q'
 VWhat do you do in the free time?
 p299
 sg41
-I1
+I4
 sg42
-I9
+I10
 sg43
 I0
 sg44
@@ -1627,9 +1627,9 @@ F2.3399999999999999
 sg46
 I2
 sg47
-I0
+I1
 sg48
-I517
+I569
 sg49
 S'5da14ead'
 p300
@@ -1641,7 +1641,7 @@ S'a'
 VAvete
 p303
 sg37
-I521
+I568
 sg38
 I7
 sg39
@@ -1650,9 +1650,9 @@ sS'q'
 VDo you have
 p304
 sg41
-I1
+I0
 sg42
-I10
+I11
 sg43
 I0
 sg44
@@ -1662,9 +1662,9 @@ F2.3199999999999998
 sg46
 I4
 sg47
-I1
+I2
 sg48
-I521
+I568
 sg49
 S'd54306ee'
 p305
@@ -1675,7 +1675,7 @@ p306
 S'a'
 g160
 sg64
-I517
+I568
 sg65
 I4
 sg66
@@ -1683,9 +1683,9 @@ g23
 sS'q'
 g159
 sg68
-I1
+I4
 sg69
-I17
+I18
 sg70
 I0
 sg44
@@ -1695,9 +1695,9 @@ F2.5765882352941225
 sg72
 I3
 sg73
-I0
+I1
 sg74
-I517
+I569
 sg75
 S'4cc08058'
 p308
@@ -1710,7 +1710,7 @@ Vancora una cosa
 p311
 sS'last_rep'
 p312
-I517
+I568
 sS'ret_reps'
 p313
 I1
@@ -1722,10 +1722,10 @@ Vanother thing
 p315
 sS'grade'
 p316
-I1
+I0
 sS'acq_reps'
 p317
-I3
+I4
 sS'ret_reps_since_lapse'
 p318
 I0
@@ -1740,10 +1740,10 @@ p321
 I1
 sS'acq_reps_since_lapse'
 p322
-I0
+I1
 sS'next_rep'
 p323
-I517
+I568
 sS'id'
 p324
 S'55b19e44.inv'
@@ -1826,7 +1826,7 @@ S'a'
 Vil televisore
 p338
 sg90
-I517
+I568
 sg91
 I2
 sg92
@@ -1835,9 +1835,9 @@ sS'q'
 Vtelevision (the object)
 p339
 sg93
-I1
-sg94
 I4
+sg94
+I5
 sg95
 I0
 sg96
@@ -1847,9 +1847,9 @@ F2.5593671623758492
 sg98
 I2
 sg99
-I0
+I1
 sg100
-I517
+I570
 sg101
 S'd0669643'
 p340
@@ -3868,9 +3868,9 @@ p609
 S'a'
 g571
 sg37
-I491
+I568
 sg38
-I4
+I5
 sg39
 g14
 sS'q'
@@ -3880,7 +3880,7 @@ I4
 sg42
 I3
 sg43
-I2
+I3
 sg44
 I00
 sg45
@@ -3890,7 +3890,7 @@ I1
 sg47
 I1
 sg48
-F568
+F769
 sg49
 S'30ff3ed7'
 p611
@@ -5096,7 +5096,8 @@ Item
 p759
 (dp760
 S'a'
-g67
+Vyou can
+p761
 sg64
 I561
 sg65
@@ -5104,7 +5105,8 @@ I4
 sg66
 g23
 sS'q'
-g63
+Vtu puoi
+p762
 sg68
 I4
 sg69
@@ -5123,14 +5125,14 @@ sg74
 F676
 sg75
 S'b2d3b1d9'
-p761
+p763
 sba(imnemosyne.core.mnemosyne_core
 Item
-p762
-(dp763
+p764
+(dp765
 S'a'
 Vio posso
-p764
+p766
 sg64
 I561
 sg65
@@ -5139,7 +5141,7 @@ sg66
 g23
 sS'q'
 VI can
-p765
+p767
 sg68
 I5
 sg69
@@ -5158,11 +5160,11 @@ sg74
 F688
 sg75
 S'5623e547'
-p766
+p768
 sba(imnemosyne.core.mnemosyne_core
 Item
-p767
-(dp768
+p769
+(dp770
 S'a'
 g646
 sg64
@@ -5191,11 +5193,11 @@ sg74
 I594
 sg75
 S'983c9530'
-p769
+p771
 sba(imnemosyne.core.mnemosyne_core
 Item
-p770
-(dp771
+p772
+(dp773
 S'a'
 g406
 sg64
@@ -5224,11 +5226,11 @@ sg74
 F606
 sg75
 S'430aa553'
-p772
+p774
 sba(imnemosyne.core.mnemosyne_core
 Item
-p773
-(dp774
+p775
+(dp776
 S'a'
 g651
 sg64
@@ -5257,11 +5259,11 @@ sg74
 F609
 sg75
 S'a4a6ff9b'
-p775
+p777
 sba(imnemosyne.core.mnemosyne_core
 Item
-p776
-(dp777
+p778
+(dp779
 S'a'
 g656
 sg64
@@ -5290,14 +5292,14 @@ sg74
 F683
 sg75
 S'7358eada'
-p778
+p780
 sba(imnemosyne.core.mnemosyne_core
 Item
-p779
-(dp780
+p781
+(dp782
 S'a'
 Vil letto
-p781
+p783
 sg64
 I540
 sg65
@@ -5306,7 +5308,7 @@ sg66
 g20
 sS'q'
 Vbed
-p782
+p784
 sg68
 I4
 sg69
@@ -5325,11 +5327,11 @@ sg74
 F601
 sg75
 S'48a5aa73'
-p783
+p785
 sba(imnemosyne.core.mnemosyne_core
 Item
-p784
-(dp785
+p786
+(dp787
 S'a'
 g54
 sg37
@@ -5358,14 +5360,14 @@ sg48
 F572
 sg49
 S'ea8bc85e'
-p786
+p788
 sba(imnemosyne.core.mnemosyne_core
 Item
-p787
-(dp788
+p789
+(dp790
 S'a'
 VTutto 'e a posto
-p789
+p791
 sg37
 I452
 sg38
@@ -5374,7 +5376,7 @@ sg39
 g9
 sS'q'
 VAll is in place
-p790
+p792
 sg41
 I4
 sg42
@@ -5393,14 +5395,14 @@ sg48
 F1457
 sg49
 V90c147ea
-p791
+p793
 sba(imnemosyne.core.mnemosyne_core
 Item
-p792
-(dp793
+p794
+(dp795
 S'a'
 VIt's Tuesday
-p794
+p796
 sg37
 I452
 sg38
@@ -5409,7 +5411,7 @@ sg39
 g9
 sS'q'
 VOggi 'e Martedi
-p795
+p797
 sg41
 I5
 sg42
@@ -5428,14 +5430,14 @@ sg48
 F1533
 sg49
 Vcc2633eb.inv
-p796
+p798
 sba(imnemosyne.core.mnemosyne_core
 Item
-p797
-(dp798
+p799
+(dp800
 S'a'
 VWhat is your address?
-p799
+p801
 sg37
 I491
 sg38
@@ -5444,7 +5446,7 @@ sg39
 g9
 sS'q'
 VDove abiti?
-p800
+p802
 sg41
 I5
 sg42
@@ -5463,14 +5465,14 @@ sg48
 F592
 sg49
 Vf691e17c.inv
-p801
+p803
 sba(imnemosyne.core.mnemosyne_core
 Item
-p802
-(dp803
+p804
+(dp805
 S'a'
 VDi quale nazionalita sei?
-p804
+p806
 sg37
 I452
 sg38
@@ -5479,7 +5481,7 @@ sg39
 g9
 sS'q'
 VWhat nationality are you?
-p805
+p807
 sg41
 I4
 sg42
@@ -5498,14 +5500,14 @@ sg48
 F1461
 sg49
 Vbe76041a
-p806
+p808
 sba(imnemosyne.core.mnemosyne_core
 Item
-p807
-(dp808
+p809
+(dp810
 S'a'
 VWhat nationality are you?
-p809
+p811
 sg37
 I452
 sg38
@@ -5514,7 +5516,7 @@ sg39
 g9
 sS'q'
 VDi quale nazionalita sei?
-p810
+p812
 sg41
 I5
 sg42
@@ -5533,14 +5535,14 @@ sg48
 F1598
 sg49
 Vbe76041a.inv
-p811
+p813
 sba(imnemosyne.core.mnemosyne_core
 Item
-p812
-(dp813
+p814
+(dp815
 S'a'
 VIo sono nuovo (neo) zelandese
-p814
+p816
 sg37
 I453
 sg38
@@ -5549,7 +5551,7 @@ sg39
 g9
 sS'q'
 VI'm from New Zealand
-p815
+p817
 sg41
 I4
 sg42
@@ -5568,14 +5570,14 @@ sg48
 F1517
 sg49
 Vb46f03f5
-p816
+p818
 sba(imnemosyne.core.mnemosyne_core
 Item
-p817
-(dp818
+p819
+(dp820
 S'a'
 VI'm from New Zealand
-p819
+p821
 sg37
 I453
 sg38
@@ -5584,7 +5586,7 @@ sg39
 g9
 sS'q'
 VIo sono nuovo (neo) zelandese
-p820
+p822
 sg41
 I4
 sg42
@@ -5603,14 +5605,14 @@ sg48
 F1520
 sg49
 Vb46f03f5.inv
-p821
+p823
 sba(imnemosyne.core.mnemosyne_core
 Item
-p822
-(dp823
+p824
+(dp825
 S'a'
 VDi dove sei?
-p824
+p826
 sg37
 I491
 sg38
@@ -5619,7 +5621,7 @@ sg39
 g9
 sS'q'
 VWhere are you from?
-p825
+p827
 sg41
 I4
 sg42
@@ -5638,14 +5640,14 @@ sg48
 F589
 sg49
 Vc9fa082a
-p826
+p828
 sba(imnemosyne.core.mnemosyne_core
 Item
-p827
-(dp828
+p829
+(dp830
 S'a'
 VWhere are you from?
-p829
+p831
 sg37
 I453
 sg38
@@ -5654,7 +5656,7 @@ sg39
 g9
 sS'q'
 VDi dove sei?
-p830
+p832
 sg41
 I5
 sg42
@@ -5673,14 +5675,14 @@ sg48
 F1624
 sg49
 Vc9fa082a.inv
-p831
+p833
 sba(imnemosyne.core.mnemosyne_core
 Item
-p832
-(dp833
+p834
+(dp835
 S'a'
 VHow long have you lived in Cambridge
-p834
+p836
 sg37
 I452
 sg38
@@ -5689,7 +5691,7 @@ sg39
 g9
 sS'q'
 VDa quanto tempo vivi a Cambridge?
-p835
+p837
 sg41
 I5
 sg42
@@ -5708,14 +5710,14 @@ sg48
 F1590
 sg49
 Vca7df8be.inv
-p836
+p838
 sba(imnemosyne.core.mnemosyne_core
 Item
-p837
-(dp838
+p839
+(dp840
 S'a'
 VI've lived in Cambridge for 2 years
-p839
+p841
 sg37
 I453
 sg38
@@ -5724,7 +5726,7 @@ sg39
 g9
 sS'q'
 VIo vivo a Cambridge da due anni
-p840
+p842
 sg41
 I4
 sg42
@@ -5743,14 +5745,14 @@ sg48
 F1599
 sg49
 Vb39bbb5b.inv
-p841
+p843
 sba(imnemosyne.core.mnemosyne_core
 Item
-p842
-(dp843
+p844
+(dp845
 S'a'
 VDove abiti?
-p844
+p846
 sg37
 I453
 sg38
@@ -5759,7 +5761,7 @@ sg39
 g9
 sS'q'
 VWhat is your address?
-p845
+p847
 sg41
 I4
 sg42
@@ -5778,14 +5780,14 @@ sg48
 F1472
 sg49
 Vf691e17c
-p846
+p848
 sba(imnemosyne.core.mnemosyne_core
 Item
-p847
-(dp848
+p849
+(dp850
 S'a'
 VQual 'e il tuo numero di telephono
-p849
+p851
 sg37
 I491
 sg38
@@ -5794,7 +5796,7 @@ sg39
 g9
 sS'q'
 VWhat is your telephone number?
-p850
+p852
 sg41
 I4
 sg42
@@ -5813,14 +5815,14 @@ sg48
 F574
 sg49
 V01842a63
-p851
+p853
 sba(imnemosyne.core.mnemosyne_core
 Item
-p852
-(dp853
+p854
+(dp855
 S'a'
 VWhat is your telephone number?
-p854
+p856
 sg37
 I453
 sg38
@@ -5829,7 +5831,7 @@ sg39
 g9
 sS'q'
 VQual 'e il tuo numero di telephono
-p855
+p857
 sg41
 I5
 sg42
@@ -5848,14 +5850,14 @@ sg48
 F1635
 sg49
 V01842a63.inv
-p856
+p858
 sba(imnemosyne.core.mnemosyne_core
 Item
-p857
-(dp858
+p859
+(dp860
 S'a'
 VQuanti anni hai?
-p859
+p861
 sg37
 I453
 sg38
@@ -5864,7 +5866,7 @@ sg39
 g9
 sS'q'
 VHow old are you?
-p860
+p862
 sg41
 I4
 sg42
@@ -5883,14 +5885,14 @@ sg48
 F1468
 sg49
 Vee97bae6
-p861
+p863
 sba(imnemosyne.core.mnemosyne_core
 Item
-p862
-(dp863
+p864
+(dp865
 S'a'
 VHow old are you?
-p864
+p866
 sg37
 I453
 sg38
@@ -5899,7 +5901,7 @@ sg39
 g9
 sS'q'
 VQuanti anni hai?
-p865
+p867
 sg41
 I4
 sg42
@@ -5918,14 +5920,14 @@ sg48
 F1565
 sg49
 Vee97bae6.inv
-p866
+p868
 sba(imnemosyne.core.mnemosyne_core
 Item
-p867
-(dp868
+p869
+(dp870
 S'a'
 VQuando 'e il tuo compleanno?
-p869
+p871
 sg37
 I491
 sg38
@@ -5934,7 +5936,7 @@ sg39
 g9
 sS'q'
 VWhen is your birthday?
-p870
+p872
 sg41
 I4
 sg42
@@ -5953,14 +5955,14 @@ sg48
 F576
 sg49
 V8b79bd86
-p871
+p873
 sba(imnemosyne.core.mnemosyne_core
 Item
-p872
-(dp873
+p874
+(dp875
 S'a'
 VWhen is your birthday?
-p874
+p876
 sg37
 I453
 sg38
@@ -5969,7 +5971,7 @@ sg39
 g9
 sS'q'
 VQuando 'e il tuo compleanno?
-p875
+p877
 sg41
 I4
 sg42
@@ -5988,14 +5990,14 @@ sg48
 F1582
 sg49
 V8b79bd86.inv
-p876
+p878
 sba(imnemosyne.core.mnemosyne_core
 Item
-p877
-(dp878
+p879
+(dp880
 S'a'
 VWhat day of the week is it?
-p879
+p881
 sg37
 I452
 sg38
@@ -6004,7 +6006,7 @@ sg39
 g9
 sS'q'
 VChe giorno 'e oggi?
-p880
+p882
 sg41
 I4
 sg42
@@ -6023,14 +6025,14 @@ sg48
 F1539
 sg49
 Vd132b4c0.inv
-p881
+p883
 sba(imnemosyne.core.mnemosyne_core
 Item
-p882
-(dp883
+p884
+(dp885
 S'a'
 VOggi 'e Martedi
-p884
+p886
 sg37
 I453
 sg38
@@ -6039,7 +6041,7 @@ sg39
 g9
 sS'q'
 VIt's Tuesday
-p885
+p887
 sg41
 I4
 sg42
@@ -6058,14 +6060,14 @@ sg48
 F1500
 sg49
 Vcc2633eb
-p886
+p888
 sba(imnemosyne.core.mnemosyne_core
 Item
-p887
-(dp888
+p889
+(dp890
 S'a'
 Vtutto e rosa
-p889
+p891
 sg37
 I521
 sg38
@@ -6074,7 +6076,7 @@ sg39
 g9
 sS'q'
 VAll is pink
-p890
+p892
 sg41
 I4
 sg42
@@ -6093,14 +6095,14 @@ sg48
 F592
 sg49
 V65ad33c2
-p891
+p893
 sba(imnemosyne.core.mnemosyne_core
 Item
-p892
-(dp893
+p894
+(dp895
 S'a'
 VAll is pink
-p894
+p896
 sg37
 I453
 sg38
@@ -6109,7 +6111,7 @@ sg39
 g9
 sS'q'
 Vtutto e rosa
-p895
+p897
 sg41
 I5
 sg42
@@ -6128,14 +6130,14 @@ sg48
 F1618
 sg49
 V65ad33c2.inv
-p896
+p898
 sba(imnemosyne.core.mnemosyne_core
 Item
-p897
-(dp898
+p899
+(dp900
 S'a'
 Vtutto va liscio come l'olio
-p899
+p901
 sg37
 I491
 sg38
@@ -6144,7 +6146,7 @@ sg39
 g9
 sS'q'
 VAll goes straight like olive oil
-p900
+p902
 sg41
 I4
 sg42
@@ -6163,14 +6165,14 @@ sg48
 F591
 sg49
 V44630ed8
-p901
+p903
 sba(imnemosyne.core.mnemosyne_core
 Item
-p902
-(dp903
+p904
+(dp905
 S'a'
 VAll goes straight like olive oil
-p904
+p906
 sg37
 I453
 sg38
@@ -6179,7 +6181,7 @@ sg39
 g9
 sS'q'
 Vtutto va liscio come l'olio
-p905
+p907
 sg41
 I5
 sg42
@@ -6198,14 +6200,14 @@ sg48
 F1614
 sg49
 V44630ed8.inv
-p906
+p908
 sba(imnemosyne.core.mnemosyne_core
 Item
-p907
-(dp908
+p909
+(dp910
 S'a'
 VVado a gonfie vele
-p909
+p911
 sg37
 I453
 sg38
@@ -6214,7 +6216,7 @@ sg39
 g9
 sS'q'
 VI go with full sails
-p910
+p912
 sg41
 I4
 sg42
@@ -6233,14 +6235,14 @@ sg48
 F1506
 sg49
 V92a086c9
-p911
+p913
 sba(imnemosyne.core.mnemosyne_core
 Item
-p912
-(dp913
+p914
+(dp915
 S'a'
 VI go with full sails
-p914
+p916
 sg37
 I453
 sg38
@@ -6249,7 +6251,7 @@ sg39
 g9
 sS'q'
 VVado a gonfie vele
-p915
+p917
 sg41
 I5
 sg42
@@ -6268,14 +6270,14 @@ sg48
 F1586
 sg49
 V92a086c9.inv
-p916
+p918
 sba(imnemosyne.core.mnemosyne_core
 Item
-p917
-(dp918
+p919
+(dp920
 S'a'
 VVado al massimo
-p919
+p921
 sg37
 I453
 sg38
@@ -6284,7 +6286,7 @@ sg39
 g9
 sS'q'
 VI go to the best
-p920
+p922
 sg41
 I5
 sg42
@@ -6303,14 +6305,14 @@ sg48
 F1597
 sg49
 V38ffbb1e
-p921
+p923
 sba(imnemosyne.core.mnemosyne_core
 Item
-p922
-(dp923
+p924
+(dp925
 S'a'
 VI go to the best
-p924
+p926
 sg37
 I453
 sg38
@@ -6319,7 +6321,7 @@ sg39
 g9
 sS'q'
 VVado al massimo
-p925
+p927
 sg41
 I4
 sg42
@@ -6338,14 +6340,14 @@ sg48
 F1590
 sg49
 V38ffbb1e.inv
-p926
+p928
 sba(imnemosyne.core.mnemosyne_core
 Item
-p927
-(dp928
+p929
+(dp930
 S'a'
 VI'm on the 7th sky
-p929
+p931
 sg37
 I452
 sg38
@@ -6354,7 +6356,7 @@ sg39
 g9
 sS'q'
 VSono al settimo cielo
-p930
+p932
 sg41
 I5
 sg42
@@ -6373,14 +6375,14 @@ sg48
 F1643
 sg49
 V78eabcf7.inv
-p931
+p933
 sba(imnemosyne.core.mnemosyne_core
 Item
-p932
-(dp933
+p934
+(dp935
 S'a'
 VTutto va storto
-p934
+p936
 sg37
 I453
 sg38
@@ -6389,7 +6391,7 @@ sg39
 g9
 sS'q'
 VAll goes wrong
-p935
+p937
 sg41
 I4
 sg42
@@ -6408,14 +6410,14 @@ sg48
 F1500
 sg49
 V30e7ec10
-p936
+p938
 sba(imnemosyne.core.mnemosyne_core
 Item
-p937
-(dp938
+p939
+(dp940
 S'a'
 VAll goes wrong
-p939
+p941
 sg37
 I453
 sg38
@@ -6424,7 +6426,7 @@ sg39
 g9
 sS'q'
 VTutto va storto
-p940
+p942
 sg41
 I4
 sg42
@@ -6443,14 +6445,14 @@ sg48
 F1460
 sg49
 V30e7ec10.inv
-p941
+p943
 sba(imnemosyne.core.mnemosyne_core
 Item
-p942
-(dp943
+p944
+(dp945
 S'a'
 VWorse than this you die
-p944
+p946
 sg37
 I453
 sg38
@@ -6459,7 +6461,7 @@ sg39
 g9
 sS'q'
 VPeggio di cosi si muore
-p945
+p947
 sg41
 I4
 sg42
@@ -6478,14 +6480,14 @@ sg48
 F1547
 sg49
 V1ac3ccc9.inv
-p946
+p948
 sba(imnemosyne.core.mnemosyne_core
 Item
-p947
-(dp948
+p949
+(dp950
 S'a'
 VIt could be better
-p949
+p951
 sg37
 I452
 sg38
@@ -6494,7 +6496,7 @@ sg39
 g9
 sS'q'
 VPotrebbe andare meglio
-p950
+p952
 sg41
 I4
 sg42
@@ -6513,14 +6515,14 @@ sg48
 F1557
 sg49
 V6b754fe9.inv
-p951
+p953
 sba(imnemosyne.core.mnemosyne_core
 Item
-p952
-(dp953
+p954
+(dp955
 S'a'
 VSono stanco (/a)
-p954
+p956
 sg37
 I453
 sg38
@@ -6529,7 +6531,7 @@ sg39
 g9
 sS'q'
 VI'm tired
-p955
+p957
 sg41
 I5
 sg42
@@ -6548,14 +6550,14 @@ sg48
 F1628
 sg49
 Vc1cee5b5
-p956
+p958
 sba(imnemosyne.core.mnemosyne_core
 Item
-p957
-(dp958
+p959
+(dp960
 S'a'
 VI'm tired
-p959
+p961
 sg37
 I453
 sg38
@@ -6564,7 +6566,7 @@ sg39
 g9
 sS'q'
 VSono stanco (/a)
-p960
+p962
 sg41
 I4
 sg42
@@ -6583,14 +6585,14 @@ sg48
 F1533
 sg49
 Vc1cee5b5.inv
-p961
+p963
 sba(imnemosyne.core.mnemosyne_core
 Item
-p962
-(dp963
+p964
+(dp965
 S'a'
 VSono stufo (a)
-p964
+p966
 sg37
 I453
 sg38
@@ -6599,7 +6601,7 @@ sg39
 g9
 sS'q'
 VI'm fed up
-p965
+p967
 sg41
 I4
 sg42
@@ -6618,14 +6620,14 @@ sg48
 F1599
 sg49
 Vb592f34e
-p966
+p968
 sba(imnemosyne.core.mnemosyne_core
 Item
-p967
-(dp968
+p969
+(dp970
 S'a'
 VAre you married?
-p969
+p971
 sg37
 I453
 sg38
@@ -6634,7 +6636,7 @@ sg39
 g9
 sS'q'
 VSei Sposato (/a)
-p970
+p972
 sg41
 I4
 sg42
@@ -6653,14 +6655,14 @@ sg48
 F1557
 sg49
 Vfa76afab
-p971
+p973
 sba(imnemosyne.core.mnemosyne_core
 Item
-p972
-(dp973
+p974
+(dp975
 S'a'
 VNo, I'm not married
-p974
+p976
 sg37
 I453
 sg38
@@ -6669,7 +6671,7 @@ sg39
 g9
 sS'q'
 VNo, non sono sposato (/a)
-p975
+p977
 sg41
 I4
 sg42
@@ -6688,14 +6690,14 @@ sg48
 F1548
 sg49
 Vc4f29bfa
-p976
+p978
 sba(imnemosyne.core.mnemosyne_core
 Item
-p977
-(dp978
+p979
+(dp980
 S'a'
 VWhy do you study Italian?
-p979
+p981
 sg37
 I453
 sg38
@@ -6704,7 +6706,7 @@ sg39
 g9
 sS'q'
 VPerch'e studi la lingua italiano?
-p980
+p982
 sg41
 I4
 sg42
@@ -6723,14 +6725,14 @@ sg48
 F1571
 sg49
 V7123bee1
-p981
+p983
 sba(imnemosyne.core.mnemosyne_core
 Item
-p982
-(dp983
+p984
+(dp985
 S'a'
 VWhat is your job?
-p984
+p986
 sg37
 I453
 sg38
@@ -6739,7 +6741,7 @@ sg39
 g9
 sS'q'
 VQuale 'e la tua professione?
-p985
+p987
 sg41
 I4
 sg42
@@ -6758,14 +6760,14 @@ sg48
 F1565
 sg49
 Vc3e61616.inv
-p986
+p988
 sba(imnemosyne.core.mnemosyne_core
 Item
-p987
-(dp988
+p989
+(dp990
 S'a'
 VShop Assistant
-p989
+p991
 sg37
 I491
 sg38
@@ -6774,7 +6776,7 @@ sg39
 g9
 sS'q'
 VCommesso
-p990
+p992
 sg41
 I4
 sg42
@@ -6793,14 +6795,14 @@ sg48
 F579
 sg49
 V7b180f22
-p991
+p993
 sba(imnemosyne.core.mnemosyne_core
 Item
-p992
-(dp993
+p994
+(dp995
 S'a'
 Vlibrarian
-p994
+p996
 sg37
 I453
 sg38
@@ -6809,7 +6811,7 @@ sg39
 g9
 sS'q'
 VBibliotecaria
-p995
+p997
 sg41
 I5
 sg42
@@ -6828,14 +6830,14 @@ sg48
 F1584
 sg49
 Vf1439dd5
-p996
+p998
 sba(imnemosyne.core.mnemosyne_core
 Item
-p997
-(dp998
+p999
+(dp1000
 S'a'
 VBibliotecaria
-p999
+p1001
 sg37
 I453
 sg38
@@ -6844,7 +6846,7 @@ sg39
 g9
 sS'q'
 Vlibrarian
-p1000
+p1002
 sg41
 I5
 sg42
@@ -6863,14 +6865,14 @@ sg48
 F1615
 sg49
 Vf1439dd5.inv
-p1001
+p1003
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1002
-(dp1003
+p1004
+(dp1005
 S'a'
 VAccountant
-p1004
+p1006
 sg37
 I453
 sg38
@@ -6879,7 +6881,7 @@ sg39
 g9
 sS'q'
 VRagioniere (/a)
-p1005
+p1007
 sg41
 I4
 sg42
@@ -6898,14 +6900,14 @@ sg48
 F1494
 sg49
 Vbc8dd371
-p1006
+p1008
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1007
-(dp1008
+p1009
+(dp1010
 S'a'
 VRagioniere (/a)
-p1009
+p1011
 sg37
 I521
 sg38
@@ -6914,7 +6916,7 @@ sg39
 g9
 sS'q'
 VAccountant
-p1010
+p1012
 sg41
 I4
 sg42
@@ -6933,14 +6935,14 @@ sg48
 F591
 sg49
 Vbc8dd371.inv
-p1011
+p1013
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1012
-(dp1013
+p1014
+(dp1015
 S'a'
 Vretired
-p1014
+p1016
 sg37
 I453
 sg38
@@ -6949,7 +6951,7 @@ sg39
 g9
 sS'q'
 VPensionato
-p1015
+p1017
 sg41
 I4
 sg42
@@ -6968,14 +6970,14 @@ sg48
 F1546
 sg49
 V21036fb3
-p1016
+p1018
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1017
-(dp1018
+p1019
+(dp1020
 S'a'
 VPensionato
-p1019
+p1021
 sg37
 I453
 sg38
@@ -6984,7 +6986,7 @@ sg39
 g9
 sS'q'
 Vretired
-p1020
+p1022
 sg41
 I4
 sg42
@@ -7003,14 +7005,14 @@ sg48
 F1594
 sg49
 V21036fb3.inv
-p1021
+p1023
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1022
-(dp1023
+p1024
+(dp1025
 S'a'
 VVet
-p1024
+p1026
 sg37
 I453
 sg38
@@ -7019,7 +7021,7 @@ sg39
 g9
 sS'q'
 VVeterinario
-p1025
+p1027
 sg41
 I5
 sg42
@@ -7038,14 +7040,14 @@ sg48
 F1555
 sg49
 Vf54dfb58
-p1026
+p1028
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1027
-(dp1028
+p1029
+(dp1030
 S'a'
 VVeterinario
-p1029
+p1031
 sg37
 I453
 sg38
@@ -7054,7 +7056,7 @@ sg39
 g9
 sS'q'
 VVet
-p1030
+p1032
 sg41
 I5
 sg42
@@ -7073,14 +7075,14 @@ sg48
 F1471
 sg49
 Vf54dfb58.inv
-p1031
+p1033
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1032
-(dp1033
+p1034
+(dp1035
 S'a'
 Vunemployed
-p1034
+p1036
 sg37
 I453
 sg38
@@ -7089,7 +7091,7 @@ sg39
 g9
 sS'q'
 Vdisoccupato
-p1035
+p1037
 sg41
 I4
 sg42
@@ -7108,14 +7110,14 @@ sg48
 F1537
 sg49
 Vfea4660f
-p1036
+p1038
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1037
-(dp1038
+p1039
+(dp1040
 S'a'
 VItalian Student
-p1039
+p1041
 sg37
 I453
 sg38
@@ -7124,7 +7126,7 @@ sg39
 g9
 sS'q'
 Vstudente (essa) di italiano
-p1040
+p1042
 sg41
 I4
 sg42
@@ -7143,11 +7145,11 @@ sg48
 F1551
 sg49
 V3e65a240
-p1041
+p1043
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1042
-(dp1043
+p1044
+(dp1045
 S'a'
 g576
 sg37
@@ -7176,11 +7178,11 @@ sg48
 F1503
 sg49
 S'49910ef5'
-p1044
+p1046
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1045
-(dp1046
+p1047
+(dp1048
 S'a'
 g607
 sg37
@@ -7209,14 +7211,14 @@ sg48
 F575
 sg49
 S'9b770d07'
-p1047
+p1049
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1048
-(dp1049
+p1050
+(dp1051
 S'a'
 Vdinner
-p1050
+p1052
 sg37
 I452
 sg38
@@ -7225,7 +7227,7 @@ sg39
 g14
 sS'q'
 Vcena
-p1051
+p1053
 sg41
 I4
 sg42
@@ -7244,11 +7246,11 @@ sg48
 F1501
 sg49
 S'bad19685'
-p1052
+p1054
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1053
-(dp1054
+p1055
+(dp1056
 S'a'
 g602
 sg37
@@ -7277,14 +7279,14 @@ sg48
 F574
 sg49
 S'a147b6e0'
-p1055
+p1057
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1056
-(dp1057
+p1058
+(dp1059
 S'a'
 Vbagno
-p1058
+p1060
 sg37
 I452
 sg38
@@ -7293,7 +7295,7 @@ sg39
 g14
 sS'q'
 Vbath
-p1059
+p1061
 sg41
 I4
 sg42
@@ -7312,11 +7314,11 @@ sg48
 F1467
 sg49
 S'4aefe44c'
-p1060
+p1062
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1061
-(dp1062
+p1063
+(dp1064
 S'a'
 g561
 sg37
@@ -7345,11 +7347,11 @@ sg48
 F1511
 sg49
 S'969767b0'
-p1063
+p1065
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1064
-(dp1065
+p1066
+(dp1067
 S'a'
 g548
 sg37
@@ -7378,11 +7380,11 @@ sg48
 F1533
 sg49
 S'1af3423e'
-p1066
+p1068
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1067
-(dp1068
+p1069
+(dp1070
 S'a'
 g396
 sg37
@@ -7411,11 +7413,11 @@ sg48
 F572
 sg49
 S'e4e8008e'
-p1069
+p1071
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1070
-(dp1071
+p1072
+(dp1073
 S'a'
 g441
 sg37
@@ -7444,11 +7446,11 @@ sg48
 F570
 sg49
 S'912cbc23'
-p1072
+p1074
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1073
-(dp1074
+p1075
+(dp1076
 S'a'
 g85
 sg37
@@ -7477,14 +7479,14 @@ sg48
 F574
 sg49
 S'd350876b'
-p1075
+p1077
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1076
-(dp1077
+p1078
+(dp1079
 S'a'
 VI love
-p1078
+p1080
 sg37
 I452
 sg38
@@ -7493,7 +7495,7 @@ sg39
 g14
 sS'q'
 Vamo
-p1079
+p1081
 sg41
 I4
 sg42
@@ -7512,13 +7514,13 @@ sg48
 F1461
 sg49
 S'8485e12b'
-p1080
+p1082
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1081
-(dp1082
+p1083
+(dp1084
 S'a'
-g1079
+g1081
 sg37
 I452
 sg38
@@ -7526,7 +7528,7 @@ I2
 sg39
 g14
 sS'q'
-g1078
+g1080
 sg41
 I4
 sg42
@@ -7545,11 +7547,11 @@ sg48
 F1502
 sg49
 S'df07b7f7'
-p1083
+p1085
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1084
-(dp1085
+p1086
+(dp1087
 S'a'
 g597
 sg37
@@ -7578,14 +7580,14 @@ sg48
 F576
 sg49
 S'1686c857'
-p1086
+p1088
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1087
-(dp1088
+p1089
+(dp1090
 S'a'
 VVoglio
-p1089
+p1091
 sg37
 I452
 sg38
@@ -7594,7 +7596,7 @@ sg39
 g14
 sS'q'
 VI'd like (informal)
-p1090
+p1092
 sg41
 I4
 sg42
@@ -7613,13 +7615,13 @@ sg48
 F1517
 sg49
 S'cad70ee8'
-p1091
+p1093
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1092
-(dp1093
+p1094
+(dp1095
 S'a'
-g1090
+g1092
 sg37
 I491
 sg38
@@ -7627,7 +7629,7 @@ I4
 sg39
 g14
 sS'q'
-g1089
+g1091
 sg41
 I5
 sg42
@@ -7646,11 +7648,11 @@ sg48
 F573
 sg49
 S'f937ff2e'
-p1094
+p1096
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1095
-(dp1096
+p1097
+(dp1098
 S'a'
 g725
 sg37
@@ -7679,11 +7681,11 @@ sg48
 F760
 sg49
 S'09e2faab'
-p1097
+p1099
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1098
-(dp1099
+p1100
+(dp1101
 S'a'
 g299
 sg37
@@ -7712,14 +7714,14 @@ sg48
 F572
 sg49
 S'd594db40'
-p1100
+p1102
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1101
-(dp1102
+p1103
+(dp1104
 S'a'
 VMy God!
-p1103
+p1105
 sg37
 I452
 sg38
@@ -7728,7 +7730,7 @@ sg39
 g9
 sS'q'
 VDio mio!
-p1104
+p1106
 sg41
 I5
 sg42
@@ -7747,13 +7749,13 @@ sg48
 F1522
 sg49
 S'0843b2c3'
-p1105
+p1107
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1106
-(dp1107
+p1108
+(dp1109
 S'a'
-g1104
+g1106
 sg37
 I491
 sg38
@@ -7761,7 +7763,7 @@ I4
 sg39
 g9
 sS'q'
-g1103
+g1105
 sg41
 I5
 sg42
@@ -7780,48 +7782,48 @@ sg48
 F570
 sg49
 S'f96d424a'
-p1108
+p1110
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1109
-(dp1110
+p1111
+(dp1112
 S'a'
 VIt's cold
-p1111
+p1113
 sg37
-I491
+I568
 sg38
-I4
+I5
 sg39
 g9
 sS'q'
 VFa freddo
-p1112
+p1114
 sg41
 I5
 sg42
 I2
 sg43
-I4
+I5
 sg44
 I00
 sg45
-F2.5600000000000001
+F2.6600000000000001
 sg46
 I0
 sg47
 I2
 sg48
-F568
+F780
 sg49
 S'952dd327'
-p1113
+p1115
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1114
-(dp1115
+p1116
+(dp1117
 S'a'
-g1112
+g1114
 sg37
 I491
 sg38
@@ -7829,7 +7831,7 @@ I4
 sg39
 g9
 sS'q'
-g1111
+g1113
 sg41
 I5
 sg42
@@ -7848,14 +7850,14 @@ sg48
 F570
 sg49
 S'e609b7d7'
-p1116
+p1118
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1117
-(dp1118
+p1119
+(dp1120
 S'a'
 Vcarne
-p1119
+p1121
 sg37
 I452
 sg38
@@ -7864,7 +7866,7 @@ sg39
 g9
 sS'q'
 Vmeat
-p1120
+p1122
 sg41
 I5
 sg42
@@ -7883,13 +7885,13 @@ sg48
 F1510
 sg49
 S'55852abf'
-p1121
+p1123
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1122
-(dp1123
+p1124
+(dp1125
 S'a'
-g1120
+g1122
 sg37
 I452
 sg38
@@ -7897,7 +7899,7 @@ I2
 sg39
 g9
 sS'q'
-g1119
+g1121
 sg41
 I5
 sg42
@@ -7916,14 +7918,14 @@ sg48
 F1492
 sg49
 S'2b244e70'
-p1124
+p1126
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1125
-(dp1126
+p1127
+(dp1128
 S'a'
 Vcane
-p1127
+p1129
 sg37
 I452
 sg38
@@ -7932,7 +7934,7 @@ sg39
 g9
 sS'q'
 Vdog
-p1128
+p1130
 sg41
 I4
 sg42
@@ -7951,13 +7953,13 @@ sg48
 F1536
 sg49
 S'f9ba042b'
-p1129
+p1131
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1130
-(dp1131
+p1132
+(dp1133
 S'a'
-g1128
+g1130
 sg37
 I452
 sg38
@@ -7965,7 +7967,7 @@ I2
 sg39
 g9
 sS'q'
-g1127
+g1129
 sg41
 I5
 sg42
@@ -7984,17 +7986,17 @@ sg48
 F1503
 sg49
 S'29a11f69'
-p1132
+p1134
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1133
-(dp1134
+p1135
+(dp1136
 S'a'
 g703
 sg37
-I491
+I568
 sg38
-I4
+I5
 sg39
 g17
 sS'q'
@@ -8004,24 +8006,24 @@ I5
 sg42
 I2
 sg43
-I4
+I5
 sg44
 I00
 sg45
-F2.5600000000000001
+F2.6600000000000001
 sg46
 I0
 sg47
 I2
 sg48
-F568
+F762
 sg49
 S'938c5233'
-p1135
+p1137
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1136
-(dp1137
+p1138
+(dp1139
 S'a'
 g698
 sg37
@@ -8050,11 +8052,11 @@ sg48
 F570
 sg49
 S'35f29ad1'
-p1138
+p1140
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1139
-(dp1140
+p1141
+(dp1142
 S'a'
 g233
 sg37
@@ -8083,14 +8085,14 @@ sg48
 F717
 sg49
 S'1f08534e'
-p1141
+p1143
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1142
-(dp1143
+p1144
+(dp1145
 S'a'
 Vcake cream
-p1144
+p1146
 sg37
 I567
 sg38
@@ -8099,7 +8101,7 @@ sg39
 g17
 sS'q'
 Vcrema
-p1145
+p1147
 sg41
 I5
 sg42
@@ -8118,27 +8120,27 @@ sg48
 F758
 sg49
 S'243a08c7'
-p1146
+p1148
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1147
-(dp1148
+p1149
+(dp1150
 S'a'
-g1145
+g1147
 sg37
-I491
+I568
 sg38
-I3
+I4
 sg39
 g17
 sS'q'
-g1144
+g1146
 sg41
 I4
 sg42
 I2
 sg43
-I3
+I4
 sg44
 I00
 sg45
@@ -8148,14 +8150,14 @@ I0
 sg47
 I2
 sg48
-F568
+F767
 sg49
 S'8debd5a7'
-p1149
+p1151
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1150
-(dp1151
+p1152
+(dp1153
 S'a'
 g684
 sg37
@@ -8184,11 +8186,11 @@ sg48
 F576
 sg49
 S'80dd1b1c'
-p1152
+p1154
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1153
-(dp1154
+p1155
+(dp1156
 S'a'
 g679
 sg37
@@ -8217,11 +8219,11 @@ sg48
 F1509
 sg49
 S'647be7eb'
-p1155
+p1157
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1156
-(dp1157
+p1158
+(dp1159
 S'a'
 g674
 sg37
@@ -8250,11 +8252,11 @@ sg48
 F571
 sg49
 S'8bc01f74'
-p1158
+p1160
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1159
-(dp1160
+p1161
+(dp1162
 S'a'
 g155
 sg37
@@ -8283,11 +8285,11 @@ sg48
 F1487
 sg49
 S'8b08c9de'
-p1161
+p1163
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1162
-(dp1163
+p1164
+(dp1165
 S'a'
 g145
 sg37
@@ -8316,11 +8318,11 @@ sg48
 F739
 sg49
 S'd7fba87e'
-p1164
+p1166
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1165
-(dp1166
+p1167
+(dp1168
 S'a'
 g80
 sg37
@@ -8349,47 +8351,49 @@ sg48
 F576
 sg49
 S'96f2e117'
-p1167
+p1169
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1168
-(dp1169
+p1170
+(dp1171
 S'a'
-g765
+VI can
+p1172
 sg64
-I491
+I568
 sg65
-I3
+I4
 sg66
 g23
 sS'q'
-g764
+Vposso
+p1173
 sg68
 I5
 sg69
 I2
 sg70
-I3
+I4
 sg44
 I00
 sg71
-F2.5165882352941207
+F2.6165882352941208
 sg72
 I0
 sg73
 I2
 sg74
-F568
+F775
 sg75
 S'f6575af6'
-p1170
+p1174
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1171
-(dp1172
+p1175
+(dp1176
 S'a'
 Vhe/she can
-p1173
+p1177
 sg64
 I567
 sg65
@@ -8398,7 +8402,7 @@ sg66
 g23
 sS'q'
 Vpuó
-p1174
+p1178
 sg68
 I4
 sg69
@@ -8417,11 +8421,11 @@ sg74
 F738
 sg75
 S'7bb6365a'
-p1175
+p1179
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1176
-(dp1177
+p1180
+(dp1181
 S'a'
 g747
 sg64
@@ -8450,14 +8454,14 @@ sg74
 F584
 sg75
 S'7d6b5b1c'
-p1178
+p1182
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1179
-(dp1180
+p1183
+(dp1184
 S'a'
 Vthere are two rooms
-p1181
+p1185
 sg64
 I491
 sg65
@@ -8466,7 +8470,7 @@ sg66
 g23
 sS'q'
 VCi sono due camere
-p1182
+p1186
 sg68
 I5
 sg69
@@ -8485,11 +8489,11 @@ sg74
 F571
 sg75
 S'5f879839'
-p1183
+p1187
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1184
-(dp1185
+p1188
+(dp1189
 S'a'
 g736
 sg64
@@ -8518,11 +8522,11 @@ sg74
 F747
 sg75
 S'b5a9befb'
-p1186
+p1190
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1187
-(dp1188
+p1191
+(dp1192
 S'a'
 g459
 sg64
@@ -8551,14 +8555,14 @@ sg74
 F574
 sg75
 S'6626268c'
-p1189
+p1193
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1190
-(dp1191
+p1194
+(dp1195
 S'a'
 Vstrong coffee
-p1192
+p1196
 sg64
 I491
 sg65
@@ -8567,7 +8571,7 @@ sg66
 g23
 sS'q'
 Vcaffé ristretto
-p1193
+p1197
 sg68
 I5
 sg69
@@ -8586,13 +8590,13 @@ sg74
 F577
 sg75
 S'821b4efe'
-p1194
+p1198
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1195
-(dp1196
+p1199
+(dp1200
 S'a'
-g1193
+g1197
 sg64
 I491
 sg65
@@ -8600,7 +8604,7 @@ I3
 sg66
 g23
 sS'q'
-g1192
+g1196
 sg68
 I5
 sg69
@@ -8619,14 +8623,14 @@ sg74
 F578
 sg75
 S'40976025'
-p1197
+p1201
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1198
-(dp1199
+p1202
+(dp1203
 S'a'
 Vimmediately
-p1200
+p1204
 sg111
 I540
 sg112
@@ -8635,7 +8639,7 @@ sg113
 g23
 sS'q'
 Vsubito
-p1201
+p1205
 sg115
 I4
 sg116
@@ -8654,14 +8658,14 @@ sg122
 I597
 sg123
 S'488eab2e'
-p1202
+p1206
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1203
-(dp1204
+p1207
+(dp1208
 S'a'
 Vsubito
-p1205
+p1209
 sg111
 I561
 sg112
@@ -8670,7 +8674,7 @@ sg113
 g23
 sS'q'
 Vimmediately
-p1206
+p1210
 sg115
 I5
 sg116
@@ -8689,14 +8693,14 @@ sg122
 F686
 sg123
 S'488eab2e.inv'
-p1207
+p1211
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1208
-(dp1209
+p1212
+(dp1213
 S'a'
 Vancora
-p1210
+p1214
 sg111
 I540
 sg112
@@ -8705,7 +8709,7 @@ sg113
 g23
 sS'q'
 Vagain / still
-p1211
+p1215
 sg115
 I4
 sg116
@@ -8724,14 +8728,14 @@ sg122
 I594
 sg123
 S'87d9c24f.inv'
-p1212
+p1216
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1213
-(dp1214
+p1217
+(dp1218
 S'a'
 Vprefer
-p1215
+p1219
 sg111
 I540
 sg112
@@ -8740,7 +8744,7 @@ sg113
 g23
 sS'q'
 Vpreferisce
-p1216
+p1220
 sg115
 I4
 sg116
@@ -8759,13 +8763,13 @@ sg122
 I600
 sg123
 S'5a15b30e'
-p1217
+p1221
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1218
-(dp1219
+p1222
+(dp1223
 S'a'
-g1216
+g1220
 sg111
 I540
 sg112
@@ -8773,7 +8777,7 @@ I3
 sg113
 g23
 sS'q'
-g1215
+g1219
 sg115
 I4
 sg116
@@ -8792,11 +8796,11 @@ sg122
 I595
 sg123
 S'5a15b30e.inv'
-p1220
+p1224
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1221
-(dp1222
+p1225
+(dp1226
 S'a'
 g276
 sg111
@@ -8825,14 +8829,14 @@ sg122
 I596
 sg123
 S'8efbe8cf'
-p1223
+p1227
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1224
-(dp1225
+p1228
+(dp1229
 S'a'
 Vperfect
-p1226
+p1230
 sg111
 I562
 sg112
@@ -8841,7 +8845,7 @@ sg113
 g23
 sS'q'
 Vperfetto
-p1227
+p1231
 sg115
 I5
 sg116
@@ -8860,13 +8864,13 @@ sg122
 F706
 sg123
 S'1fec0035'
-p1228
+p1232
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1229
-(dp1230
+p1233
+(dp1234
 S'a'
-g1227
+g1231
 sg111
 I562
 sg112
@@ -8874,7 +8878,7 @@ I4
 sg113
 g23
 sS'q'
-g1226
+g1230
 sg115
 I5
 sg116
@@ -8893,14 +8897,14 @@ sg122
 F712
 sg123
 S'1fec0035.inv'
-p1231
+p1235
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1232
-(dp1233
+p1236
+(dp1237
 S'a'
 Vmissing
-p1234
+p1238
 sg111
 I562
 sg112
@@ -8909,7 +8913,7 @@ sg113
 g23
 sS'q'
 Vmanca
-p1235
+p1239
 sg115
 I5
 sg116
@@ -8928,13 +8932,13 @@ sg122
 F691
 sg123
 S'86f84c04'
-p1236
+p1240
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1237
-(dp1238
+p1241
+(dp1242
 S'a'
-g1235
+g1239
 sg111
 I517
 sg112
@@ -8942,7 +8946,7 @@ I3
 sg113
 g23
 sS'q'
-g1234
+g1238
 sg115
 I5
 sg116
@@ -8961,14 +8965,14 @@ sg122
 I570
 sg123
 S'86f84c04.inv'
-p1239
+p1243
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1240
-(dp1241
+p1244
+(dp1245
 S'a'
 Vthe blanket
-p1242
+p1246
 sg111
 I540
 sg112
@@ -8977,7 +8981,7 @@ sg113
 g23
 sS'q'
 Vla coperta
-p1243
+p1247
 sg115
 I5
 sg116
@@ -8996,13 +9000,13 @@ sg122
 F604
 sg123
 S'2881313d'
-p1244
+p1248
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1245
-(dp1246
+p1249
+(dp1250
 S'a'
-g1243
+g1247
 sg111
 I540
 sg112
@@ -9010,7 +9014,7 @@ I3
 sg113
 g23
 sS'q'
-g1242
+g1246
 sg115
 I5
 sg116
@@ -9029,11 +9033,11 @@ sg122
 I601
 sg123
 S'2881313d.inv'
-p1247
+p1251
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1248
-(dp1249
+p1252
+(dp1253
 S'a'
 g150
 sg111
@@ -9062,14 +9066,14 @@ sg122
 I610
 sg123
 S'e03f9460.inv'
-p1250
+p1254
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1251
-(dp1252
+p1255
+(dp1256
 S'a'
 Vthe bed
-p1253
+p1257
 sg111
 I540
 sg112
@@ -9078,7 +9082,7 @@ sg113
 g23
 sS'q'
 Vil letto
-p1254
+p1258
 sg115
 I5
 sg116
@@ -9097,13 +9101,13 @@ sg122
 F601
 sg123
 S'9f721c72'
-p1255
+p1259
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1256
-(dp1257
+p1260
+(dp1261
 S'a'
-g1254
+g1258
 sg111
 I562
 sg112
@@ -9111,7 +9115,7 @@ I3
 sg113
 g23
 sS'q'
-g1253
+g1257
 sg115
 I5
 sg116
@@ -9130,14 +9134,14 @@ sg122
 F679
 sg123
 S'9f721c72.inv'
-p1258
+p1262
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1259
-(dp1260
+p1263
+(dp1264
 S'a'
 Vthe ashtray
-p1261
+p1265
 sg111
 I540
 sg112
@@ -9146,7 +9150,7 @@ sg113
 g23
 sS'q'
 Vil portacenere
-p1262
+p1266
 sg115
 I5
 sg116
@@ -9165,13 +9169,13 @@ sg122
 F601
 sg123
 S'6e33177e'
-p1263
+p1267
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1264
-(dp1265
+p1268
+(dp1269
 S'a'
-g1262
+g1266
 sg111
 I561
 sg112
@@ -9179,7 +9183,7 @@ I3
 sg113
 g23
 sS'q'
-g1261
+g1265
 sg115
 I4
 sg116
@@ -9198,11 +9202,11 @@ sg122
 F670
 sg123
 S'6e33177e.inv'
-p1266
+p1270
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1267
-(dp1268
+p1271
+(dp1272
 S'a'
 g185
 sg111
@@ -9231,14 +9235,14 @@ sg122
 I595
 sg123
 S'efa33b87'
-p1269
+p1273
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1270
-(dp1271
+p1274
+(dp1275
 S'a'
 Vthe table
-p1272
+p1276
 sg111
 I540
 sg112
@@ -9247,7 +9251,7 @@ sg113
 g23
 sS'q'
 Vil tavolo
-p1273
+p1277
 sg115
 I5
 sg116
@@ -9266,13 +9270,13 @@ sg122
 F605
 sg123
 S'a98340be'
-p1274
+p1278
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1275
-(dp1276
+p1279
+(dp1280
 S'a'
-g1273
+g1277
 sg111
 I562
 sg112
@@ -9280,7 +9284,7 @@ I3
 sg113
 g23
 sS'q'
-g1272
+g1276
 sg115
 I4
 sg116
@@ -9299,11 +9303,11 @@ sg122
 F670
 sg123
 S'a98340be.inv'
-p1277
+p1281
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1278
-(dp1279
+p1282
+(dp1283
 S'a'
 g114
 sg111
@@ -9332,14 +9336,14 @@ sg122
 I582
 sg123
 S'3f747de3'
-p1280
+p1284
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1281
-(dp1282
+p1285
+(dp1286
 S'a'
 Vthe light
-p1283
+p1287
 sg111
 I540
 sg112
@@ -9348,7 +9352,7 @@ sg113
 g23
 sS'q'
 Vla lampada
-p1284
+p1288
 sg115
 I5
 sg116
@@ -9367,13 +9371,13 @@ sg122
 F605
 sg123
 S'83931d15'
-p1285
+p1289
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1286
-(dp1287
+p1290
+(dp1291
 S'a'
-g1284
+g1288
 sg111
 I562
 sg112
@@ -9381,7 +9385,7 @@ I3
 sg113
 g23
 sS'q'
-g1283
+g1287
 sg115
 I4
 sg116
@@ -9400,11 +9404,11 @@ sg122
 F674
 sg123
 S'83931d15.inv'
-p1288
+p1292
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1289
-(dp1290
+p1293
+(dp1294
 S'a'
 g271
 sg111
@@ -9433,14 +9437,14 @@ sg122
 I578
 sg123
 S'cb2a3dbd'
-p1291
+p1295
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1292
-(dp1293
+p1296
+(dp1297
 S'a'
 Vthe toilet paper
-p1294
+p1298
 sg111
 I562
 sg112
@@ -9449,7 +9453,7 @@ sg113
 g23
 sS'q'
 Vla carta igienica
-p1295
+p1299
 sg115
 I5
 sg116
@@ -9468,13 +9472,13 @@ sg122
 F676
 sg123
 S'ffeb6af8'
-p1296
+p1300
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1297
-(dp1298
+p1301
+(dp1302
 S'a'
-g1295
+g1299
 sg111
 I539
 sg112
@@ -9482,7 +9486,7 @@ I2
 sg113
 g23
 sS'q'
-g1294
+g1298
 sg115
 I4
 sg116
@@ -9501,11 +9505,11 @@ sg122
 I595
 sg123
 S'ffeb6af8.inv'
-p1299
+p1303
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1300
-(dp1301
+p1304
+(dp1305
 S'a'
 g344
 sg90
@@ -9534,11 +9538,11 @@ sg100
 I596
 sg101
 S'0e9defb6.inv'
-p1302
+p1306
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1303
-(dp1304
+p1307
+(dp1308
 S'a'
 g334
 sg90
@@ -9567,11 +9571,11 @@ sg100
 I592
 sg101
 S'6b530ba2.inv'
-p1305
+p1309
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1306
-(dp1307
+p1310
+(dp1311
 S'a'
 g238
 sg90
@@ -9600,11 +9604,11 @@ sg100
 I593
 sg101
 S'105b5382.inv'
-p1308
+p1312
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1309
-(dp1310
+p1313
+(dp1314
 S'a'
 g281
 sg90
@@ -9633,14 +9637,14 @@ sg100
 I595
 sg101
 S'7d59052f.inv'
-p1311
+p1315
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1312
-(dp1313
+p1316
+(dp1317
 S'a'
 Vlisten (imperative, polite)
-p1314
+p1318
 sg90
 I540
 sg91
@@ -9649,7 +9653,7 @@ sg92
 g20
 sS'q'
 Vsenta
-p1315
+p1319
 sg93
 I5
 sg94
@@ -9668,13 +9672,13 @@ sg100
 F601
 sg101
 S'05ed11c4'
-p1316
+p1320
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1317
-(dp1318
+p1321
+(dp1322
 S'a'
-g1315
+g1319
 sg90
 I540
 sg91
@@ -9682,7 +9686,7 @@ I3
 sg92
 g20
 sS'q'
-g1314
+g1318
 sg93
 I5
 sg94
@@ -9701,14 +9705,14 @@ sg100
 F606
 sg101
 S'05ed11c4.inv'
-p1319
+p1323
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1320
-(dp1321
+p1324
+(dp1325
 S'a'
 Vagain
-p1322
+p1326
 sg90
 I540
 sg91
@@ -9717,7 +9721,7 @@ sg92
 g20
 sS'q'
 Vancora
-p1323
+p1327
 sg93
 I4
 sg94
@@ -9736,14 +9740,14 @@ sg100
 I597
 sg101
 S'70409e1a'
-p1324
+p1328
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1325
-(dp1326
+p1329
+(dp1330
 S'a'
 Vcampagna
-p1327
+p1331
 sg90
 I540
 sg91
@@ -9752,7 +9756,7 @@ sg92
 g23
 sS'q'
 Vcountryside
-p1328
+p1332
 sg93
 I4
 sg94
@@ -9771,13 +9775,13 @@ sg100
 F604
 sg101
 S'586e3608'
-p1329
+p1333
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1330
-(dp1331
+p1334
+(dp1335
 S'a'
-g1328
+g1332
 sg90
 I539
 sg91
@@ -9785,7 +9789,7 @@ I2
 sg92
 g23
 sS'q'
-g1327
+g1331
 sg93
 I5
 sg94
@@ -9804,14 +9808,14 @@ sg100
 I597
 sg101
 S'586e3608.inv'
-p1332
+p1336
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1333
-(dp1334
+p1337
+(dp1338
 S'a'
 VI prefer
-p1335
+p1339
 sg90
 I562
 sg91
@@ -9820,7 +9824,7 @@ sg92
 g23
 sS'q'
 Vpreferisco
-p1336
+p1340
 sg93
 I4
 sg94
@@ -9839,13 +9843,13 @@ sg100
 F671
 sg101
 S'5e98ce4a'
-p1337
+p1341
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1338
-(dp1339
+p1342
+(dp1343
 S'a'
-g1336
+g1340
 sg90
 I540
 sg91
@@ -9853,7 +9857,7 @@ I2
 sg92
 g23
 sS'q'
-g1335
+g1339
 sg93
 I4
 sg94
@@ -9872,11 +9876,11 @@ sg100
 F601
 sg101
 S'5e98ce4a.inv'
-p1340
+p1344
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1341
-(dp1342
+p1345
+(dp1346
 S'a'
 g258
 sg90
@@ -9905,14 +9909,14 @@ sg100
 I588
 sg101
 S'8da42f7d'
-p1343
+p1347
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1344
-(dp1345
+p1348
+(dp1349
 S'a'
 Von
-p1346
+p1350
 sg90
 I562
 sg91
@@ -9921,7 +9925,7 @@ sg92
 g28
 sS'q'
 Vsu
-p1347
+p1351
 sg93
 I5
 sg94
@@ -9940,13 +9944,13 @@ sg100
 F677
 sg101
 S'd9fcd842'
-p1348
+p1352
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1349
-(dp1350
+p1353
+(dp1354
 S'a'
-g1347
+g1351
 sg90
 I561
 sg91
@@ -9954,7 +9958,7 @@ I3
 sg92
 g28
 sS'q'
-g1346
+g1350
 sg93
 I4
 sg94
@@ -9973,14 +9977,14 @@ sg100
 I609
 sg101
 S'd9fcd842.inv'
-p1351
+p1355
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1352
-(dp1353
+p1356
+(dp1357
 S'a'
 Vbetween
-p1354
+p1358
 sg90
 I540
 sg91
@@ -9989,7 +9993,7 @@ sg92
 g28
 sS'q'
 Vtra/fra
-p1355
+p1359
 sg93
 I5
 sg94
@@ -10008,13 +10012,13 @@ sg100
 F600
 sg101
 S'de5b5085'
-p1356
+p1360
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1357
-(dp1358
+p1361
+(dp1362
 S'a'
-g1355
+g1359
 sg90
 I540
 sg91
@@ -10022,7 +10026,7 @@ I2
 sg92
 g28
 sS'q'
-g1354
+g1358
 sg93
 I4
 sg94
@@ -10041,14 +10045,14 @@ sg100
 F599
 sg101
 S'de5b5085.inv'
-p1359
+p1363
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1360
-(dp1361
+p1364
+(dp1365
 S'a'
 Vbooking
-p1362
+p1366
 sg90
 I540
 sg91
@@ -10057,7 +10061,7 @@ sg92
 g28
 sS'q'
 Vprenotazione
-p1363
+p1367
 sg93
 I4
 sg94
@@ -10076,13 +10080,13 @@ sg100
 F604
 sg101
 S'f35d3447'
-p1364
+p1368
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1365
-(dp1366
+p1369
+(dp1370
 S'a'
-g1363
+g1367
 sg90
 I539
 sg91
@@ -10090,7 +10094,7 @@ I2
 sg92
 g28
 sS'q'
-g1362
+g1366
 sg93
 I4
 sg94
@@ -10109,14 +10113,14 @@ sg100
 I599
 sg101
 S'f35d3447.inv'
-p1367
+p1371
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1368
-(dp1369
+p1372
+(dp1373
 S'a'
 VI haven't done it
-p1370
+p1374
 sg90
 I540
 sg91
@@ -10125,7 +10129,7 @@ sg92
 g23
 sS'q'
 VNon l'ho fatto
-p1371
+p1375
 sg93
 I4
 sg94
@@ -10144,11 +10148,11 @@ sg100
 F600
 sg101
 S'd72a1e04.inv'
-p1372
+p1376
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1373
-(dp1374
+p1377
+(dp1378
 S'a'
 g253
 sg90
@@ -10177,11 +10181,11 @@ sg100
 I595
 sg101
 S'57039c86.inv'
-p1375
+p1379
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1376
-(dp1377
+p1380
+(dp1381
 S'a'
 g190
 sg90
@@ -10210,11 +10214,11 @@ sg100
 F600
 sg101
 S'33568dd6'
-p1378
+p1382
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1379
-(dp1380
+p1383
+(dp1384
 S'a'
 g352
 sg90
@@ -10243,11 +10247,11 @@ sg100
 I610
 sg101
 S'432bcf45.inv'
-p1381
+p1385
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1382
-(dp1383
+p1386
+(dp1387
 S'a'
 g315
 sg312
@@ -10276,14 +10280,14 @@ sg323
 I600
 sg324
 S'55b19e44'
-p1384
+p1388
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1385
-(dp1386
+p1389
+(dp1390
 S'a'
 Vblanket
-p1387
+p1391
 sg312
 I540
 sg313
@@ -10292,7 +10296,7 @@ sg314
 g20
 sS'q'
 Vla coperta
-p1388
+p1392
 sg316
 I5
 sg317
@@ -10311,14 +10315,14 @@ sg323
 F601
 sg324
 S'd6c349a4'
-p1389
+p1393
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1390
-(dp1391
+p1394
+(dp1395
 S'a'
 Vla coperta
-p1392
+p1396
 sg312
 I540
 sg313
@@ -10327,7 +10331,7 @@ sg314
 g20
 sS'q'
 Vblanket
-p1393
+p1397
 sg316
 I4
 sg317
@@ -10346,14 +10350,14 @@ sg323
 F603
 sg324
 S'd6c349a4.inv'
-p1394
+p1398
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1395
-(dp1396
+p1399
+(dp1400
 S'a'
 Vashtray
-p1397
+p1401
 sg312
 I540
 sg313
@@ -10362,7 +10366,7 @@ sg314
 g20
 sS'q'
 Vportacenere
-p1398
+p1402
 sg316
 I5
 sg317
@@ -10381,14 +10385,14 @@ sg323
 F606
 sg324
 S'4a1d4c15'
-p1399
+p1403
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1400
-(dp1401
+p1404
+(dp1405
 S'a'
 Vhairdryer
-p1402
+p1406
 sg312
 I561
 sg313
@@ -10397,7 +10401,7 @@ sg314
 g20
 sS'q'
 Vl'asciugacapelli
-p1403
+p1407
 sg316
 I5
 sg317
@@ -10416,14 +10420,14 @@ sg323
 F700
 sg324
 S'3077b944'
-p1404
+p1408
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1405
-(dp1406
+p1409
+(dp1410
 S'a'
 Vthe soap
-p1407
+p1411
 sg312
 I540
 sg313
@@ -10432,7 +10436,7 @@ sg314
 g20
 sS'q'
 Vla saponetta
-p1408
+p1412
 sg316
 I5
 sg317
@@ -10451,13 +10455,13 @@ sg323
 F600
 sg324
 S'77bc52fa'
-p1409
+p1413
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1410
-(dp1411
+p1414
+(dp1415
 S'a'
-g1408
+g1412
 sg312
 I561
 sg313
@@ -10465,7 +10469,7 @@ I3
 sg314
 g20
 sS'q'
-g1407
+g1411
 sg316
 I5
 sg317
@@ -10484,14 +10488,14 @@ sg323
 I614
 sg324
 S'77bc52fa.inv'
-p1412
+p1416
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1413
-(dp1414
+p1417
+(dp1418
 S'a'
 Vtowel
-p1415
+p1419
 sg312
 I540
 sg313
@@ -10500,7 +10504,7 @@ sg314
 g20
 sS'q'
 Vl'asciugamano
-p1416
+p1420
 sg316
 I5
 sg317
@@ -10519,13 +10523,13 @@ sg323
 F598
 sg324
 S'a45dc98c'
-p1417
+p1421
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1418
-(dp1419
+p1422
+(dp1423
 S'a'
-g1416
+g1420
 sg312
 I540
 sg313
@@ -10533,7 +10537,7 @@ I2
 sg314
 g20
 sS'q'
-g1415
+g1419
 sg316
 I4
 sg317
@@ -10552,11 +10556,11 @@ sg323
 F602
 sg324
 S'a45dc98c.inv'
-p1420
+p1424
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1421
-(dp1422
+p1425
+(dp1426
 S'a'
 g248
 sg128
@@ -10585,11 +10589,11 @@ sg139
 I510
 sg140
 S'a758fd84.inv'
-p1423
+p1427
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1424
-(dp1425
+p1428
+(dp1429
 S'a'
 g131
 sg128
@@ -10618,14 +10622,14 @@ sg139
 I510
 sg140
 S'01a9b383.inv'
-p1426
+p1430
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1427
-(dp1428
+p1431
+(dp1432
 S'a'
 VI'm always late
-p1429
+p1433
 sg128
 I512
 sg129
@@ -10634,7 +10638,7 @@ sg130
 g23
 sS'q'
 Vsono sempre in ritardo
-p1430
+p1434
 sg132
 I1
 sg133
@@ -10653,13 +10657,13 @@ sg139
 I512
 sg140
 S'96a0bd8c'
-p1431
+p1435
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1432
-(dp1433
+p1436
+(dp1437
 S'a'
-g1430
+g1434
 sg128
 I510
 sg129
@@ -10667,7 +10671,7 @@ I0
 sg130
 g23
 sS'q'
-g1429
+g1433
 sg132
 I0
 sg133
@@ -10686,14 +10690,14 @@ sg139
 I510
 sg140
 S'96a0bd8c.inv'
-p1434
+p1438
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1435
-(dp1436
+p1439
+(dp1440
 S'a'
 VWhat is there to see?
-p1437
+p1441
 sg128
 I510
 sg129
@@ -10702,7 +10706,7 @@ sg130
 g23
 sS'q'
 Vcosa che da vedere?
-p1438
+p1442
 sg132
 I0
 sg133
@@ -10721,13 +10725,13 @@ sg139
 I510
 sg140
 S'2edd3cba'
-p1439
+p1443
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1440
-(dp1441
+p1444
+(dp1445
 S'a'
-g1438
+g1442
 sg128
 I510
 sg129
@@ -10735,7 +10739,7 @@ I0
 sg130
 g23
 sS'q'
-g1437
+g1441
 sg132
 I0
 sg133
@@ -10754,14 +10758,14 @@ sg139
 I510
 sg140
 S'2edd3cba.inv'
-p1442
+p1446
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1443
-(dp1444
+p1447
+(dp1448
 S'a'
 Vto know
-p1445
+p1449
 sg128
 I510
 sg129
@@ -10770,7 +10774,7 @@ sg130
 g23
 sS'q'
 Vsapere
-p1446
+p1450
 sg132
 I0
 sg133
@@ -10789,13 +10793,13 @@ sg139
 I510
 sg140
 S'fe3dd620'
-p1447
+p1451
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1448
-(dp1449
+p1452
+(dp1453
 S'a'
-g1446
+g1450
 sg128
 I510
 sg129
@@ -10803,7 +10807,7 @@ I0
 sg130
 g23
 sS'q'
-g1445
+g1449
 sg132
 I0
 sg133
@@ -10822,14 +10826,14 @@ sg139
 I510
 sg140
 S'fe3dd620.inv'
-p1450
+p1454
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1451
-(dp1452
+p1455
+(dp1456
 S'a'
 Vhere
-p1453
+p1457
 sg128
 I510
 sg129
@@ -10838,7 +10842,7 @@ sg130
 g23
 sS'q'
 Vqui
-p1454
+p1458
 sg132
 I0
 sg133
@@ -10857,13 +10861,13 @@ sg139
 I510
 sg140
 S'192df1ea'
-p1455
+p1459
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1456
-(dp1457
+p1460
+(dp1461
 S'a'
-g1454
+g1458
 sg128
 I510
 sg129
@@ -10871,7 +10875,7 @@ I0
 sg130
 g23
 sS'q'
-g1453
+g1457
 sg132
 I0
 sg133
@@ -10890,14 +10894,14 @@ sg139
 I510
 sg140
 S'192df1ea.inv'
-p1458
+p1462
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1459
-(dp1460
+p1463
+(dp1464
 S'a'
 Vthing
-p1461
+p1465
 sg128
 I510
 sg129
@@ -10906,7 +10910,7 @@ sg130
 g23
 sS'q'
 Vcosa
-p1462
+p1466
 sg132
 I0
 sg133
@@ -10925,13 +10929,13 @@ sg139
 I510
 sg140
 S'd9625fcd'
-p1463
+p1467
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1464
-(dp1465
+p1468
+(dp1469
 S'a'
-g1462
+g1466
 sg128
 I510
 sg129
@@ -10939,7 +10943,7 @@ I0
 sg130
 g23
 sS'q'
-g1461
+g1465
 sg132
 I0
 sg133
@@ -10958,14 +10962,14 @@ sg139
 I510
 sg140
 S'd9625fcd.inv'
-p1466
+p1470
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1467
-(dp1468
+p1471
+(dp1472
 S'a'
 Vplace
-p1469
+p1473
 sg128
 I510
 sg129
@@ -10974,7 +10978,7 @@ sg130
 g23
 sS'q'
 Vposto
-p1470
+p1474
 sg132
 I0
 sg133
@@ -10993,13 +10997,13 @@ sg139
 I510
 sg140
 S'e43b68ee'
-p1471
+p1475
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1472
-(dp1473
+p1476
+(dp1477
 S'a'
-g1470
+g1474
 sg128
 I510
 sg129
@@ -11007,7 +11011,7 @@ I0
 sg130
 g23
 sS'q'
-g1469
+g1473
 sg132
 I0
 sg133
@@ -11026,14 +11030,14 @@ sg139
 I510
 sg140
 S'e43b68ee.inv'
-p1474
+p1478
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1475
-(dp1476
+p1479
+(dp1480
 S'a'
 Vthis
-p1477
+p1481
 sg128
 I510
 sg129
@@ -11042,7 +11046,7 @@ sg130
 g23
 sS'q'
 Vquesto
-p1478
+p1482
 sg132
 I0
 sg133
@@ -11061,13 +11065,13 @@ sg139
 I510
 sg140
 S'7a4ca905'
-p1479
+p1483
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1480
-(dp1481
+p1484
+(dp1485
 S'a'
-g1478
+g1482
 sg128
 I510
 sg129
@@ -11075,7 +11079,7 @@ I0
 sg130
 g23
 sS'q'
-g1477
+g1481
 sg132
 I0
 sg133
@@ -11094,14 +11098,14 @@ sg139
 I510
 sg140
 S'7a4ca905.inv'
-p1482
+p1486
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1483
-(dp1484
+p1487
+(dp1488
 S'a'
 Va lot of
-p1485
+p1489
 sg128
 I510
 sg129
@@ -11110,7 +11114,7 @@ sg130
 g23
 sS'q'
 Vtante
-p1486
+p1490
 sg132
 I0
 sg133
@@ -11129,13 +11133,13 @@ sg139
 I510
 sg140
 S'2eafefaf'
-p1487
+p1491
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1488
-(dp1489
+p1492
+(dp1493
 S'a'
-g1486
+g1490
 sg128
 I510
 sg129
@@ -11143,7 +11147,7 @@ I0
 sg130
 g23
 sS'q'
-g1485
+g1489
 sg132
 I0
 sg133
@@ -11162,14 +11166,14 @@ sg139
 I510
 sg140
 S'2eafefaf.inv'
-p1490
+p1494
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1491
-(dp1492
+p1495
+(dp1496
 S'a'
 Vthere (masc)
-p1493
+p1497
 sg128
 I510
 sg129
@@ -11178,7 +11182,7 @@ sg130
 g23
 sS'q'
 Vli
-p1494
+p1498
 sg132
 I0
 sg133
@@ -11197,13 +11201,13 @@ sg139
 I510
 sg140
 S'fb0e0c8d'
-p1495
+p1499
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1496
-(dp1497
+p1500
+(dp1501
 S'a'
-g1494
+g1498
 sg128
 I510
 sg129
@@ -11211,7 +11215,7 @@ I0
 sg130
 g23
 sS'q'
-g1493
+g1497
 sg132
 I0
 sg133
@@ -11230,14 +11234,14 @@ sg139
 I510
 sg140
 S'fb0e0c8d.inv'
-p1498
+p1502
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1499
-(dp1500
+p1503
+(dp1504
 S'a'
 Vthere (fem)
-p1501
+p1505
 sg128
 I510
 sg129
@@ -11246,7 +11250,7 @@ sg130
 g23
 sS'q'
 Vlá
-p1502
+p1506
 sg132
 I0
 sg133
@@ -11265,13 +11269,13 @@ sg139
 I510
 sg140
 S'6ba89099'
-p1503
+p1507
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1504
-(dp1505
+p1508
+(dp1509
 S'a'
-g1502
+g1506
 sg128
 I510
 sg129
@@ -11279,7 +11283,7 @@ I0
 sg130
 g23
 sS'q'
-g1501
+g1505
 sg132
 I0
 sg133
@@ -11298,14 +11302,14 @@ sg139
 I510
 sg140
 S'6ba89099.inv'
-p1506
+p1510
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1507
-(dp1508
+p1511
+(dp1512
 S'a'
 Vsurroundings
-p1509
+p1513
 sg128
 I510
 sg129
@@ -11314,7 +11318,7 @@ sg130
 g23
 sS'q'
 Vdintorno
-p1510
+p1514
 sg132
 I0
 sg133
@@ -11333,13 +11337,13 @@ sg139
 I510
 sg140
 S'd4f9ce11'
-p1511
+p1515
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1512
-(dp1513
+p1516
+(dp1517
 S'a'
-g1510
+g1514
 sg128
 I510
 sg129
@@ -11347,7 +11351,7 @@ I0
 sg130
 g23
 sS'q'
-g1509
+g1513
 sg132
 I0
 sg133
@@ -11366,14 +11370,14 @@ sg139
 I510
 sg140
 S'd4f9ce11.inv'
-p1514
+p1518
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1515
-(dp1516
+p1519
+(dp1520
 S'a'
 Vin conclusion
-p1517
+p1521
 sg128
 I510
 sg129
@@ -11382,7 +11386,7 @@ sg130
 g23
 sS'q'
 Vinsomma
-p1518
+p1522
 sg132
 I0
 sg133
@@ -11401,13 +11405,13 @@ sg139
 I510
 sg140
 S'c7fb0dcc'
-p1519
+p1523
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1520
-(dp1521
+p1524
+(dp1525
 S'a'
-g1518
+g1522
 sg128
 I510
 sg129
@@ -11415,7 +11419,7 @@ I0
 sg130
 g23
 sS'q'
-g1517
+g1521
 sg132
 I0
 sg133
@@ -11434,14 +11438,14 @@ sg139
 I510
 sg140
 S'c7fb0dcc.inv'
-p1522
+p1526
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1523
-(dp1524
+p1527
+(dp1528
 S'a'
 Vci vado
-p1525
+p1529
 sg128
 I510
 sg129
@@ -11450,7 +11454,7 @@ sg130
 g23
 sS'q'
 VI go there
-p1526
+p1530
 sg132
 I0
 sg133
@@ -11469,13 +11473,13 @@ sg139
 I510
 sg140
 S'3c094bb5'
-p1527
+p1531
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1528
-(dp1529
+p1532
+(dp1533
 S'a'
-g1526
+g1530
 sg128
 I510
 sg129
@@ -11483,7 +11487,7 @@ I0
 sg130
 g23
 sS'q'
-g1525
+g1529
 sg132
 I0
 sg133
@@ -11502,14 +11506,14 @@ sg139
 I510
 sg140
 S'3c094bb5.inv'
-p1530
+p1534
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1531
-(dp1532
+p1535
+(dp1536
 S'a'
 Vwe would like
-p1533
+p1537
 sg128
 I510
 sg129
@@ -11518,7 +11522,7 @@ sg130
 g23
 sS'q'
 Vvorremmo
-p1534
+p1538
 sg132
 I0
 sg133
@@ -11537,13 +11541,13 @@ sg139
 I510
 sg140
 S'aa158576'
-p1535
+p1539
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1536
-(dp1537
+p1540
+(dp1541
 S'a'
-g1534
+g1538
 sg128
 I510
 sg129
@@ -11551,7 +11555,7 @@ I0
 sg130
 g23
 sS'q'
-g1533
+g1537
 sg132
 I0
 sg133
@@ -11570,14 +11574,14 @@ sg139
 I510
 sg140
 S'aa158576.inv'
-p1538
+p1542
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1539
-(dp1540
+p1543
+(dp1544
 S'a'
 VEngland
-p1541
+p1545
 sg128
 I510
 sg129
@@ -11586,7 +11590,7 @@ sg130
 g23
 sS'q'
 VInghilterra
-p1542
+p1546
 sg132
 I0
 sg133
@@ -11605,13 +11609,13 @@ sg139
 I510
 sg140
 S'37d092c7'
-p1543
+p1547
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1544
-(dp1545
+p1548
+(dp1549
 S'a'
-g1542
+g1546
 sg128
 I510
 sg129
@@ -11619,7 +11623,7 @@ I0
 sg130
 g23
 sS'q'
-g1541
+g1545
 sg132
 I0
 sg133
@@ -11638,14 +11642,14 @@ sg139
 I510
 sg140
 S'37d092c7.inv'
-p1546
+p1550
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1547
-(dp1548
+p1551
+(dp1552
 S'a'
 Vto have to
-p1549
+p1553
 sg128
 I510
 sg129
@@ -11654,7 +11658,7 @@ sg130
 g23
 sS'q'
 VDovere
-p1550
+p1554
 sg132
 I0
 sg133
@@ -11673,13 +11677,13 @@ sg139
 I510
 sg140
 S'36bd0063'
-p1551
+p1555
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1552
-(dp1553
+p1556
+(dp1557
 S'a'
-g1550
+g1554
 sg128
 I510
 sg129
@@ -11687,7 +11691,7 @@ I0
 sg130
 g23
 sS'q'
-g1549
+g1553
 sg132
 I0
 sg133
@@ -11706,14 +11710,14 @@ sg139
 I510
 sg140
 S'36bd0063.inv'
-p1554
+p1558
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1555
-(dp1556
+p1559
+(dp1560
 S'a'
 Vto take
-p1557
+p1561
 sg128
 I510
 sg129
@@ -11722,7 +11726,7 @@ sg130
 g23
 sS'q'
 VPrendere
-p1558
+p1562
 sg132
 I0
 sg133
@@ -11741,13 +11745,13 @@ sg139
 I510
 sg140
 S'3eff7804'
-p1559
+p1563
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1560
-(dp1561
+p1564
+(dp1565
 S'a'
-g1558
+g1562
 sg128
 I510
 sg129
@@ -11755,7 +11759,7 @@ I0
 sg130
 g23
 sS'q'
-g1557
+g1561
 sg132
 I0
 sg133
@@ -11774,14 +11778,14 @@ sg139
 I510
 sg140
 S'3eff7804.inv'
-p1562
+p1566
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1563
-(dp1564
+p1567
+(dp1568
 S'a'
 Vto descend
-p1565
+p1569
 sg128
 I510
 sg129
@@ -11790,7 +11794,7 @@ sg130
 g23
 sS'q'
 VScendere
-p1566
+p1570
 sg132
 I0
 sg133
@@ -11809,13 +11813,13 @@ sg139
 I510
 sg140
 S'9872d174'
-p1567
+p1571
 sba(imnemosyne.core.mnemosyne_core
 Item
-p1568
-(dp1569
+p1572
+(dp1573
 S'a'
-g1566
+g1570
 sg128
 I510
 sg129
@@ -11823,7 +11827,7 @@ I0
 sg130
 g23
 sS'q'
-g1565
+g1569
 sg132
 I0
 sg133
@@ -11842,5 +11846,5 @@ sg139
 I510
 sg140
 S'9872d174.inv'
-p1570
+p1574
 sbaa.
