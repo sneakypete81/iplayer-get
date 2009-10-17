@@ -333,3 +333,17 @@
 2009-10-16 13:21:52 : R 49d32b8c 1 2.57 | 2 0 0 2 0 | 0 47 | 0 0 | 23.7
 2009-10-16 13:21:59 : Saved database 0 69 442
 2009-10-16 13:21:59 : Program stopped
+2009-10-17 11:41:33 : Program started : Mnemosyne 1.2.1 posix linux2
+2009-10-17 11:41:35 : Loaded database 25 69 442
+2009-10-17 11:42:31 : New item 49faf453 0 0
+2009-10-17 11:42:31 : New item 49faf453.inv 0 0
+2009-10-17 11:43:26 : New item 6fba681b 0 0
+2009-10-17 11:43:26 : New item 6fba681b.inv 0 0
+2009-10-17 11:46:32 : New item 0dae1a64 0 0
+2009-10-17 11:46:32 : New item 0dae1a64.inv 0 0
+2009-10-17 11:46:52 : New item cff28ec8 0 0
+2009-10-17 11:46:52 : New item cff28ec8.inv 0 0
+2009-10-17 11:47:21 : New item 52d6d9f2 0 0
+2009-10-17 11:47:21 : New item 52d6d9f2.inv 0 0
+2009-10-17 11:47:26 : Saved database 25 79 452
+2009-10-17 11:47:26 : Program stopped
