@@ -25,7 +25,12 @@ def is_clean(client):
     """ Ensure that mnemosyne svn directory is completely clean """
     abnormal_files = [item for item in client.status(MNEMOSYNE_SVN_DIR)
                       if item.text_status != pysvn.wc_status_kind.normal]
-    return abnormal_files == []
+    if abnormal_files == []:
+        return True
+    else:
+        print "Abnormal Files:"
+        print abnormal_files
+        return False
 
 def add_unversioned(client):
     """ Add any unversioned files """
