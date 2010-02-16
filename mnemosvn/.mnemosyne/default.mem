@@ -1203,7 +1203,7 @@ S'a'
 Vaffittare
 p285
 sg231
-I754
+I763
 sg232
 I4
 sg233
@@ -1212,9 +1212,9 @@ sS'q'
 Vto rent
 p286
 sg235
-I0
+I4
 sg236
-I2
+I5
 sg237
 I0
 sg238
@@ -1224,9 +1224,9 @@ F2.6569142068324849
 sg240
 I1
 sg241
-I0
+I3
 sg242
-I754
+I764
 sg243
 S'a758fd84.inv'
 p287
@@ -1238,7 +1238,7 @@ S'a'
 Vla valigia
 p290
 sg131
-I754
+I763
 sg132
 I9
 sg133
@@ -1247,9 +1247,9 @@ sS'q'
 Vthe suitcase
 p291
 sg135
-I0
+I4
 sg136
-I14
+I15
 sg137
 I0
 sg138
@@ -1259,9 +1259,9 @@ F2.4913515981735146
 sg140
 I6
 sg141
-I0
+I1
 sg142
-I754
+I765
 sg143
 S'cb2a3dbd.inv'
 p292
@@ -1306,7 +1306,7 @@ S'a'
 VCosa ti piace fare?
 p298
 sg105
-I754
+I763
 sg106
 I10
 sg107
@@ -1315,9 +1315,9 @@ sS'q'
 VWhat do you like doing?
 p299
 sg109
-I0
+I4
 sg110
-I20
+I21
 sg111
 I0
 sg61
@@ -1327,9 +1327,9 @@ F2.2799999999999998
 sg113
 I6
 sg114
-I0
+I1
 sg115
-I754
+I765
 sg116
 S'cc6f45dc'
 p300
@@ -1341,7 +1341,7 @@ S'a'
 Vmettere
 p303
 sg71
-I754
+I763
 sg72
 I5
 sg73
@@ -1350,9 +1350,9 @@ sS'q'
 Vto put
 p304
 sg75
-I0
+I5
 sg76
-I3
+I4
 sg77
 I0
 sg78
@@ -1362,9 +1362,9 @@ F2.872575266589438
 sg80
 I2
 sg81
-I0
+I1
 sg82
-I754
+I765
 sg83
 S'8bd63bf7.inv'
 p305
@@ -1376,7 +1376,7 @@ S'a'
 Vhere
 p308
 sg231
-I754
+I763
 sg232
 I4
 sg233
@@ -1385,9 +1385,9 @@ sS'q'
 Vqui
 p309
 sg235
-I0
+I4
 sg236
-I2
+I3
 sg237
 I0
 sg238
@@ -1397,9 +1397,9 @@ F2.396914206832486
 sg240
 I1
 sg241
-I0
+I1
 sg242
-I754
+I765
 sg243
 S'192df1ea'
 p310
@@ -1411,7 +1411,7 @@ S'a'
 Vanche
 p313
 sg88
-I754
+I763
 sg89
 I3
 sg90
@@ -1420,9 +1420,9 @@ sS'q'
 Vtoo (also)
 p314
 sg92
-I0
+I4
 sg93
-I2
+I3
 sg94
 I0
 sg95
@@ -1432,9 +1432,9 @@ F2.578996835216889
 sg97
 I1
 sg98
-I0
+I1
 sg99
-I754
+I765
 sg100
 S'a83e9584.inv'
 p315
@@ -1446,7 +1446,7 @@ S'a'
 Varound (at around ...)
 p318
 sg71
-I754
+I763
 sg72
 I4
 sg73
@@ -1455,9 +1455,9 @@ sS'q'
 Vverso
 p319
 sg75
-I0
+I3
 sg76
-I7
+I8
 sg77
 I0
 sg78
@@ -1467,9 +1467,9 @@ F2.4325752665894398
 sg80
 I2
 sg81
-I0
+I1
 sg82
-I754
+I765
 sg83
 S'adda8333'
 p320
@@ -1481,7 +1481,7 @@ S'a'
 Voften
 p323
 sg37
-I754
+I763
 sg38
 I6
 sg39
@@ -1490,9 +1490,9 @@ sS'q'
 Vspesso
 p324
 sg41
-I0
+I2
 sg42
-I6
+I8
 sg43
 I0
 sg44
@@ -1502,9 +1502,9 @@ F2.4135561930199581
 sg46
 I3
 sg47
-I0
+I2
 sg48
-I754
+I765
 sg49
 S'f1cd2707'
 p325
@@ -1516,7 +1516,7 @@ S'a'
 Vsapere
 p328
 sg231
-I754
+I763
 sg232
 I6
 sg233
@@ -1525,9 +1525,9 @@ sS'q'
 Vto know
 p329
 sg235
-I0
+I5
 sg236
-I3
+I4
 sg237
 I0
 sg238
@@ -1537,9 +1537,9 @@ F2.6169142068324858
 sg240
 I2
 sg241
-I0
+I1
 sg242
-I754
+I765
 sg243
 S'fe3dd620.inv'
 p330
@@ -1551,7 +1551,7 @@ S'a'
 VDo you want to try it?
 p333
 sg105
-I754
+I763
 sg106
 I12
 sg107
@@ -1560,9 +1560,9 @@ sS'q'
 VVuoi Assaggiarlo?
 p334
 sg109
-I0
+I4
 sg110
-I9
+I10
 sg111
 I0
 sg61
@@ -1572,9 +1572,9 @@ F2.52
 sg113
 I5
 sg114
-I0
+I1
 sg115
-I754
+I764
 sg116
 S'7ed9277a'
 p335
@@ -1633,7 +1633,7 @@ S'a'
 Vprevious
 p355
 sg37
-I754
+I763
 sg38
 I7
 sg39
@@ -1642,9 +1642,9 @@ sS'q'
 Vscorso
 p356
 sg41
-I0
+I4
 sg42
-I8
+I9
 sg43
 I0
 sg44
@@ -1654,9 +1654,9 @@ F2.5735561930199582
 sg46
 I5
 sg47
-I0
+I1
 sg48
-I754
+I765
 sg49
 S'27878eac'
 p357
@@ -1668,7 +1668,7 @@ S'a'
 Vsurroundings
 p360
 sg231
-I754
+I763
 sg232
 I7
 sg233
@@ -1677,9 +1677,9 @@ sS'q'
 Vdintorno
 p361
 sg235
-I0
+I4
 sg236
-I6
+I7
 sg237
 I0
 sg238
@@ -1689,9 +1689,9 @@ F2.7169142068324872
 sg240
 I3
 sg241
-I0
+I1
 sg242
-I754
+I764
 sg243
 S'd4f9ce11'
 p362
@@ -1704,7 +1704,7 @@ Vvolta
 p365
 sS'last_rep'
 p366
-I754
+I763
 sS'ret_reps'
 p367
 I3
@@ -1716,10 +1716,10 @@ Vtime
 p369
 sS'grade'
 p370
-I0
+I4
 sS'acq_reps'
 p371
-I2
+I4
 sS'ret_reps_since_lapse'
 p372
 I0
@@ -1734,10 +1734,10 @@ p375
 I1
 sS'acq_reps_since_lapse'
 p376
-I0
+I2
 sS'next_rep'
 p377
-I754
+I764
 sS'id'
 p378
 S'4f280d74.inv'
@@ -1751,7 +1751,7 @@ Vvento
 p382
 sS'last_rep'
 p383
-I754
+I763
 sS'ret_reps'
 p384
 I3
@@ -1763,10 +1763,10 @@ Vwind
 p386
 sS'grade'
 p387
-I0
+I4
 sS'acq_reps'
 p388
-I2
+I3
 sS'ret_reps_since_lapse'
 p389
 I0
@@ -1781,10 +1781,10 @@ p392
 I1
 sS'acq_reps_since_lapse'
 p393
-I0
+I1
 sS'next_rep'
 p394
-I754
+I764
 sS'id'
 p395
 S'87f5fcbc.inv'
@@ -1797,7 +1797,7 @@ S'a'
 Vrimanere
 p399
 sg71
-I754
+I763
 sg72
 I5
 sg73
@@ -1806,9 +1806,9 @@ sS'q'
 Vto stay
 p400
 sg75
-I0
+I4
 sg76
-I6
+I7
 sg77
 I0
 sg78
@@ -1818,9 +1818,9 @@ F2.5725752665894377
 sg80
 I2
 sg81
-I0
+I1
 sg82
-I754
+I765
 sg83
 S'a0349f33.inv'
 p401
@@ -1832,7 +1832,7 @@ S'a'
 Vvenire
 p404
 sg71
-I754
+I763
 sg72
 I6
 sg73
@@ -1841,9 +1841,9 @@ sS'q'
 Vto come
 p405
 sg75
-I0
+I4
 sg76
-I5
+I6
 sg77
 I0
 sg78
@@ -1853,9 +1853,9 @@ F2.5725752665894372
 sg80
 I3
 sg81
-I0
+I1
 sg82
-I754
+I764
 sg83
 S'7e15494b.inv'
 p406
@@ -1867,7 +1867,7 @@ S'a'
 Vpasseggiare
 p409
 sg71
-I754
+I763
 sg72
 I4
 sg73
@@ -1876,9 +1876,9 @@ sS'q'
 Vto stroll
 p410
 sg75
-I0
-sg76
 I2
+sg76
+I5
 sg77
 I0
 sg78
@@ -1888,9 +1888,9 @@ F2.2725752665894383
 sg80
 I1
 sg81
-I0
+I3
 sg82
-I754
+I765
 sg83
 S'7b28eb50.inv'
 p411
@@ -1949,7 +1949,7 @@ S'a'
 Vgrapes
 p431
 sg383
-I754
+I763
 sg384
 I3
 sg385
@@ -1958,9 +1958,9 @@ sS'q'
 Vuva
 p432
 sg387
-I0
+I4
 sg388
-I3
+I4
 sg389
 I0
 sg390
@@ -1970,9 +1970,9 @@ F2.6868100394667711
 sg392
 I1
 sg393
-I0
+I1
 sg394
-I754
+I764
 sg395
 S'de24e2b1'
 p433
@@ -1983,7 +1983,7 @@ p434
 S'a'
 g309
 sg231
-I754
+I763
 sg232
 I6
 sg233
@@ -1991,9 +1991,9 @@ g23
 sS'q'
 g308
 sg235
-I0
-sg236
 I4
+sg236
+I5
 sg237
 I0
 sg238
@@ -2003,9 +2003,9 @@ F2.396914206832486
 sg240
 I3
 sg241
-I0
+I1
 sg242
-I754
+I766
 sg243
 S'192df1ea.inv'
 p436
@@ -2134,7 +2134,7 @@ S'a'
 Vonion
 p466
 sg383
-I754
+I763
 sg384
 I3
 sg385
@@ -2143,9 +2143,9 @@ sS'q'
 Vcippola
 p467
 sg387
-I0
+I4
 sg388
-I3
+I4
 sg389
 I0
 sg390
@@ -2155,9 +2155,9 @@ F2.7868100394667707
 sg392
 I1
 sg393
-I0
+I1
 sg394
-I754
+I765
 sg395
 S'1f23846a'
 p468
@@ -2169,7 +2169,7 @@ S'a'
 VDo you have
 p471
 sg105
-I754
+I763
 sg106
 I11
 sg107
@@ -2178,9 +2178,9 @@ sS'q'
 VAvete
 p472
 sg109
-I0
+I4
 sg110
-I10
+I11
 sg111
 I0
 sg61
@@ -2190,9 +2190,9 @@ F1.8599999999999997
 sg113
 I6
 sg114
-I0
+I1
 sg115
-I754
+I764
 sg116
 S'3510784d'
 p473
@@ -2204,7 +2204,7 @@ S'a'
 Vmiele
 p476
 sg383
-I754
+I763
 sg384
 I4
 sg385
@@ -2213,9 +2213,9 @@ sS'q'
 Vhoney
 p477
 sg387
-I0
+I2
 sg388
-I3
+I5
 sg389
 I0
 sg390
@@ -2225,9 +2225,9 @@ F2.6868100394667715
 sg392
 I2
 sg393
-I0
+I2
 sg394
-I754
+I764
 sg395
 S'8908163f.inv'
 p478
@@ -2239,7 +2239,7 @@ S'a'
 Vper caritá
 p481
 sg366
-I754
+I763
 sg367
 I2
 sg368
@@ -2248,9 +2248,9 @@ sS'q'
 Vmy goodness
 p482
 sg370
-I0
-sg371
 I2
+sg371
+I3
 sg372
 I0
 sg373
@@ -2260,9 +2260,9 @@ F2.7059490457565398
 sg375
 I1
 sg376
-I0
+I1
 sg377
-I754
+I765
 sg378
 S'4d5318e1.inv'
 p483
@@ -2274,7 +2274,7 @@ S'a'
 Vtutti / ogni
 p486
 sg366
-I754
+I763
 sg367
 I2
 sg368
@@ -2283,9 +2283,9 @@ sS'q'
 Vevery
 p487
 sg370
-I0
+I4
 sg371
-I2
+I3
 sg372
 I0
 sg373
@@ -2295,9 +2295,9 @@ F2.7058945968463592
 sg375
 I1
 sg376
-I0
+I1
 sg377
-I754
+I764
 sg378
 S'478e4f5f.inv'
 p488
@@ -2309,7 +2309,7 @@ S'a'
 Vseason (of the year)
 p491
 sg440
-I754
+I763
 sg441
 I3
 sg442
@@ -2318,9 +2318,9 @@ sS'q'
 Vstagione
 p492
 sg444
-I0
-sg445
 I4
+sg445
+I5
 sg446
 I0
 sg447
@@ -2330,9 +2330,9 @@ F2.6935521209147333
 sg449
 I2
 sg450
-I0
+I1
 sg451
-I754
+I764
 sg452
 S'3cd0bb48'
 p493
@@ -2344,7 +2344,7 @@ S'a'
 Vadesso
 p496
 sg415
-I754
+I763
 sg416
 I4
 sg417
@@ -2353,9 +2353,9 @@ sS'q'
 Vnow
 p497
 sg419
-I0
+I2
 sg420
-I5
+I8
 sg421
 I0
 sg422
@@ -2365,9 +2365,9 @@ F2.7024791595413427
 sg424
 I3
 sg425
-I0
+I3
 sg426
-I754
+I764
 sg427
 S'1d2cfb02.inv'
 p498
@@ -2379,7 +2379,7 @@ S'a'
 Vfino a
 p501
 sg339
-I754
+I763
 sg340
 I4
 sg341
@@ -2388,9 +2388,9 @@ sS'q'
 Vuntil
 p502
 sg343
-I0
+I2
 sg344
-I4
+I7
 sg345
 I0
 sg346
@@ -2400,9 +2400,9 @@ F2.5535521209147349
 sg348
 I2
 sg349
-I0
+I3
 sg350
-I754
+I764
 sg351
 S'6fba681b'
 p503
@@ -2414,7 +2414,7 @@ S'a'
 Vvorremmo
 p506
 sg231
-I754
+I763
 sg232
 I5
 sg233
@@ -2423,9 +2423,9 @@ sS'q'
 Vwe would like
 p507
 sg235
-I0
+I4
 sg236
-I3
+I4
 sg237
 I0
 sg238
@@ -2435,9 +2435,9 @@ F2.656914206832488
 sg240
 I2
 sg241
-I0
+I1
 sg242
-I754
+I765
 sg243
 S'aa158576.inv'
 p508
@@ -2448,7 +2448,7 @@ p509
 S'a'
 g472
 sg105
-I754
+I763
 sg106
 I15
 sg107
@@ -2456,9 +2456,9 @@ g14
 sS'q'
 g471
 sg109
-I0
+I2
 sg110
-I18
+I19
 sg111
 I0
 sg61
@@ -2468,9 +2468,9 @@ F2.52
 sg113
 I8
 sg114
-I0
+I1
 sg115
-I754
+I765
 sg116
 S'd54306ee'
 p511
@@ -2482,7 +2482,7 @@ S'a'
 Vregalare
 p514
 sg366
-I754
+I763
 sg367
 I2
 sg368
@@ -2491,9 +2491,9 @@ sS'q'
 Vto give
 p515
 sg370
-I0
+I4
 sg371
-I2
+I3
 sg372
 I0
 sg373
@@ -2503,9 +2503,9 @@ F2.44594904575654
 sg375
 I1
 sg376
-I0
+I1
 sg377
-I754
+I765
 sg378
 S'f78b5f8b.inv'
 p516
@@ -2517,7 +2517,7 @@ S'a'
 Vany
 p519
 sg366
-I754
+I763
 sg367
 I2
 sg368
@@ -2528,7 +2528,7 @@ p520
 sg370
 I0
 sg371
-I4
+I5
 sg372
 I0
 sg373
@@ -2538,9 +2538,9 @@ F2.7058945968463592
 sg375
 I1
 sg376
-I0
+I1
 sg377
-I754
+I763
 sg378
 S'd363ab36'
 p521
@@ -2692,7 +2692,7 @@ S'a'
 Vcomplimenti
 p544
 sg366
-I754
+I763
 sg367
 I3
 sg368
@@ -2701,9 +2701,9 @@ sS'q'
 Vwell done
 p545
 sg370
-I0
+I1
 sg371
-I3
+I4
 sg372
 I0
 sg373
@@ -2713,9 +2713,9 @@ F2.6058945968463587
 sg375
 I2
 sg376
-I0
+I1
 sg377
-I754
+I763
 sg378
 S'b1ade12a.inv'
 p546
