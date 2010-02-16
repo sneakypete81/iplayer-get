@@ -129,3 +129,7 @@
 2010-02-16 12:31:12 : Loaded database 0 195 649
 2010-02-16 12:31:18 : Saved database 0 195 649
 2010-02-16 12:31:18 : Program stopped
+2010-02-16 12:32:00 : Program started : Mnemosyne 1.2.1 nt win32
+2010-02-16 12:32:00 : Loaded database 0 195 649
+2010-02-16 12:32:05 : Saved database 0 195 649
+2010-02-16 12:32:05 : Program stopped
