@@ -125,3 +125,7 @@
 2010-02-16 12:30:30 : R 36bd0063.inv 4 2.42 | 6 3 1 4 0 | 0 1 | 1 0 | 3.1
 2010-02-16 12:30:33 : Saved database 0 195 649
 2010-02-16 12:30:33 : Program stopped
+2010-02-16 12:31:12 : Program started : Mnemosyne 1.2.1 nt win32
+2010-02-16 12:31:12 : Loaded database 0 195 649
+2010-02-16 12:31:18 : Saved database 0 195 649
+2010-02-16 12:31:18 : Program stopped
