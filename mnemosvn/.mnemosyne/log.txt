@@ -180,3 +180,879 @@
 2010-02-16 12:36:19 : R 1d2cfb02.inv 2 2.70 | 8 4 3 3 0 | 0 1 | 1 0 | 1.7
 2010-02-16 12:36:21 : Saved database 0 165 649
 2010-02-16 12:36:21 : Program stopped
+2010-02-17 17:09:45 : Program started : Mnemosyne 1.2.1 nt win32
+2010-02-17 17:09:47 : Loaded database 20 165 649
+2010-02-17 17:16:36 : Imported item a40e224b 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 1063f284 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item e3aa3db0 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 36f5ece0 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 9f3ee3fa 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 1383834b 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 15a503cb 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 75923048 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 1ffd21c4 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item af80138a 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 8e487b90 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 238e6047 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 271e6bcd 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item bd08699e 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 19426129 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 1be0a35c 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 4f9db8d5 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item ddab4dca 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 3b9dc113 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 39d46e55 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 3b4c3d19 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 59726fb3 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item e4933756 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 21289f7a 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 31b32eb0 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item fe18b62c 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item d911451a 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 0e50bfdf 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 7fe28d23 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 3611c694 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 9f85ae4f 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 677faa33 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 9f1400fc 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 9494634d 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item fdab8f6b 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 787582c2 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 46e8958d 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 033f431e 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 38ec3048 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 281791b4 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item ea22eab1 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 8aadb569 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item d3c4d423 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 8313fc8a 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item e73e211f 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 513a2b91 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item afc9314a 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 9093e192 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 6af153ec 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 8e69c24c 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item bd2defea 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 09f599be 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item c06a19cb 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 5fdb021b 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item f38cc62b 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item a0325efe 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item ed3352d3 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item a79b8eca 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 4713a08e 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item cc3daffe 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item ace3b4ac 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 9acd4f57 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 5a6accc8 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 93eef02a 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 2897dcf7 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 11c6eb4b 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item b0d336b6 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 66649e73 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item a417bb1f 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 9116ce46 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 358fcddb 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item e9acee2c 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 131c5e04 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 1bb22c3b 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item b011debb 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item c1cbb331 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item e795541a 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item e85fbb2b 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item baf8c06f 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 2c281e99 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 0a39609d 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 7def0a3b 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 1d86f235 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 816227d4 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 87d6fc9e 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 8df16636 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 2ac21672 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 9503bcf1 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 527f9854 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item da95248c 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item c1abccf1 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 1ad1873e 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item ebb6962e 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 3195027c 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 3b2c3cd6 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 4ae44981 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item aca18c7a 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 0ee53a25 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 169808f5 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item c042a344 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 1b310ebc 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 70e4d349 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item a82cdead 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 80d12bb7 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item e738b81a 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item d46d08a2 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item fd41d860 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item fe0bc037 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 20affb2c 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item fee7ed81 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 67e6a880 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 70b94081 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 563453b1 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 3e670baa 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 3f88313b 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item ef450f31 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 3de7deda 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 29125be5 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item b491dab1 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 0349c06e 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 19baaeba 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 07154866 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 8b963d22 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 43f3d689 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 370128e5 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 27bd86fe 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item deccb497 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item a735f497 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item f56cddf9 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 8786c4a1 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 66049fd1 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item c8e06bf4 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 54f5652e 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item a75e4405 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 9b3bdd8e 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item faab4c25 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 90539381 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 06e855f1 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 895f9c3c 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 26dccab5 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item d7a5ce94 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item ae877412 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item d550ef78 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item e1f4b7d0 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 78ba434f 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item a8c15a19 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item cff63caf 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 4ffd08f6 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item d923f5f0 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item b684d61d 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 70ada860 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 853f2f4e 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 17433aa1 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item b68fb7f5 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 21fbbe0b 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 57604d77 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item ac5e80d7 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 7d9bb687 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 56974bbc 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item f1d2176e 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item d964c5b8 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 9229bba3 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 739f8225 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 2ce6dc4f 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 3617568e 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item e540a0f1 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 143967ee 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 85e85d8f 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 970da316 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 8cb81d91 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item da916561 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 2253a019 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 4678ec8f 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item b5849d65 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 9c725ec8 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item d35cbdff 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 493bacd3 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 710fdb56 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 559ebd7d 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 79a43481 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item b09fa883 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item cefd3ee5 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 23cd1729 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 7dfe8024 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item ec4b4033 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item ff28cf83 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 719d0bb0 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item eae54f7a 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 870f8b7b 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 203793cd 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item b9e91bf0 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 1c1813a7 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 5a7949a2 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 57f58910 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item fc64c9d7 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 04e340d2 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 4ba7e7e4 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 48776129 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 78c0dd2a 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item f57a2b6b 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 75b0b75a 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item def06d3f 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 082ed7bf 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 3d4ce77e 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item b7480fba 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item fbea0ab3 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 8496e5e6 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item fea382e6 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 829e3985 0 0 0 0 -764
+2010-02-17 17:16:36 : Imported item 12790414 0 0 0 0 -764
+2010-02-17 17:17:14 : Deleted item 26dccab5
+2010-02-17 17:17:14 : Deleted item 9f1400fc
+2010-02-17 17:17:14 : Deleted item b68fb7f5
+2010-02-17 17:17:14 : Deleted item 04e340d2
+2010-02-17 17:17:14 : Deleted item bd08699e
+2010-02-17 17:17:14 : Deleted item 8aadb569
+2010-02-17 17:17:14 : Deleted item a0325efe
+2010-02-17 17:17:14 : Deleted item d964c5b8
+2010-02-17 17:17:14 : Deleted item 6af153ec
+2010-02-17 17:17:14 : Deleted item fe18b62c
+2010-02-17 17:17:14 : Deleted item 5a6accc8
+2010-02-17 17:17:14 : Deleted item 15a503cb
+2010-02-17 17:17:14 : Deleted item 9116ce46
+2010-02-17 17:17:14 : Deleted item 85e85d8f
+2010-02-17 17:17:14 : Deleted item e795541a
+2010-02-17 17:17:14 : Deleted item 082ed7bf
+2010-02-17 17:17:14 : Deleted item 816227d4
+2010-02-17 17:17:14 : Deleted item c1abccf1
+2010-02-17 17:17:14 : Deleted item 9c725ec8
+2010-02-17 17:17:14 : Deleted item 12790414
+2010-02-17 17:17:14 : Deleted item 0ee53a25
+2010-02-17 17:17:14 : Deleted item cefd3ee5
+2010-02-17 17:17:14 : Deleted item 54f5652e
+2010-02-17 17:17:14 : Deleted item 3b4c3d19
+2010-02-17 17:17:14 : Deleted item e738b81a
+2010-02-17 17:17:14 : Deleted item cff63caf
+2010-02-17 17:17:14 : Deleted item 870f8b7b
+2010-02-17 17:17:14 : Deleted item 70b94081
+2010-02-17 17:17:14 : Deleted item b491dab1
+2010-02-17 17:17:14 : Deleted item 27bd86fe
+2010-02-17 17:17:14 : Deleted item 895f9c3c
+2010-02-17 17:17:14 : Deleted item fdab8f6b
+2010-02-17 17:17:14 : Deleted item 17433aa1
+2010-02-17 17:17:14 : Deleted item fc64c9d7
+2010-02-17 17:17:14 : Deleted item 271e6bcd
+2010-02-17 17:17:14 : Deleted item ea22eab1
+2010-02-17 17:17:14 : Deleted item f38cc62b
+2010-02-17 17:17:14 : Deleted item f1d2176e
+2010-02-17 17:17:14 : Deleted item 9093e192
+2010-02-17 17:17:14 : Deleted item 0e50bfdf
+2010-02-17 17:17:14 : Deleted item 9acd4f57
+2010-02-17 17:17:14 : Deleted item 1383834b
+2010-02-17 17:17:14 : Deleted item a417bb1f
+2010-02-17 17:17:14 : Deleted item 143967ee
+2010-02-17 17:17:14 : Deleted item c1cbb331
+2010-02-17 17:17:14 : Deleted item def06d3f
+2010-02-17 17:17:14 : Deleted item 1d86f235
+2010-02-17 17:17:14 : Deleted item da95248c
+2010-02-17 17:17:15 : Deleted item b5849d65
+2010-02-17 17:17:15 : Deleted item 829e3985
+2010-02-17 17:17:15 : Deleted item aca18c7a
+2010-02-17 17:17:15 : Deleted item b09fa883
+2010-02-17 17:17:15 : Deleted item c8e06bf4
+2010-02-17 17:17:15 : Deleted item 39d46e55
+2010-02-17 17:17:15 : Deleted item 80d12bb7
+2010-02-17 17:17:15 : Deleted item a8c15a19
+2010-02-17 17:17:15 : Deleted item eae54f7a
+2010-02-17 17:17:15 : Deleted item 67e6a880
+2010-02-17 17:17:15 : Deleted item 29125be5
+2010-02-17 17:17:15 : Deleted item 370128e5
+2010-02-17 17:17:15 : Deleted item 06e855f1
+2010-02-17 17:17:15 : Deleted item 9494634d
+2010-02-17 17:17:15 : Deleted item 853f2f4e
+2010-02-17 17:17:15 : Deleted item 57f58910
+2010-02-17 17:17:15 : Deleted item 238e6047
+2010-02-17 17:17:15 : Deleted item 281791b4
+2010-02-17 17:17:15 : Deleted item 5fdb021b
+2010-02-17 17:17:15 : Deleted item 56974bbc
+2010-02-17 17:17:15 : Deleted item afc9314a
+2010-02-17 17:17:15 : Deleted item d911451a
+2010-02-17 17:17:15 : Deleted item ace3b4ac
+2010-02-17 17:17:15 : Deleted item 9f3ee3fa
+2010-02-17 17:17:15 : Deleted item 66649e73
+2010-02-17 17:17:15 : Deleted item e540a0f1
+2010-02-17 17:17:15 : Deleted item b011debb
+2010-02-17 17:17:15 : Deleted item 75b0b75a
+2010-02-17 17:17:15 : Deleted item 7def0a3b
+2010-02-17 17:17:15 : Deleted item 527f9854
+2010-02-17 17:17:15 : Deleted item 4678ec8f
+2010-02-17 17:17:15 : Deleted item fea382e6
+2010-02-17 17:17:15 : Deleted item 4ae44981
+2010-02-17 17:17:15 : Deleted item 79a43481
+2010-02-17 17:17:15 : Deleted item 66049fd1
+2010-02-17 17:17:15 : Deleted item 3b9dc113
+2010-02-17 17:17:15 : Deleted item a82cdead
+2010-02-17 17:17:15 : Deleted item 78ba434f
+2010-02-17 17:17:15 : Deleted item 719d0bb0
+2010-02-17 17:17:15 : Deleted item fee7ed81
+2010-02-17 17:17:15 : Deleted item 3de7deda
+2010-02-17 17:17:15 : Deleted item 43f3d689
+2010-02-17 17:17:15 : Deleted item 90539381
+2010-02-17 17:17:15 : Deleted item 677faa33
+2010-02-17 17:17:15 : Deleted item 70ada860
+2010-02-17 17:17:15 : Deleted item 5a7949a2
+2010-02-17 17:17:15 : Deleted item 8e487b90
+2010-02-17 17:17:15 : Deleted item 033f431e
+2010-02-17 17:17:15 : Deleted item 09f599be
+2010-02-17 17:17:15 : Deleted item 7d9bb687
+2010-02-17 17:17:15 : Deleted item 513a2b91
+2010-02-17 17:17:15 : Deleted item 31b32eb0
+2010-02-17 17:17:15 : Deleted item 4713a08e
+2010-02-17 17:17:15 : Deleted item 36f5ece0
+2010-02-17 17:17:15 : Deleted item b0d336b6
+2010-02-17 17:17:15 : Deleted item 3617568e
+2010-02-17 17:17:15 : Deleted item 1bb22c3b
+2010-02-17 17:17:15 : Deleted item f57a2b6b
+2010-02-17 17:17:15 : Deleted item 0a39609d
+2010-02-17 17:17:15 : Deleted item 9503bcf1
+2010-02-17 17:17:15 : Deleted item 2253a019
+2010-02-17 17:17:15 : Deleted item 8496e5e6
+2010-02-17 17:17:15 : Deleted item 3195027c
+2010-02-17 17:17:15 : Deleted item 559ebd7d
+2010-02-17 17:17:15 : Deleted item 8786c4a1
+2010-02-17 17:17:15 : Deleted item ddab4dca
+2010-02-17 17:17:15 : Deleted item 70e4d349
+2010-02-17 17:17:15 : Deleted item e1f4b7d0
+2010-02-17 17:17:15 : Deleted item ff28cf83
+2010-02-17 17:17:15 : Deleted item 20affb2c
+2010-02-17 17:17:15 : Deleted item ef450f31
+2010-02-17 17:17:15 : Deleted item 8b963d22
+2010-02-17 17:17:15 : Deleted item 9b3bdd8e
+2010-02-17 17:17:15 : Deleted item 3611c694
+2010-02-17 17:17:15 : Deleted item d923f5f0
+2010-02-17 17:17:15 : Deleted item b9e91bf0
+2010-02-17 17:17:15 : Deleted item 1ffd21c4
+2010-02-17 17:17:15 : Deleted item 46e8958d
+2010-02-17 17:17:15 : Deleted item bd2defea
+2010-02-17 17:17:15 : Deleted item 57604d77
+2010-02-17 17:17:15 : Deleted item 8313fc8a
+2010-02-17 17:17:15 : Deleted item e4933756
+2010-02-17 17:17:15 : Deleted item a79b8eca
+2010-02-17 17:17:15 : Deleted item 1063f284
+2010-02-17 17:17:15 : Deleted item 2897dcf7
+2010-02-17 17:17:15 : Deleted item 739f8225
+2010-02-17 17:17:15 : Deleted item e9acee2c
+2010-02-17 17:17:15 : Deleted item 48776129
+2010-02-17 17:17:15 : Deleted item baf8c06f
+2010-02-17 17:17:15 : Deleted item 8df16636
+2010-02-17 17:17:15 : Deleted item 8cb81d91
+2010-02-17 17:17:15 : Deleted item b7480fba
+2010-02-17 17:17:15 : Deleted item ebb6962e
+2010-02-17 17:17:15 : Deleted item 493bacd3
+2010-02-17 17:17:15 : Deleted item a735f497
+2010-02-17 17:17:15 : Deleted item 1be0a35c
+2010-02-17 17:17:15 : Deleted item c042a344
+2010-02-17 17:17:15 : Deleted item ae877412
+2010-02-17 17:17:15 : Deleted item 7dfe8024
+2010-02-17 17:17:15 : Deleted item fd41d860
+2010-02-17 17:17:15 : Deleted item 3e670baa
+2010-02-17 17:17:15 : Deleted item 19baaeba
+2010-02-17 17:17:15 : Deleted item faab4c25
+2010-02-17 17:17:15 : Deleted item 9f85ae4f
+2010-02-17 17:17:15 : Deleted item b684d61d
+2010-02-17 17:17:15 : Deleted item 1c1813a7
+2010-02-17 17:17:15 : Deleted item af80138a
+2010-02-17 17:17:15 : Deleted item 38ec3048
+2010-02-17 17:17:15 : Deleted item c06a19cb
+2010-02-17 17:17:15 : Deleted item ac5e80d7
+2010-02-17 17:17:15 : Deleted item e73e211f
+2010-02-17 17:17:15 : Deleted item 21289f7a
+2010-02-17 17:17:15 : Deleted item cc3daffe
+2010-02-17 17:17:15 : Deleted item e3aa3db0
+2010-02-17 17:17:15 : Deleted item 11c6eb4b
+2010-02-17 17:17:15 : Deleted item 2ce6dc4f
+2010-02-17 17:17:15 : Deleted item 131c5e04
+2010-02-17 17:17:15 : Deleted item 78c0dd2a
+2010-02-17 17:17:15 : Deleted item 2c281e99
+2010-02-17 17:17:15 : Deleted item 2ac21672
+2010-02-17 17:17:15 : Deleted item da916561
+2010-02-17 17:17:15 : Deleted item fbea0ab3
+2010-02-17 17:17:15 : Deleted item 3b2c3cd6
+2010-02-17 17:17:15 : Deleted item 710fdb56
+2010-02-17 17:17:15 : Deleted item f56cddf9
+2010-02-17 17:17:15 : Deleted item 4f9db8d5
+2010-02-17 17:17:15 : Deleted item 1b310ebc
+2010-02-17 17:17:15 : Deleted item d550ef78
+2010-02-17 17:17:15 : Deleted item ec4b4033
+2010-02-17 17:17:15 : Deleted item fe0bc037
+2010-02-17 17:17:15 : Deleted item 3f88313b
+2010-02-17 17:17:15 : Deleted item 07154866
+2010-02-17 17:17:15 : Deleted item a75e4405
+2010-02-17 17:17:15 : Deleted item 7fe28d23
+2010-02-17 17:17:15 : Deleted item 4ffd08f6
+2010-02-17 17:17:15 : Deleted item 203793cd
+2010-02-17 17:17:15 : Deleted item 75923048
+2010-02-17 17:17:15 : Deleted item 787582c2
+2010-02-17 17:17:15 : Deleted item 8e69c24c
+2010-02-17 17:17:15 : Deleted item 21fbbe0b
+2010-02-17 17:17:15 : Deleted item d3c4d423
+2010-02-17 17:17:15 : Deleted item 59726fb3
+2010-02-17 17:17:15 : Deleted item ed3352d3
+2010-02-17 17:17:15 : Deleted item a40e224b
+2010-02-17 17:17:15 : Deleted item 93eef02a
+2010-02-17 17:17:15 : Deleted item 9229bba3
+2010-02-17 17:17:15 : Deleted item 358fcddb
+2010-02-17 17:17:15 : Deleted item 4ba7e7e4
+2010-02-17 17:17:15 : Deleted item e85fbb2b
+2010-02-17 17:17:15 : Deleted item 87d6fc9e
+2010-02-17 17:17:15 : Deleted item 970da316
+2010-02-17 17:17:15 : Deleted item 3d4ce77e
+2010-02-17 17:17:15 : Deleted item 1ad1873e
+2010-02-17 17:17:15 : Deleted item d35cbdff
+2010-02-17 17:17:15 : Deleted item deccb497
+2010-02-17 17:17:15 : Deleted item 19426129
+2010-02-17 17:17:15 : Deleted item 169808f5
+2010-02-17 17:17:15 : Deleted item d7a5ce94
+2010-02-17 17:17:15 : Deleted item 23cd1729
+2010-02-17 17:17:15 : Deleted item d46d08a2
+2010-02-17 17:17:15 : Deleted item 563453b1
+2010-02-17 17:17:15 : Deleted item 0349c06e
+2010-02-17 17:17:33 : Imported item 0e2e2c2f 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 90363bc9 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 6ab4899c 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item c6ea398c 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item cae1aa1c 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item b480c0a1 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 63ff6037 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 26e5b376 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item ef837da1 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 37acbcba 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 01221e71 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 310f19b7 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 28ce27d7 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item de45d590 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 78d38218 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 1bee4a01 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 214eae94 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 42e79f9a 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item a746c42f 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 44d03e6f 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 563bd19c 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item f206011d 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 3f734187 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item fdcefab0 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item e56274a2 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 60acdffc 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item d2509001 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item e5ddc9f5 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 8faded88 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 011598bd 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item fae6e818 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 96964e3d 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item c1daa145 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item a086e2d8 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item be6591c1 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item f2f4db23 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 31853fb1 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 75680719 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 2b19cb31 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item da3e413a 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item bd55011b 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 3d9d9f07 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 21d0a105 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item e6ae3f48 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 5cb0efe4 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item ad6136fa 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item d5fac23d 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 1f711c1f 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 1bd720aa 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 547f2b9d 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 9f465757 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 30860699 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 2823bfbd 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item c1d1b54b 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item a1c65114 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item e7cec10d 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item e5f3700d 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 699c8b8d 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item f1f1c372 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item d47b07e5 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 465e3bb0 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 89fee2c6 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item db7c010d 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 5a66f784 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item f273c8cc 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item f644b764 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item f31b7ee8 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 903b0355 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 7b49c31b 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 06732a53 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 9b73e1df 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 1672a769 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item a7db565c 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item e2f51228 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 31cbf4d0 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 01575713 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item a332d4cf 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 84961e3d 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item d1140ebe 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item b056caf8 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item b77968a5 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item fab894ec 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item e0a619da 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 394f791a 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 966dcfa2 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item db0cdf01 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item e0c2325d 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 78afcd8f 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 0f1427da 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 7abc31b6 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item a43811b5 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 6beff928 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 98e4dd04 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 76a68fd1 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 28691538 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 04eaf039 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 0999c9d3 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 4a2803f5 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item d7bcd4f6 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 015858e9 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item f6c48844 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 26ebbf18 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 41cd9284 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 5b3bc1d5 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item b63d0a1f 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item d7216d6c 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 028ad40c 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 9d61482e 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 0f08f076 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item e21b5b9e 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 20b46c0f 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 6dceaec4 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 1025ee61 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 50e71cd1 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 63413657 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 873f21ba 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item e9da60b5 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 88dbe25f 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 543fda30 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item a7834e0e 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 2752d2a1 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item fe1d20c4 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 8e3ff8fd 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 358d0d91 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item d5663b00 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item f3ad2720 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item e355b740 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item b994764a 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 0d8c4c41 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item eeafc9e9 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 00878a0b 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 359aa1d4 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item a3e0a6f9 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 67a35fe3 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 87a5a91e 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 5819cbd9 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 1d6c2242 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 0aee785c 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 526ea430 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item b90ca3c8 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 06f7c30b 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 051abd08 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item b7f319b1 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item e3fb08e8 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item adc21c73 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 60749a15 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item de6ddff7 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 79986bfb 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 87adc62a 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item c2b997d7 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item fd055cee 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item ed83ae7e 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 3075a537 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 33f511c7 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 70896d2e 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 32a58bc4 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item ec28e481 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item deaff5a7 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 20725f24 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 98e9e718 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 92fe1ea9 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 3a200683 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 26198061 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item b9c60cdb 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item d6306e07 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 7e597c95 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item a3190dbd 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 0000348b 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item c123a599 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 1aed08a2 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item f7a52504 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item a65c6fcc 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 21f52239 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item d133537f 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 200a683f 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item c2f16c42 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item ef7f3633 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 66d6bbd3 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 2e74f171 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 0d8db8fa 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 66514abf 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 88b7db69 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item b0dc2284 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 0e2a2f3c 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 947740ee 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item af38fd3a 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 958c3957 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 81e57c80 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item f2536212 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 0f8a561c 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 0eee7476 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item d4b5426f 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 8a51a719 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item f4345ad3 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item b35f3aa5 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item f3c809cf 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 654a6a52 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 4c7b762b 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item aea22993 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item e4244ac8 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 3e525808 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 7912927e 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 8ece7729 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 5d324445 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 249480ad 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item a6d137b4 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 4f1c5c9a 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item da5c90b8 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 1530c694 0 0 0 0 -764
+2010-02-17 17:17:33 : Imported item 1eca6dd8 0 0 0 0 -764
+2010-02-17 17:18:24 : Deleted item 5819cbd9
+2010-02-17 17:18:24 : Deleted item fae6e818
+2010-02-17 17:18:24 : Deleted item c2b997d7
+2010-02-17 17:18:24 : Deleted item d4b5426f
+2010-02-17 17:18:24 : Deleted item 37acbcba
+2010-02-17 17:18:24 : Deleted item 2b19cb31
+2010-02-17 17:18:24 : Deleted item 2823bfbd
+2010-02-17 17:18:24 : Deleted item ec28e481
+2010-02-17 17:18:24 : Deleted item 5cb0efe4
+2010-02-17 17:18:24 : Deleted item fdcefab0
+2010-02-17 17:18:24 : Deleted item d47b07e5
+2010-02-17 17:18:24 : Deleted item 6ab4899c
+2010-02-17 17:18:24 : Deleted item f644b764
+2010-02-17 17:18:24 : Deleted item b9c60cdb
+2010-02-17 17:18:24 : Deleted item a7db565c
+2010-02-17 17:18:24 : Deleted item aea22993
+2010-02-17 17:18:24 : Deleted item b056caf8
+2010-02-17 17:18:24 : Deleted item e0c2325d
+2010-02-17 17:18:24 : Deleted item f7a52504
+2010-02-17 17:18:24 : Deleted item a6d137b4
+2010-02-17 17:18:24 : Deleted item 28691538
+2010-02-17 17:18:24 : Deleted item 66d6bbd3
+2010-02-17 17:18:24 : Deleted item 0d8c4c41
+2010-02-17 17:18:24 : Deleted item 214eae94
+2010-02-17 17:18:24 : Deleted item f6c48844
+2010-02-17 17:18:24 : Deleted item b7f319b1
+2010-02-17 17:18:24 : Deleted item 947740ee
+2010-02-17 17:18:24 : Deleted item 9d61482e
+2010-02-17 17:18:24 : Deleted item 63413657
+2010-02-17 17:18:24 : Deleted item fe1d20c4
+2010-02-17 17:18:35 : Deleted item 1d6c2242
+2010-02-17 17:18:35 : Deleted item 96964e3d
+2010-02-17 17:18:35 : Deleted item fd055cee
+2010-02-17 17:18:35 : Deleted item 8a51a719
+2010-02-17 17:18:35 : Deleted item 01221e71
+2010-02-17 17:18:35 : Deleted item 75680719
+2010-02-17 17:18:35 : Deleted item 30860699
+2010-02-17 17:18:35 : Deleted item deaff5a7
+2010-02-17 17:18:35 : Deleted item ad6136fa
+2010-02-17 17:18:35 : Deleted item e56274a2
+2010-02-17 17:18:35 : Deleted item f1f1c372
+2010-02-17 17:18:35 : Deleted item c6ea398c
+2010-02-17 17:18:35 : Deleted item f31b7ee8
+2010-02-17 17:18:35 : Deleted item d6306e07
+2010-02-17 17:18:35 : Deleted item e2f51228
+2010-02-17 17:18:35 : Deleted item e4244ac8
+2010-02-17 17:18:35 : Deleted item b77968a5
+2010-02-17 17:18:35 : Deleted item 78afcd8f
+2010-02-17 17:18:35 : Deleted item a65c6fcc
+2010-02-17 17:18:35 : Deleted item 4f1c5c9a
+2010-02-17 17:18:35 : Deleted item 76a68fd1
+2010-02-17 17:18:35 : Deleted item 2e74f171
+2010-02-17 17:18:35 : Deleted item eeafc9e9
+2010-02-17 17:18:35 : Deleted item 42e79f9a
+2010-02-17 17:18:35 : Deleted item 26ebbf18
+2010-02-17 17:18:35 : Deleted item e3fb08e8
+2010-02-17 17:18:35 : Deleted item af38fd3a
+2010-02-17 17:18:35 : Deleted item 0f08f076
+2010-02-17 17:18:35 : Deleted item 873f21ba
+2010-02-17 17:18:35 : Deleted item 8e3ff8fd
+2010-02-17 17:19:02 : Deleted item b90ca3c8
+2010-02-17 17:19:02 : Deleted item c1daa145
+2010-02-17 17:19:02 : Deleted item 33f511c7
+2010-02-17 17:19:02 : Deleted item f3c809cf
+2010-02-17 17:19:02 : Deleted item de45d590
+2010-02-17 17:19:02 : Deleted item 3d9d9f07
+2010-02-17 17:19:02 : Deleted item e7cec10d
+2010-02-17 17:19:02 : Deleted item 92fe1ea9
+2010-02-17 17:19:02 : Deleted item 1bd720aa
+2010-02-17 17:19:02 : Deleted item 60acdffc
+2010-02-17 17:19:02 : Deleted item db7c010d
+2010-02-17 17:19:02 : Deleted item 63ff6037
+2010-02-17 17:19:02 : Deleted item 06732a53
+2010-02-17 17:19:02 : Deleted item 0000348b
+2010-02-17 17:19:02 : Deleted item a332d4cf
+2010-02-17 17:19:02 : Deleted item 8ece7729
+2010-02-17 17:19:03 : Deleted item 394f791a
+2010-02-17 17:19:03 : Deleted item a43811b5
+2010-02-17 17:19:03 : Deleted item 200a683f
+2010-02-17 17:19:03 : Deleted item 1eca6dd8
+2010-02-17 17:19:03 : Deleted item 4a2803f5
+2010-02-17 17:19:03 : Deleted item 88b7db69
+2010-02-17 17:19:03 : Deleted item a3e0a6f9
+2010-02-17 17:19:03 : Deleted item 563bd19c
+2010-02-17 17:19:03 : Deleted item b63d0a1f
+2010-02-17 17:19:03 : Deleted item de6ddff7
+2010-02-17 17:19:03 : Deleted item f2536212
+2010-02-17 17:19:03 : Deleted item 6dceaec4
+2010-02-17 17:19:03 : Deleted item 543fda30
+2010-02-17 17:19:03 : Deleted item f3ad2720
+2010-02-17 17:19:03 : Deleted item 526ea430
+2010-02-17 17:19:03 : Deleted item be6591c1
+2010-02-17 17:19:03 : Deleted item 3075a537
+2010-02-17 17:19:03 : Deleted item b35f3aa5
+2010-02-17 17:19:03 : Deleted item 28ce27d7
+2010-02-17 17:19:03 : Deleted item bd55011b
+2010-02-17 17:19:03 : Deleted item a1c65114
+2010-02-17 17:19:03 : Deleted item 98e9e718
+2010-02-17 17:19:03 : Deleted item 1f711c1f
+2010-02-17 17:19:03 : Deleted item e5ddc9f5
+2010-02-17 17:19:03 : Deleted item 89fee2c6
+2010-02-17 17:19:03 : Deleted item b480c0a1
+2010-02-17 17:19:03 : Deleted item 7b49c31b
+2010-02-17 17:19:03 : Deleted item a3190dbd
+2010-02-17 17:19:03 : Deleted item 01575713
+2010-02-17 17:19:03 : Deleted item 7912927e
+2010-02-17 17:19:03 : Deleted item e0a619da
+2010-02-17 17:19:03 : Deleted item 7abc31b6
+2010-02-17 17:19:03 : Deleted item d133537f
+2010-02-17 17:19:03 : Deleted item 1530c694
+2010-02-17 17:19:03 : Deleted item 0999c9d3
+2010-02-17 17:19:03 : Deleted item 66514abf
+2010-02-17 17:19:03 : Deleted item 359aa1d4
+2010-02-17 17:19:03 : Deleted item 44d03e6f
+2010-02-17 17:19:03 : Deleted item 5b3bc1d5
+2010-02-17 17:19:03 : Deleted item 60749a15
+2010-02-17 17:19:03 : Deleted item 81e57c80
+2010-02-17 17:19:03 : Deleted item 20b46c0f
+2010-02-17 17:19:03 : Deleted item 88dbe25f
+2010-02-17 17:19:03 : Deleted item d5663b00
+2010-02-17 17:19:03 : Deleted item 0aee785c
+2010-02-17 17:19:03 : Deleted item a086e2d8
+2010-02-17 17:19:03 : Deleted item ed83ae7e
+2010-02-17 17:19:03 : Deleted item f4345ad3
+2010-02-17 17:19:03 : Deleted item 310f19b7
+2010-02-17 17:19:03 : Deleted item da3e413a
+2010-02-17 17:19:03 : Deleted item c1d1b54b
+2010-02-17 17:19:03 : Deleted item 20725f24
+2010-02-17 17:19:03 : Deleted item d5fac23d
+2010-02-17 17:19:03 : Deleted item d2509001
+2010-02-17 17:19:03 : Deleted item 465e3bb0
+2010-02-17 17:19:03 : Deleted item cae1aa1c
+2010-02-17 17:19:03 : Deleted item 903b0355
+2010-02-17 17:19:03 : Deleted item 7e597c95
+2010-02-17 17:19:03 : Deleted item 31cbf4d0
+2010-02-17 17:19:03 : Deleted item 3e525808
+2010-02-17 17:19:03 : Deleted item fab894ec
+2010-02-17 17:19:03 : Deleted item 0f1427da
+2010-02-17 17:19:03 : Deleted item 21f52239
+2010-02-17 17:19:03 : Deleted item da5c90b8
+2010-02-17 17:19:03 : Deleted item 04eaf039
+2010-02-17 17:19:03 : Deleted item 0d8db8fa
+2010-02-17 17:19:03 : Deleted item 00878a0b
+2010-02-17 17:19:03 : Deleted item a746c42f
+2010-02-17 17:19:03 : Deleted item 41cd9284
+2010-02-17 17:19:03 : Deleted item adc21c73
+2010-02-17 17:19:03 : Deleted item 958c3957
+2010-02-17 17:19:03 : Deleted item e21b5b9e
+2010-02-17 17:19:03 : Deleted item e9da60b5
+2010-02-17 17:19:03 : Deleted item 358d0d91
+2010-02-17 17:21:47 : R 36bd0063.inv 4 2.42 | 6 4 1 4 1 | 1 1 | 6 -1 | 143.2
+2010-02-17 17:21:51 : R a758fd84.inv 4 2.66 | 5 5 1 3 1 | 1 1 | 6 0 | 2.1
+2010-02-17 17:21:53 : R 16ae6c56 4 2.80 | 13 14 8 1 1 | 1 1 | 6 1 | 1.6
+2010-02-17 17:22:02 : R 7ed9277a 4 2.52 | 10 13 5 1 1 | 1 1 | 6 -1 | 6.1
+2010-02-17 17:22:05 : R d4f9ce11 4 2.72 | 7 8 3 1 1 | 1 1 | 6 -1 | 1.4
+2010-02-17 17:22:11 : R 4f280d74.inv 4 2.61 | 4 4 1 2 1 | 1 1 | 6 0 | 5.4
+2010-02-17 17:22:13 : R 87f5fcbc.inv 5 2.89 | 3 4 1 1 1 | 1 1 | 6 0 | 1.4
+2010-02-17 17:22:19 : R 7e15494b.inv 4 2.57 | 6 7 3 1 1 | 1 1 | 6 -1 | 4.4
+2010-02-17 17:22:21 : R de24e2b1 4 2.69 | 4 4 1 1 1 | 1 1 | 6 -1 | 1.6
+2010-02-17 17:22:28 : R 3510784d 1 1.86 | 11 12 7 0 0 | 1 1 | 0 0 | 2.8
+2010-02-17 17:22:31 : R 8908163f.inv 4 2.69 | 5 5 2 2 1 | 1 1 | 6 -1 | 1.6
+2010-02-17 17:22:33 : R 478e4f5f.inv 4 2.71 | 3 3 1 1 1 | 1 1 | 6 0 | 1.4
+2010-02-17 17:22:36 : R 3cd0bb48 5 2.79 | 5 4 2 1 1 | 1 1 | 6 1 | 1.5
+2010-02-17 17:22:38 : R 1d2cfb02.inv 4 2.70 | 8 5 3 3 1 | 1 1 | 6 1 | 1.2
+2010-02-17 17:22:49 : R 6fba681b 4 2.55 | 7 5 2 3 1 | 1 1 | 6 1 | 10.3
+2010-02-17 17:22:51 : R 742538fb 4 2.37 | 8 11 4 1 1 | 2 2 | 6 1 | 1.3
+2010-02-17 17:22:53 : R 65fd0bef 4 2.58 | 8 7 3 1 1 | 2 2 | 6 -1 | 1.1
+2010-02-17 17:22:59 : R 057fe7fd 4 2.57 | 8 7 3 1 1 | 2 2 | 6 0 | 5.2
+2010-02-17 17:23:08 : R 4ab3ff04 4 2.53 | 7 8 3 1 1 | 2 2 | 6 1 | 7.4
+2010-02-17 17:23:14 : R 16372e29 4 2.16 | 3 4 0 3 4 | 10 10 | 21 2 | 4.4
+2010-02-17 17:23:22 : R 0c6d7dad.inv 1 2.69 | 5 3 2 1 0 | 0 10 | 0 0 | 6.9
+2010-02-17 17:23:30 : R 3510784d 4 1.86 | 12 12 7 1 0 | 0 1 | 1 1 | 7.0
+2010-02-17 17:23:40 : R adda8333.inv 0 2.53 | 12 7 4 1 0 | 0 10 | 0 0 | 6.1
+2010-02-17 17:23:42 : R adda8333.inv 0 2.53 | 13 7 4 2 0 | 0 1 | 0 0 | 1.2
+2010-02-17 17:23:50 : R b1ade12a.inv 0 2.61 | 5 3 2 2 0 | 0 1 | 0 0 | 7.0
+2010-02-17 17:24:07 : R a7251fcb 1 2.67 | 9 8 5 1 0 | 0 10 | 0 0 | 14.3
+2010-02-17 17:24:14 : R d363ab36 3 2.71 | 6 2 1 2 0 | 0 1 | 1 0 | 5.6
+2010-02-17 17:24:35 : R 2edd3cba.inv 1 2.40 | 14 8 6 1 0 | 0 10 | 0 0 | 17.7
+2010-02-17 17:24:37 : R 2edd3cba.inv 1 2.40 | 15 8 6 2 0 | 0 1 | 0 0 | 1.0
+2010-02-17 17:24:42 : R 0c6d7dad.inv 1 2.69 | 6 3 2 2 0 | 0 1 | 0 0 | 2.2
+2010-02-17 17:24:45 : R a7251fcb 2 2.67 | 10 8 5 2 0 | 0 1 | 1 0 | 2.0
+2010-02-17 17:24:48 : R b1ade12a.inv 2 2.61 | 6 3 2 3 0 | 0 1 | 1 0 | 1.5
+2010-02-17 17:24:50 : R adda8333.inv 2 2.53 | 14 7 4 3 0 | 0 1 | 1 1 | 1.5
+2010-02-17 17:24:56 : R d00a8a4b.inv 0 2.69 | 6 4 3 1 0 | 0 10 | 0 0 | 4.0
+2010-02-17 17:25:09 : R 2edd3cba.inv 2 2.40 | 16 8 6 3 0 | 0 1 | 1 0 | 10.7
+2010-02-17 17:25:11 : R d00a8a4b.inv 2 2.69 | 7 4 3 2 0 | 0 1 | 1 1 | 1.4
+2010-02-17 17:25:15 : R 36bd0063 4 2.56 | 6 6 3 1 0 | 0 10 | 1 0 | 2.9
+2010-02-17 17:25:18 : R 0c6d7dad.inv 4 2.69 | 7 3 2 3 0 | 0 1 | 1 1 | 2.3
+2010-02-17 17:25:28 : R d7201344 3 1.78 | 8 11 4 1 0 | 0 10 | 1 0 | 8.2
+2010-02-17 17:25:31 : R 4d5318e1 4 2.61 | 5 1 1 2 0 | 0 6 | 1 1 | 2.2
+2010-02-17 17:25:34 : R 6613d908.inv 1 2.57 | 12 5 5 1 0 | 0 82 | 0 0 | 1.7
+2010-02-17 17:25:43 : R 5853cc6a.inv 1 2.69 | 5 4 2 1 0 | 0 10 | 0 0 | 7.2
+2010-02-17 17:25:53 : R a0349f33 0 2.57 | 8 5 3 1 0 | 0 10 | 0 0 | 7.6
+2010-02-17 17:25:56 : R 6613d908.inv 2 2.57 | 13 5 5 2 0 | 0 1 | 1 1 | 2.3
+2010-02-17 17:26:01 : R 5853cc6a.inv 2 2.69 | 6 4 2 2 0 | 0 1 | 1 0 | 4.2
+2010-02-17 17:26:06 : R 4027f043.inv 0 2.43 | 5 6 3 1 0 | 0 82 | 0 0 | 3.4
+2010-02-17 17:26:08 : R 4027f043.inv 0 2.43 | 6 6 3 2 0 | 0 1 | 0 0 | 0.8
+2010-02-17 17:26:11 : R a0349f33 2 2.57 | 9 5 3 2 0 | 0 1 | 1 1 | 2.2
+2010-02-17 17:26:14 : R 4027f043.inv 2 2.43 | 7 6 3 3 0 | 0 1 | 1 1 | 2.3
+2010-02-17 17:26:18 : R d00a8a4b 0 2.59 | 6 2 2 1 0 | 0 82 | 0 0 | 3.2
+2010-02-17 17:26:32 : R c33f5334.inv 1 2.59 | 7 2 2 2 0 | 0 6 | 0 0 | 5.9
+2010-02-17 17:26:34 : R c33f5334.inv 1 2.59 | 8 2 2 3 0 | 0 1 | 0 0 | 1.1
+2010-02-17 17:26:38 : R d00a8a4b 2 2.59 | 7 2 2 2 0 | 0 1 | 1 0 | 3.3
+2010-02-17 17:26:45 : R d363ab36.inv 0 2.61 | 4 1 1 1 0 | 0 82 | 0 0 | 4.6
+2010-02-17 17:26:49 : R 45d7afd1 1 2.61 | 7 3 2 1 0 | 0 82 | 0 0 | 3.0
+2010-02-17 17:26:51 : R 45d7afd1 1 2.61 | 8 3 2 2 0 | 0 1 | 0 0 | 0.7
+2010-02-17 17:26:54 : R d363ab36.inv 2 2.61 | 5 1 1 2 0 | 0 1 | 1 1 | 2.6
+2010-02-17 17:27:04 : R c33f5334.inv 1 2.59 | 9 2 2 4 0 | 0 1 | 0 0 | 7.7
+2010-02-17 17:27:11 : R bb270d79 0 2.61 | 3 0 0 3 0 | 0 85 | 0 0 | 4.2
+2010-02-17 17:27:12 : R bb270d79 0 2.61 | 4 0 0 4 0 | 0 1 | 0 0 | 0.8
+2010-02-17 17:27:19 : R ed060bec 1 2.61 | 3 0 0 3 0 | 0 85 | 0 0 | 4.8
+2010-02-17 17:27:31 : R 45d7afd1 2 2.61 | 9 3 2 3 0 | 0 1 | 1 0 | 10.9
+2010-02-17 17:27:33 : R ed060bec 2 2.61 | 4 0 0 4 0 | 0 1 | 1 0 | 1.9
+2010-02-17 17:27:35 : R bb270d79.inv 2 2.61 | 2 0 0 2 0 | 0 97 | 1 1 | 1.4
+2010-02-17 17:27:43 : R 42eec0b9.inv 0 2.61 | 2 0 0 2 0 | 0 97 | 0 0 | 5.9
+2010-02-17 17:27:45 : R ed060bec.inv 2 2.61 | 2 0 0 2 0 | 0 97 | 1 1 | 1.6
+2010-02-17 17:27:56 : R bb270d79 2 2.61 | 5 0 0 5 0 | 0 1 | 1 0 | 9.4
+2010-02-17 17:28:02 : R c33f5334.inv 2 2.59 | 10 2 2 5 0 | 0 1 | 1 0 | 2.5
+2010-02-17 17:28:05 : R 42eec0b9.inv 2 2.61 | 3 0 0 3 0 | 0 1 | 1 0 | 2.4
+2010-02-17 17:28:07 : R 28c87d1d.inv 2 2.61 | 2 0 0 2 0 | 0 97 | 1 1 | 1.5
+2010-02-17 17:28:21 : R d3fa1b9c 2 2.61 | 2 0 0 2 0 | 0 97 | 1 1 | 8.9
+2010-02-17 17:28:27 : R 411ec13f 2 2.61 | 2 0 0 2 0 | 0 97 | 1 1 | 2.2
+2010-02-17 17:28:29 : R 411ec13f.inv 1 2.61 | 2 0 0 2 0 | 0 97 | 0 0 | 1.5
+2010-02-17 17:28:36 : R 883c5656 1 2.61 | 2 0 0 2 0 | 0 97 | 0 0 | 5.1
+2010-02-17 17:28:46 : R 468fc902 0 2.61 | 2 0 0 2 0 | 0 97 | 0 0 | 8.0
+2010-02-17 17:28:50 : R 490f11b1 0 2.61 | 2 0 0 2 0 | 0 95 | 0 0 | 3.3
+2010-02-17 17:28:57 : R 55259610 1 2.61 | 2 0 0 2 0 | 0 95 | 0 0 | 5.8
+2010-02-17 17:29:01 : R 411ec13f.inv 4 2.61 | 3 0 0 3 0 | 0 1 | 1 0 | 1.7
+2010-02-17 17:29:03 : R 55259610 2 2.61 | 3 0 0 3 0 | 0 1 | 1 1 | 1.2
+2010-02-17 17:29:05 : R 490f11b1 2 2.61 | 3 0 0 3 0 | 0 1 | 1 0 | 1.7
+2010-02-17 17:29:07 : R 883c5656 2 2.61 | 3 0 0 3 0 | 0 1 | 1 0 | 1.3
+2010-02-17 17:29:12 : R 468fc902 2 2.61 | 3 0 0 3 0 | 0 1 | 1 1 | 4.4
+2010-02-17 17:29:16 : R 883c5656.inv 2 2.61 | 2 0 0 2 0 | 0 97 | 1 1 | 3.2
+2010-02-17 17:29:19 : R 468fc902.inv 2 2.61 | 2 0 0 2 0 | 0 97 | 1 2 | 1.6
+2010-02-17 17:29:28 : R 490f11b1.inv 0 2.61 | 2 0 0 2 0 | 0 95 | 0 0 | 5.7
+2010-02-17 17:29:29 : R 490f11b1.inv 0 2.61 | 3 0 0 3 0 | 0 1 | 0 0 | 1.0
+2010-02-17 17:29:30 : R 490f11b1.inv 0 2.61 | 4 0 0 4 0 | 0 1 | 0 0 | 0.6
+2010-02-17 17:29:35 : R 55259610.inv 2 2.61 | 2 0 0 2 0 | 0 95 | 1 2 | 2.1
+2010-02-17 17:29:38 : R 493c44a5 2 2.61 | 2 0 0 2 0 | 0 95 | 1 1 | 1.5
+2010-02-17 17:29:41 : R a4b5e35d 1 2.61 | 2 0 0 2 0 | 0 95 | 0 0 | 1.8
+2010-02-17 17:29:45 : R 2a85c694 2 2.61 | 2 0 0 2 0 | 0 95 | 1 1 | 3.5
+2010-02-17 17:29:47 : R a4b5e35d 2 2.61 | 3 0 0 3 0 | 0 1 | 1 1 | 1.4
+2010-02-17 17:29:53 : Saved database 0 188 709
+2010-02-17 17:29:53 : Program stopped

@@ -14,7 +14,7 @@ p6
 I01
 sS'import_format'
 p7
-S'XML'
+VXML
 p8
 sS'day_starts_at'
 p9
@@ -44,7 +44,7 @@ p18
 I5
 sS'tip'
 p19
-I20
+I21
 sS'randomise_new_cards'
 p20
 I00
@@ -63,7 +63,7 @@ p25
 I00
 sS'column_1_width'
 p26
-I238
+I963
 sS'export_format'
 p27
 VXML
@@ -88,7 +88,7 @@ Vdefault.mem
 p36
 sS'sort_column'
 p37
-I0
+I2
 sS'left_align'
 p38
 I00
@@ -110,7 +110,7 @@ p44
 I110
 sS'import_dir'
 p45
-S'/home/pete'
+Vc:\u005Cdocuments and settings\u005Cpete\u005Cdesktop
 p46
 sS'upload_logs'
 p47
