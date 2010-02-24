@@ -3,7 +3,7 @@ S'QA_font'
 p2
 NsS'log_index'
 p3
-I6
+I7
 sS'3_sided_input'
 p4
 I00
@@ -44,7 +44,7 @@ p18
 I5
 sS'tip'
 p19
-I22
+I23
 sS'randomise_new_cards'
 p20
 I00
