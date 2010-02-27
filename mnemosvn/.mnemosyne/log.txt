@@ -109,3 +109,7 @@
 2010-02-27 14:33:04 : New item 5d598e71.inv 0 0
 2010-02-27 14:34:48 : Saved database 32 265 778
 2010-02-27 14:34:48 : Program stopped
+2010-02-27 14:36:44 : Program started : Mnemosyne 1.2.1 posix linux2
+2010-02-27 14:36:44 : Loaded database 32 265 778
+2010-02-27 14:36:47 : Saved database 32 265 778
+2010-02-27 14:36:47 : Program stopped
