@@ -413,3 +413,7 @@
 2010-03-03 22:37:18 : R a02219a5.inv 4 2.61 | 2 0 0 2 0 | 0 109 | 1 1 | 1.6
 2010-03-03 22:37:27 : Saved database 0 211 804
 2010-03-03 22:37:27 : Program stopped
+2010-03-06 21:29:27 : Program started : Mnemosyne 1.2.1 posix linux2
+2010-03-06 21:29:27 : Loaded database 63 211 804
+2010-03-06 21:29:48 : Saved database 63 211 804
+2010-03-06 21:29:48 : Program stopped
