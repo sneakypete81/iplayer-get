@@ -609,3 +609,7 @@
 2010-04-04 16:54:05 : R 4d5318e1.inv 5 3.01 | 3 5 1 1 3 | 23 32 | 96 -3 | 1.7
 2010-04-04 16:54:11 : Saved database 85 233 804
 2010-04-04 16:54:11 : Program stopped
+2010-04-04 16:55:26 : Program started : Mnemosyne 1.2.1 posix linux2
+2010-04-04 16:55:26 : Loaded database 85 233 804
+2010-04-04 18:04:26 : Saved database 85 233 804
+2010-04-04 18:04:26 : Program stopped
