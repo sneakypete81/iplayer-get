@@ -613,3 +613,11 @@
 2010-04-04 16:55:26 : Loaded database 85 233 804
 2010-04-04 18:04:26 : Saved database 85 233 804
 2010-04-04 18:04:26 : Program stopped
+2010-04-05 18:04:46 : Program started : Mnemosyne 1.2.1 posix linux2
+2010-04-05 18:04:47 : Loaded database 86 233 804
+2010-04-05 18:05:08 : New item 74ce78b2 1 0
+2010-04-05 18:05:08 : New item 74ce78b2.inv 1 0
+2010-04-05 18:12:33 : New item 86a3938b 1 0
+2010-04-05 18:12:33 : New item 86a3938b.inv 1 0
+2010-04-05 20:31:19 : Saved database 86 237 808
+2010-04-05 20:31:19 : Program stopped
